@@ -44,7 +44,7 @@
     {
         "id": "978eb95a.7e19f8",
         "type": "tab",
-        "label": "Quickstart",
+        "label": "Quickstart / executetActionV5",
         "disabled": false,
         "info": ""
     },
@@ -6699,8 +6699,8 @@
         "topic": "",
         "payload": "get.trackplus",
         "payloadType": "str",
-        "x": 110,
-        "y": 160,
+        "x": 114,
+        "y": 53,
         "wires": [
             [
                 "8f3e030e.36f45"
@@ -6752,8 +6752,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 312,
-        "y": 161,
+        "x": 316,
+        "y": 54,
         "wires": [
             [
                 "a7230706.58c2a8"
@@ -6770,8 +6770,8 @@
         "createDir": false,
         "overwriteFile": "false",
         "encoding": "utf8",
-        "x": 519,
-        "y": 199,
+        "x": 523,
+        "y": 92,
         "wires": [
             []
         ]
@@ -6784,8 +6784,8 @@
         "compatibilityMode": false,
         "command": "group.get.trackplus",
         "name": "",
-        "x": 181,
-        "y": 200,
+        "x": 185,
+        "y": 93,
         "wires": [
             [
                 "2ab1dbc3.788904",
@@ -9373,6 +9373,18 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -11926,8 +11938,8 @@
         "z": "55805384.a4695c",
         "name": "creat a list of uris",
         "info": "",
-        "x": 81,
-        "y": 127,
+        "x": 85,
+        "y": 20,
         "wires": []
     },
     {
@@ -15885,8 +15897,8 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 280,
-        "y": 280,
+        "x": 284,
+        "y": 173,
         "wires": [
             [
                 "8179e457.64c758"
@@ -15905,8 +15917,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 100,
-        "y": 280,
+        "x": 104,
+        "y": 173,
         "wires": [
             [
                 "dd2c3e8e.30945",
@@ -15925,8 +15937,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 430,
-        "y": 280,
+        "x": 434,
+        "y": 173,
         "wires": []
     },
     {
@@ -15939,8 +15951,8 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 300,
-        "y": 340,
+        "x": 304,
+        "y": 233,
         "wires": [
             [
                 "8179e457.64c758"
@@ -18540,142 +18552,6 @@
         ]
     },
     {
-        "id": "7ff2513f.11bb7",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Music Library  - play album",
-        "info": "",
-        "x": 115,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "abc6b0e0.81358",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "1967",
-        "payloadType": "str",
-        "x": 130,
-        "y": 504,
-        "wires": [
-            [
-                "8ec4029b.5ccec"
-            ]
-        ]
-    },
-    {
-        "id": "8ec4029b.5ccec",
-        "type": "sonos-manage-mysonos",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "mysonos.export.item",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 340,
-        "y": 504,
-        "wires": [
-            [
-                "31d2512a.16a7de",
-                "1328ec43.44a934"
-            ]
-        ]
-    },
-    {
-        "id": "db68e1fc.f9196",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "group.play.export",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 330,
-        "y": 600,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "3470c96b.94f0b6",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "{\"uri\":\"x-rincon-playlist:RINCON_949F3EC13B9901400#A:ALBUM/1967-1970%20(Blue%20Alb)%20(Rm)\",\"queue\":true}",
-        "payloadType": "json",
-        "x": 130,
-        "y": 600,
-        "wires": [
-            [
-                "db68e1fc.f9196"
-            ]
-        ]
-    },
-    {
-        "id": "31d2512a.16a7de",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "group.play.export",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 570,
-        "y": 504,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1328ec43.44a934",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 530,
-        "y": 460,
-        "wires": []
-    },
-    {
         "id": "b3dbf63.096d008",
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
@@ -19388,562 +19264,6 @@
         ]
     },
     {
-        "id": "ecbf3817.84d968",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "GetGroupMute",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{}",
-        "payloadType": "json",
-        "x": 820,
-        "y": 1060,
-        "wires": [
-            [
-                "f6a910f7.73b3c"
-            ]
-        ]
-    },
-    {
-        "id": "f6a910f7.73b3c",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 1020,
-        "y": 1060,
-        "wires": [
-            [
-                "2acdcac8.3c7806"
-            ]
-        ]
-    },
-    {
-        "id": "2acdcac8.3c7806",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1170,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "bf9bdbef.e80568",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "get mute state 0 or 1",
-        "info": "",
-        "x": 810,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "6d02b148.57a32",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "SetGroupMute",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"DesiredMute\":\"1\"}",
-        "payloadType": "json",
-        "x": 130,
-        "y": 1060,
-        "wires": [
-            [
-                "4ba0feb9.538e1"
-            ]
-        ]
-    },
-    {
-        "id": "4ba0feb9.538e1",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 360,
-        "y": 1080,
-        "wires": [
-            [
-                "b1dd692f.4c8db8"
-            ]
-        ]
-    },
-    {
-        "id": "b1dd692f.4c8db8",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 510,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "b8750484.5966f8",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "set mute state 0/1",
-        "info": "",
-        "x": 130,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "360525b.6ef21da",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "SetGroupMute",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"DesiredMute\":\"0\"}",
-        "payloadType": "json",
-        "x": 130,
-        "y": 1100,
-        "wires": [
-            [
-                "4ba0feb9.538e1"
-            ]
-        ]
-    },
-    {
-        "id": "3f27adb6.ccb192",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "AddMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\",\"BootSeq\":\"*\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1220,
-        "wires": [
-            [
-                "36cf4a89.8b5026"
-            ]
-        ]
-    },
-    {
-        "id": "36cf4a89.8b5026",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 1227,
-        "wires": [
-            [
-                "2fa6584d.6dd0b8"
-            ]
-        ]
-    },
-    {
-        "id": "2fa6584d.6dd0b8",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 1227,
-        "wires": []
-    },
-    {
-        "id": "dc2cbf8a.af172",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Add Member  DOES NOT WORK- tested bootseq 0, 1, empty string (error), string 0, string 1 (error)",
-        "info": "does not work and is also confusing the system",
-        "x": 370,
-        "y": 1180,
-        "wires": []
-    },
-    {
-        "id": "d91c8f13.c084a",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "AddMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\",\"BootSeq\":\"*\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1321,
-        "wires": [
-            [
-                "ccc9503c.6f06d"
-            ]
-        ]
-    },
-    {
-        "id": "ccc9503c.6f06d",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 1321,
-        "wires": [
-            [
-                "654f3ae1.d08ee4"
-            ]
-        ]
-    },
-    {
-        "id": "654f3ae1.d08ee4",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 1321,
-        "wires": []
-    },
-    {
-        "id": "a4085dc9.d9bfc",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "AddMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1260,
-        "wires": [
-            [
-                "36cf4a89.8b5026"
-            ]
-        ]
-    },
-    {
-        "id": "8e503342.22ca6",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "AddMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1360,
-        "wires": [
-            [
-                "ccc9503c.6f06d"
-            ]
-        ]
-    },
-    {
-        "id": "d7435f5d.9519b",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "RemoveMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1480,
-        "wires": [
-            [
-                "18ce7aca.d19965"
-            ]
-        ]
-    },
-    {
-        "id": "18ce7aca.d19965",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 1480,
-        "wires": [
-            [
-                "75848574.9e09bc"
-            ]
-        ]
-    },
-    {
-        "id": "75848574.9e09bc",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 1480,
-        "wires": []
-    },
-    {
-        "id": "6d216c01.6a2894",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Remove Member - DOES NOT WORK",
-        "info": "does not work and is also confusing the system",
-        "x": 190,
-        "y": 1433,
-        "wires": []
-    },
-    {
-        "id": "fb41a5c7.cd4048",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "RemoveMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1528,
-        "wires": [
-            [
-                "60cd61ed.faf8e"
-            ]
-        ]
-    },
-    {
-        "id": "60cd61ed.faf8e",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 1528,
-        "wires": [
-            [
-                "c863b2f.08df75"
-            ]
-        ]
-    },
-    {
-        "id": "c863b2f.08df75",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 1528,
-        "wires": []
-    },
-    {
         "id": "353605ca.4425aa",
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
@@ -19994,425 +19314,6 @@
         ]
     },
     {
-        "id": "c23d7063.7d65b",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "Browse",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"ObjectID\":\"A:ALBUM\"}",
-        "payloadType": "json",
-        "x": 140,
-        "y": 1620,
-        "wires": [
-            [
-                "e464350e.98a248"
-            ]
-        ]
-    },
-    {
-        "id": "e464350e.98a248",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 360,
-        "y": 1620,
-        "wires": [
-            [
-                "3e945c32.5b8034"
-            ]
-        ]
-    },
-    {
-        "id": "3e945c32.5b8034",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 550,
-        "y": 1620,
-        "wires": []
-    },
-    {
-        "id": "b26094d1.6ec098",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Browse",
-        "info": "",
-        "x": 55,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "f2785568.23eb48",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "Browse",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"ObjectID\":\"A:ALBUM\"}",
-        "payloadType": "json",
-        "x": 140,
-        "y": 1674,
-        "wires": [
-            [
-                "53b7f421.b0fc3c"
-            ]
-        ]
-    },
-    {
-        "id": "53b7f421.b0fc3c",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 360,
-        "y": 1674,
-        "wires": [
-            [
-                "74d36a35.20a514"
-            ]
-        ]
-    },
-    {
-        "id": "9948ca71.752ec8",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 1674,
-        "wires": []
-    },
-    {
-        "id": "74d36a35.20a514",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 530,
-        "y": 1674,
-        "wires": [
-            [
-                "9948ca71.752ec8"
-            ]
-        ]
-    },
-    {
-        "id": "82940c75.08bfe",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "Browse",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"ObjectID\":\"A:TRACKS\"}",
-        "payloadType": "json",
-        "x": 150,
-        "y": 1730,
-        "wires": [
-            [
-                "975197e.97dcd68"
-            ]
-        ]
-    },
-    {
-        "id": "975197e.97dcd68",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 360,
-        "y": 1730,
-        "wires": [
-            [
-                "4006c5a2.61aa9c"
-            ]
-        ]
-    },
-    {
-        "id": "99a34c24.ea966",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 1730,
-        "wires": []
-    },
-    {
-        "id": "4006c5a2.61aa9c",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 530,
-        "y": 1730,
-        "wires": [
-            [
-                "99a34c24.ea966"
-            ]
-        ]
-    },
-    {
-        "id": "52eb6d71.315e74",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "Browse",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"ObjectID\":\"A:TRACKS:Angie\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1800,
-        "wires": [
-            [
-                "a3229db9.42a7c"
-            ]
-        ]
-    },
-    {
-        "id": "a3229db9.42a7c",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 360,
-        "y": 1800,
-        "wires": [
-            [
-                "aa6b3c9b.66281"
-            ]
-        ]
-    },
-    {
-        "id": "44c19b6a.cb6534",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "aa6b3c9b.66281",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 530,
-        "y": 1800,
-        "wires": [
-            [
-                "44c19b6a.cb6534"
-            ]
-        ]
-    },
-    {
-        "id": "4d6dc7fa.142768",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "Browse",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"ObjectID\":\"A:ALBUM:Milestones\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 1880,
-        "wires": [
-            [
-                "f6c36e79.4211b"
-            ]
-        ]
-    },
-    {
-        "id": "f6c36e79.4211b",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 360,
-        "y": 1880,
-        "wires": [
-            [
-                "58e01122.d3913"
-            ]
-        ]
-    },
-    {
-        "id": "3f352309.f8799c",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 710,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "58e01122.d3913",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 530,
-        "y": 1880,
-        "wires": [
-            [
-                "3f352309.f8799c"
-            ]
-        ]
-    },
-    {
         "id": "6c6411b9.0804b",
         "type": "inject",
         "z": "978eb95a.7e19f8",
@@ -20433,7 +19334,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
+        "x": 99,
         "y": 57,
         "wires": [
             [
@@ -20451,7 +19352,7 @@
         "state": "s24896",
         "stateType": "str",
         "name": "",
-        "x": 291,
+        "x": 270,
         "y": 57,
         "wires": [
             []
@@ -20478,8 +19379,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 121,
-        "y": 158,
+        "x": 100,
+        "y": 99,
         "wires": [
             [
                 "a4ba410a.87d84"
@@ -20496,8 +19397,8 @@
         "state": "s24896",
         "stateType": "str",
         "name": "",
-        "x": 292,
-        "y": 158,
+        "x": 271,
+        "y": 99,
         "wires": [
             []
         ]
@@ -20523,8 +19424,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 120,
-        "y": 258,
+        "x": 99,
+        "y": 138,
         "wires": [
             [
                 "807a5104.6e8f9"
@@ -20541,8 +19442,8 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 512,
-        "y": 258,
+        "x": 491,
+        "y": 138,
         "wires": [
             []
         ]
@@ -20557,8 +19458,8 @@
         "state": "KEXP",
         "stateType": "str",
         "name": "",
-        "x": 300,
-        "y": 258,
+        "x": 279,
+        "y": 138,
         "wires": [
             [
                 "182e34b.6e09dcb"
@@ -20586,8 +19487,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 121,
-        "y": 359,
+        "x": 100,
+        "y": 177,
         "wires": [
             [
                 "11c69f7a.0a4871"
@@ -20604,8 +19505,8 @@
         "state": "Küche,Wohnzimmer",
         "stateType": "str",
         "name": "",
-        "x": 312,
-        "y": 359,
+        "x": 291,
+        "y": 177,
         "wires": [
             []
         ]
@@ -22194,968 +21095,6 @@
         ]
     },
     {
-        "id": "6bcf1563.27c02c",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Sonos Endpoints",
-        "info": "",
-        "x": 85,
-        "y": 2520,
-        "wires": []
-    },
-    {
-        "id": "c8dcdc19.6ca62",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "device_description.xml",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "192.168.178.35",
-        "payload": "device_description.xml",
-        "payloadType": "str",
-        "x": 139,
-        "y": 2560,
-        "wires": [
-            [
-                "19547575.7686eb"
-            ]
-        ]
-    },
-    {
-        "id": "19547575.7686eb",
-        "type": "http request",
-        "z": "55805384.a4695c",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://{{topic}}:1400/xml/{{payload}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 130,
-        "y": 2600,
-        "wires": [
-            [
-                "8908c75d.e88a88"
-            ]
-        ]
-    },
-    {
-        "id": "8908c75d.e88a88",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 129,
-        "y": 2640,
-        "wires": [
-            [
-                "e0dd419d.c8f58",
-                "a701788a.7c6118"
-            ]
-        ]
-    },
-    {
-        "id": "a701788a.7c6118",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "devicelist",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.root.device[0].deviceList[0].device",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 2600,
-        "wires": [
-            [
-                "5d3ad7e4.db3918"
-            ]
-        ]
-    },
-    {
-        "id": "e0dd419d.c8f58",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "servicliste",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.root.device[0].serviceList[0].service",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 340,
-        "y": 2640,
-        "wires": [
-            [
-                "a23e29d6.ecf618"
-            ]
-        ]
-    },
-    {
-        "id": "8f4e6ae3.64cf38",
-        "type": "join",
-        "z": "55805384.a4695c",
-        "name": "",
-        "mode": "custom",
-        "build": "array",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "2",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 904,
-        "y": 2620,
-        "wires": [
-            [
-                "2068d364.7eeeac"
-            ]
-        ]
-    },
-    {
-        "id": "2068d364.7eeeac",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "merge both",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$append($.payload[0], $.payload[1])",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1044,
-        "y": 2620,
-        "wires": [
-            [
-                "eba0d2df.d9e51"
-            ]
-        ]
-    },
-    {
-        "id": "5d3ad7e4.db3918",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "servicelist all devices",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.serviceList.service",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 514,
-        "y": 2600,
-        "wires": [
-            [
-                "a23e29d6.ecf618"
-            ]
-        ]
-    },
-    {
-        "id": "56b0ac69.59bc34",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Actions per Endpoint",
-        "info": "",
-        "x": 95,
-        "y": 2718,
-        "wires": []
-    },
-    {
-        "id": "c1e1d351.448c6",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "AlarmClock1.xml",
-        "payloadType": "str",
-        "x": 120,
-        "y": 2849,
-        "wires": [
-            [
-                "6d4367f4.b76338"
-            ]
-        ]
-    },
-    {
-        "id": "6d4367f4.b76338",
-        "type": "http request",
-        "z": "55805384.a4695c",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://192.168.178.37:1400/xml/{{payload}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 365,
-        "y": 2801,
-        "wires": [
-            [
-                "6281d19c.e3e51"
-            ]
-        ]
-    },
-    {
-        "id": "6281d19c.e3e51",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 610,
-        "y": 2801,
-        "wires": [
-            [
-                "1f5c1f07.66c271"
-            ]
-        ]
-    },
-    {
-        "id": "1f5c1f07.66c271",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "get actions",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.scpd.actionList[0].action",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 650,
-        "y": 2841,
-        "wires": [
-            [
-                "de70527f.86f4a"
-            ]
-        ]
-    },
-    {
-        "id": "de70527f.86f4a",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "seperate in out",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.(\t   {\t       \"action\": $.name[0],\t       \"endpoint\": $.endpoint,\t       \"inArgs\": $.argumentList.argument[direction[0] = 'in'],\t       \"outArgs\": $.argumentList.argument[direction[0] = 'out']\t    }\t)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 680,
-        "y": 2880,
-        "wires": [
-            [
-                "9d0b2cb8.b0f79"
-            ]
-        ]
-    },
-    {
-        "id": "9d0b2cb8.b0f79",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "flatten",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.(\t   {\t       \"action\": $.action,\t       \"inArgs\": $.inArgs.($.name[0]),\t       \"outArgs\": $.outArgs.($.name[0])\t    }\t)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 690,
-        "y": 2921,
-        "wires": [
-            [
-                "88d854e1.66cb48"
-            ]
-        ]
-    },
-    {
-        "id": "a23e29d6.ecf618",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "endpoint and SCPDURL",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.( \t    {\t      \"endpoint\": $.controlURL[0],\t      \"URL\": $.SCPDURL[0]\t    }\t)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 724,
-        "y": 2640,
-        "wires": [
-            [
-                "8f4e6ae3.64cf38"
-            ]
-        ]
-    },
-    {
-        "id": "ac9e25eb.864ca8",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "Sonos Device Services",
-        "info": "",
-        "x": 105,
-        "y": 2180,
-        "wires": []
-    },
-    {
-        "id": "4b467ad6.9a09a4",
-        "type": "http request",
-        "z": "55805384.a4695c",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://192.168.178.35:1400/xml/device_description.xml",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 149,
-        "y": 2255,
-        "wires": [
-            [
-                "17d1a992.cb1276"
-            ]
-        ]
-    },
-    {
-        "id": "9466cee7.e95d7",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 99,
-        "y": 2215,
-        "wires": [
-            [
-                "4b467ad6.9a09a4"
-            ]
-        ]
-    },
-    {
-        "id": "17d1a992.cb1276",
-        "type": "xml",
-        "z": "55805384.a4695c",
-        "name": "",
-        "property": "payload",
-        "attr": "",
-        "chr": "",
-        "x": 169,
-        "y": 2295,
-        "wires": [
-            [
-                "5d732408.2da36c",
-                "469984a5.d46ccc"
-            ]
-        ]
-    },
-    {
-        "id": "49672996.56b748",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 679,
-        "y": 2335,
-        "wires": []
-    },
-    {
-        "id": "5d732408.2da36c",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.root.device[0].serviceList[0].service",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 326,
-        "y": 2335,
-        "wires": [
-            [
-                "ec5442b.510d8c",
-                "28684ec1.40ec72",
-                "736dbc24.e61914"
-            ]
-        ]
-    },
-    {
-        "id": "469984a5.d46ccc",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.root.device[0].deviceList[0].device",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 326,
-        "y": 2295,
-        "wires": [
-            [
-                "80c547d4.ee4018",
-                "7d237e99.c72db"
-            ]
-        ]
-    },
-    {
-        "id": "ec5442b.510d8c",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "endpoints general",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.controlURL[0]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 519,
-        "y": 2335,
-        "wires": [
-            [
-                "49672996.56b748"
-            ]
-        ]
-    },
-    {
-        "id": "28684ec1.40ec72",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.serviceType[0]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 509,
-        "y": 2375,
-        "wires": [
-            [
-                "429abec9.2cb43"
-            ]
-        ]
-    },
-    {
-        "id": "429abec9.2cb43",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 679,
-        "y": 2375,
-        "wires": []
-    },
-    {
-        "id": "80c547d4.ee4018",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.serviceList.service.serviceType",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 2255,
-        "wires": [
-            [
-                "2cf491de.291efe"
-            ]
-        ]
-    },
-    {
-        "id": "2cf491de.291efe",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 679,
-        "y": 2255,
-        "wires": []
-    },
-    {
-        "id": "7d237e99.c72db",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "endpoint device",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.serviceList.service.controlURL",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 510,
-        "y": 2295,
-        "wires": [
-            [
-                "5b01c3e0.7bc3ec"
-            ]
-        ]
-    },
-    {
-        "id": "5b01c3e0.7bc3ec",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 678,
-        "y": 2295,
-        "wires": []
-    },
-    {
-        "id": "3a408c39.8a0464",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "EXECUTE ACTION",
-        "info": "",
-        "x": 95,
-        "y": 700,
-        "wires": []
-    },
-    {
-        "id": "736dbc24.e61914",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload.serviceType[0]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 502,
-        "y": 2415,
-        "wires": [
-            [
-                "93c0a7b6.47a598"
-            ]
-        ]
-    },
-    {
-        "id": "93c0a7b6.47a598",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 672,
-        "y": 2415,
-        "wires": []
-    },
-    {
-        "id": "78cc9967.513448",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "RenderingControl1.xml",
-        "payloadType": "str",
-        "x": 140,
-        "y": 2800,
-        "wires": [
-            [
-                "6d4367f4.b76338"
-            ]
-        ]
-    },
-    {
-        "id": "5b3207d.82af7f8",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "x": 275,
-        "y": 2740,
-        "wires": [
-            [
-                "9949d26d.92196"
-            ]
-        ],
-        "l": false
-    },
-    {
-        "id": "9949d26d.92196",
-        "type": "function",
-        "z": "55805384.a4695c",
-        "name": "",
-        "func": "msg.endpoint = msg.payload.endpoint\nmsg.URL = msg.payload.URL.replace('/xml/', '')\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 480,
-        "y": 2740,
-        "wires": [
-            [
-                "f4c40ca8.34271",
-                "b3b65a82.42ac08"
-            ]
-        ]
-    },
-    {
-        "id": "b3b65a82.42ac08",
-        "type": "http request",
-        "z": "55805384.a4695c",
-        "name": "",
-        "method": "GET",
-        "ret": "txt",
-        "paytoqs": "ignore",
-        "url": "http://192.168.178.37:1400/xml/{{URL}}",
-        "tls": "",
-        "persist": false,
-        "proxy": "",
-        "authType": "",
-        "x": 690,
-        "y": 2740,
-        "wires": [
-            [
-                "6281d19c.e3e51"
-            ]
-        ]
-    },
-    {
-        "id": "88d854e1.66cb48",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "add endpoint",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "( $x := $.endpoint;\t    $.payload.(\t        {\t           \"action\": $.action,\t            \"endpoint\": $x,\t            \"inArgs\": $.inArgs,\t            \"outArgs\": $.outArgs\t        }\t    )\t)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 730,
-        "y": 2960,
-        "wires": [
-            [
-                "cd2dcf20.c04a7"
-            ]
-        ]
-    },
-    {
-        "id": "eba0d2df.d9e51",
-        "type": "split",
-        "z": "55805384.a4695c",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 1080,
-        "y": 2700,
-        "wires": [
-            [
-                "9949d26d.92196"
-            ]
-        ]
-    },
-    {
-        "id": "cd2dcf20.c04a7",
-        "type": "join",
-        "z": "55805384.a4695c",
-        "name": "",
-        "mode": "auto",
-        "build": "string",
-        "property": "payload",
-        "propertyType": "msg",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "",
-        "count": "",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 890,
-        "y": 2960,
-        "wires": [
-            [
-                "4212bdff.e24b94"
-            ]
-        ]
-    },
-    {
-        "id": "9f57b156.37bf7",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1270,
-        "y": 2960,
-        "wires": []
-    },
-    {
-        "id": "4212bdff.e24b94",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "flatten",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.*",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1050,
-        "y": 2960,
-        "wires": [
-            [
-                "9f57b156.37bf7",
-                "f0721483.2554c8",
-                "c2a7e075.c657e",
-                "be803b5d.70aa48"
-            ]
-        ]
-    },
-    {
         "id": "e4a216b2.70af68",
         "type": "inject",
         "z": "fcb24b59.997048",
@@ -23176,6 +21115,7 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payloadType": "str",
         "x": 749,
         "y": 2023,
         "wires": [
@@ -23315,95 +21255,6 @@
                 "2fe67a51.90ac36"
             ]
         ]
-    },
-    {
-        "id": "ff0c8447.7db568",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1270,
-        "y": 2880,
-        "wires": []
-    },
-    {
-        "id": "c2a7e075.c657e",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "d": true,
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload[endpoint = \"DeviceProperties\"]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1080,
-        "y": 2840,
-        "wires": [
-            [
-                "ff0c8447.7db568"
-            ]
-        ]
-    },
-    {
-        "id": "f0721483.2554c8",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload[action = \"SetLoudness\"]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1080,
-        "y": 2880,
-        "wires": [
-            [
-                "ff0c8447.7db568"
-            ]
-        ]
-    },
-    {
-        "id": "f4c40ca8.34271",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 2700,
-        "wires": []
     },
     {
         "id": "f9486766.41b1a8",
@@ -24098,557 +21949,6 @@
         ]
     },
     {
-        "id": "dced4c2c.5435a",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "SetAVTransportURI",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"InstanceID\":0,\"CurrentURI\":\"x-sonosapi-stream:tunein%3a25434?sid=303&flags=8224&sn=25\",\"CurrentURIMetaData\":\"\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 780,
-        "wires": [
-            [
-                "2a6db41.6fb6d4c"
-            ]
-        ]
-    },
-    {
-        "id": "2a6db41.6fb6d4c",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 780,
-        "wires": [
-            [
-                "bcf50ec5.c0f8"
-            ]
-        ]
-    },
-    {
-        "id": "bcf50ec5.c0f8",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "be803b5d.70aa48",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$.payload[action = \"SetAVTransportURI\"]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1080,
-        "y": 2800,
-        "wires": [
-            [
-                "ff0c8447.7db568"
-            ]
-        ]
-    },
-    {
-        "id": "1f2ef9f2.e24a36",
-        "type": "function",
-        "z": "55805384.a4695c",
-        "name": "backup",
-        "func": "let endpoint = msg.payload.endpoint.replace('/Control', '')\nendpoint = endpoint.split('/')\nif (endpoint.length === 2) {\n    endpoint = endpoint[1]\n} else {\n    endpoint = endpoint[2]\n}\nmsg.endpoint = endpoint\nmsg.URL = msg.payload.URL.replace('/xml/', '')\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 480,
-        "y": 2680,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a36988cd.277178",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "x-sonosapi-stream:s42824?sid=254&flags=8224&sn=0",
-        "payloadType": "str",
-        "x": 730,
-        "y": 780,
-        "wires": [
-            [
-                "897a5eaa.df7a6"
-            ]
-        ]
-    },
-    {
-        "id": "897a5eaa.df7a6",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "player.play.avtransport",
-        "state": "x-sonosapi-stream:s42824?sid=254&flags=8224&sn=0",
-        "stateType": "str",
-        "name": "",
-        "x": 960,
-        "y": 840,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "6c8da764.726e68",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "x-rincon-mp3radio://http://www.fritz.de/live.m3u",
-        "payloadType": "str",
-        "x": 730,
-        "y": 820,
-        "wires": [
-            [
-                "897a5eaa.df7a6"
-            ]
-        ]
-    },
-    {
-        "id": "8936a5cc.d2c468",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "x-rincon-mp3radio://http://live.radioarabella.de/stream?ref=radioarabella.de",
-        "payloadType": "str",
-        "x": 730,
-        "y": 860,
-        "wires": [
-            [
-                "897a5eaa.df7a6"
-            ]
-        ]
-    },
-    {
-        "id": "44eb4d9d.c90384",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "x-rincon-mp3radio://http://br-br2-nord.cast.addradio.de/br/br2/nord/mp3/128/stream.mp3",
-        "payloadType": "str",
-        "x": 730,
-        "y": 900,
-        "wires": [
-            [
-                "897a5eaa.df7a6"
-            ]
-        ]
-    },
-    {
-        "id": "b0115192.d1e4e",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "SetAVTransportURI",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"InstanceID\":0,\"CurrentURI\":\"x-rincon-mp3radio%3A%2F%2Fhttp%3A%2F%2Flive.radioarabella.de%2Fstream%3Fref%3Dradioarabella.de\",\"CurrentURIMetaData\":\"\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 840,
-        "wires": [
-            [
-                "2a6db41.6fb6d4c"
-            ]
-        ]
-    },
-    {
-        "id": "596e0cbb.837054",
-        "type": "sonos-manage-mysonos",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "mysonos.export.item",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 280,
-        "y": 900,
-        "wires": [
-            [
-                "91e440da.ede3f"
-            ]
-        ]
-    },
-    {
-        "id": "91e440da.ede3f",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 490,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "7b66431c.38308c",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "fritz",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Fritz",
-        "payloadType": "str",
-        "x": 70,
-        "y": 900,
-        "wires": [
-            [
-                "596e0cbb.837054"
-            ]
-        ]
-    },
-    {
-        "id": "1cdc2a16.930d46",
-        "type": "comment",
-        "z": "55805384.a4695c",
-        "name": "EXECUTE ACTION V5",
-        "info": "",
-        "x": 920,
-        "y": 140,
-        "wires": []
-    },
-    {
-        "id": "909ebb25.fe7558",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "volume",
-                "v": "30",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 920,
-        "y": 240,
-        "wires": [
-            [
-                "8403f456.488668"
-            ]
-        ]
-    },
-    {
-        "id": "8403f456.488668",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
-        "command": "player.play.tv",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 1090,
-        "y": 240,
-        "wires": [
-            [
-                "bed13354.da1b6"
-            ]
-        ]
-    },
-    {
-        "id": "bed13354.da1b6",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1290,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "d0c4f6fd.875948",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "player.play.tv",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 1090,
-        "y": 287,
-        "wires": [
-            [
-                "bed13354.da1b6"
-            ]
-        ]
-    },
-    {
-        "id": "48672bd.fe145d4",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 920,
-        "y": 287,
-        "wires": [
-            [
-                "d0c4f6fd.875948"
-            ]
-        ]
-    },
-    {
-        "id": "f58feb7.69a5d18",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "playerName",
-                "v": "Bad",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 920,
-        "y": 335,
-        "wires": [
-            [
-                "ef9d5dc8.980af"
-            ]
-        ]
-    },
-    {
-        "id": "ef9d5dc8.980af",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "player.play.tv",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 1090,
-        "y": 335,
-        "wires": [
-            [
-                "bed13354.da1b6"
-            ]
-        ]
-    },
-    {
-        "id": "d404424d.d255c",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 920,
-        "y": 180,
-        "wires": [
-            [
-                "d72e60f3.aed49"
-            ]
-        ]
-    },
-    {
-        "id": "d72e60f3.aed49",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
-        "command": "player.get.properties",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 1120,
-        "y": 180,
-        "wires": [
-            [
-                "bed13354.da1b6"
-            ]
-        ]
-    },
-    {
         "id": "9f3fe37a.b9859",
         "type": "debug",
         "z": "fcb24b59.997048",
@@ -24727,5 +22027,2362 @@
         "x": 1230,
         "y": 2160,
         "wires": []
+    },
+    {
+        "id": "50e0273f.33fe98",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "Sonos Endpoints",
+        "info": "",
+        "x": 120,
+        "y": 287,
+        "wires": []
+    },
+    {
+        "id": "eb955755.1dd408",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "device_description.xml",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "192.168.178.35",
+        "payload": "device_description.xml",
+        "payloadType": "str",
+        "x": 139,
+        "y": 319,
+        "wires": [
+            [
+                "ac59e62e.ad3d98"
+            ]
+        ]
+    },
+    {
+        "id": "ac59e62e.ad3d98",
+        "type": "http request",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://{{topic}}:1400/xml/{{payload}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 130,
+        "y": 359,
+        "wires": [
+            [
+                "7df3c81.1f7d238"
+            ]
+        ]
+    },
+    {
+        "id": "7df3c81.1f7d238",
+        "type": "xml",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 129,
+        "y": 399,
+        "wires": [
+            [
+                "4406afed.13322",
+                "b5f2563d.33c048"
+            ]
+        ]
+    },
+    {
+        "id": "b5f2563d.33c048",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "devicelist",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.root.device[0].deviceList[0].device",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 359,
+        "wires": [
+            [
+                "b2f76215.d9e22"
+            ]
+        ]
+    },
+    {
+        "id": "4406afed.13322",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "servicliste",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.root.device[0].serviceList[0].service",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 399,
+        "wires": [
+            [
+                "b1bf856d.31a218"
+            ]
+        ]
+    },
+    {
+        "id": "70945f03.51281",
+        "type": "join",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "2",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 910,
+        "y": 360,
+        "wires": [
+            [
+                "c8a50df8.a7297"
+            ]
+        ]
+    },
+    {
+        "id": "c8a50df8.a7297",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "merge both",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$append($.payload[0], $.payload[1])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 400,
+        "wires": [
+            [
+                "55240903.47c338"
+            ]
+        ]
+    },
+    {
+        "id": "b2f76215.d9e22",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "servicelist all devices",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.serviceList.service",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 514,
+        "y": 359,
+        "wires": [
+            [
+                "b1bf856d.31a218"
+            ]
+        ]
+    },
+    {
+        "id": "36f2e656.8d176a",
+        "type": "xml",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 430,
+        "y": 480,
+        "wires": [
+            [
+                "35ef2015.b345d"
+            ]
+        ]
+    },
+    {
+        "id": "35ef2015.b345d",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "get actions",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.scpd.actionList[0].action",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 480,
+        "wires": [
+            [
+                "1fa08c3a.5af764"
+            ]
+        ]
+    },
+    {
+        "id": "1fa08c3a.5af764",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "seperate in out",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.(\t   {\t       \"action\": $.name[0],\t       \"endpoint\": $.endpoint,\t       \"inArgs\": $.argumentList.argument[direction[0] = 'in'],\t       \"outArgs\": $.argumentList.argument[direction[0] = 'out']\t    }\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 480,
+        "wires": [
+            [
+                "186eba65.299816"
+            ]
+        ]
+    },
+    {
+        "id": "186eba65.299816",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "flatten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.(\t   {\t       \"action\": $.action,\t       \"inArgs\": $.inArgs.($.name[0]),\t       \"outArgs\": $.outArgs.($.name[0])\t    }\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 910,
+        "y": 480,
+        "wires": [
+            [
+                "d613f37b.24054"
+            ]
+        ]
+    },
+    {
+        "id": "b1bf856d.31a218",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "endpoint and SCPDURL",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.( \t    {\t      \"endpoint\": $.controlURL[0],\t      \"URL\": $.SCPDURL[0]\t    }\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 724,
+        "y": 399,
+        "wires": [
+            [
+                "70945f03.51281"
+            ]
+        ]
+    },
+    {
+        "id": "ff4af7f9.3e1248",
+        "type": "function",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "func": "msg.endpoint = msg.payload.endpoint\nmsg.URL = msg.payload.URL.replace('/xml/', '')\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 980,
+        "y": 440,
+        "wires": [
+            [
+                "d6ecdec1.6f75a"
+            ]
+        ]
+    },
+    {
+        "id": "d6ecdec1.6f75a",
+        "type": "http request",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.178.37:1400/xml/{{URL}}",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 1130,
+        "y": 440,
+        "wires": [
+            [
+                "36f2e656.8d176a"
+            ]
+        ]
+    },
+    {
+        "id": "55240903.47c338",
+        "type": "split",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 1110,
+        "y": 400,
+        "wires": [
+            [
+                "ff4af7f9.3e1248"
+            ]
+        ]
+    },
+    {
+        "id": "87ff09a1.33cb58",
+        "type": "join",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "mode": "auto",
+        "build": "string",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 690,
+        "y": 540,
+        "wires": [
+            [
+                "8fa26e64.a0171"
+            ]
+        ]
+    },
+    {
+        "id": "8fa26e64.a0171",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "flatten",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.*",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 540,
+        "wires": [
+            [
+                "7d254ec4.c1ef5",
+                "97dfbce3.0697e"
+            ]
+        ]
+    },
+    {
+        "id": "d613f37b.24054",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "add endpoint",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t   $x := $.endpoint;\t   $.payload.(\t       {\t           $.action: \t           {\t               \"endpoint\": $x,\t               \"inArgs\": $.inArgs,\t               \"outArgs\": $.outArgs\t           }\t        }\t    )\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 550,
+        "y": 540,
+        "wires": [
+            [
+                "87ff09a1.33cb58"
+            ]
+        ]
+    },
+    {
+        "id": "be78955e.0430d8",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "QUICKSTART",
+        "info": "",
+        "x": 75,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "bb1ed351.76761",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "CREATE ENDPOINTS AND ACTIONS",
+        "info": "",
+        "x": 155,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "de86701d.d1edc",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/AVTransport/Control\",\"action\":\"GetRemainingSleepTimerDuration\",\"inArgs\":{\"InstanceID\":0}}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 913,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "5edc1f47.7b67",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 320,
+        "y": 913,
+        "wires": [
+            [
+                "3a89af76.6c767"
+            ]
+        ]
+    },
+    {
+        "id": "3a89af76.6c767",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 913,
+        "wires": []
+    },
+    {
+        "id": "bb8313bf.f1a04",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "ACTIONS V5",
+        "info": "",
+        "x": 75,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "40c78f78.80833",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/GroupRenderingControl/Control\",\"action\":\"GetGroupMute\",\"inArgs\":{\"InstanceID\":0}}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1080,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "c7453e8f.3b0c5",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/GroupRenderingControl/Control\",\"action\":\"SetGroupMute\",\"inArgs\":{\"InstanceID\":0,\"DesiredMute\":\"1\"}}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1003,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "2ad20c6c.c5a4c4",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "group mute",
+        "info": "",
+        "x": 110,
+        "y": 969,
+        "wires": []
+    },
+    {
+        "id": "e3ce6b08.f70288",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "AddMember",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\",\"BootSeq\":\"*\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1420,
+        "wires": [
+            [
+                "360e7490.b8e43c"
+            ]
+        ]
+    },
+    {
+        "id": "360e7490.b8e43c",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 240,
+        "y": 1427,
+        "wires": [
+            [
+                "e802b07b.9d877"
+            ]
+        ]
+    },
+    {
+        "id": "e802b07b.9d877",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1427,
+        "wires": []
+    },
+    {
+        "id": "1d5b3387.91d55c",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "Add Member  DOES NOT WORK- tested bootseq 0, 1, empty string (error), string 0, string 1 (error)",
+        "info": "does not work and is also confusing the system",
+        "x": 370,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "19a417da.e238f8",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "AddMember",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\",\"BootSeq\":\"*\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1521,
+        "wires": [
+            [
+                "df1d9bb7.e65d88"
+            ]
+        ]
+    },
+    {
+        "id": "df1d9bb7.e65d88",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 240,
+        "y": 1521,
+        "wires": [
+            [
+                "d1828e2e.a53fc"
+            ]
+        ]
+    },
+    {
+        "id": "d1828e2e.a53fc",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1521,
+        "wires": []
+    },
+    {
+        "id": "8b11a70b.925a28",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "AddMember",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1460,
+        "wires": [
+            [
+                "360e7490.b8e43c"
+            ]
+        ]
+    },
+    {
+        "id": "a99737e6.5ed018",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "AddMember",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1560,
+        "wires": [
+            [
+                "df1d9bb7.e65d88"
+            ]
+        ]
+    },
+    {
+        "id": "384f0036.5ab46",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "RemoveMember",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1680,
+        "wires": [
+            [
+                "307e2144.1c3ebe"
+            ]
+        ]
+    },
+    {
+        "id": "307e2144.1c3ebe",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 240,
+        "y": 1680,
+        "wires": [
+            [
+                "6d0261e.bb36ca"
+            ]
+        ]
+    },
+    {
+        "id": "6d0261e.bb36ca",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "d34b07cb.f6ec78",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "Remove Member - DOES NOT WORK",
+        "info": "does not work and is also confusing the system",
+        "x": 190,
+        "y": 1633,
+        "wires": []
+    },
+    {
+        "id": "8f43b8b6.22a378",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "RemoveMember",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\"}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1728,
+        "wires": [
+            [
+                "6b48186f.15ca48"
+            ]
+        ]
+    },
+    {
+        "id": "6b48186f.15ca48",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 240,
+        "y": 1728,
+        "wires": [
+            [
+                "d7421a66.bc4f28"
+            ]
+        ]
+    },
+    {
+        "id": "d7421a66.bc4f28",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 1728,
+        "wires": []
+    },
+    {
+        "id": "aaf1007c.3e837",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "Sonos Device Services (Some)",
+        "info": "",
+        "x": 790,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9877b6ac.0ba0c8",
+        "type": "http request",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://192.168.178.35:1400/xml/device_description.xml",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 781,
+        "y": 155,
+        "wires": [
+            [
+                "20febb4b.5b1bf4"
+            ]
+        ]
+    },
+    {
+        "id": "1db7425f.46248e",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 754,
+        "y": 115,
+        "wires": [
+            [
+                "9877b6ac.0ba0c8"
+            ]
+        ]
+    },
+    {
+        "id": "20febb4b.5b1bf4",
+        "type": "xml",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 810,
+        "y": 195,
+        "wires": [
+            [
+                "2bdcbc3b.22e7f4",
+                "3a8e520f.748eae"
+            ]
+        ]
+    },
+    {
+        "id": "2bdcbc3b.22e7f4",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.root.device[0].serviceList[0].service",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 215,
+        "wires": [
+            [
+                "735224c4.8e327c",
+                "7a7cd467.c68fdc",
+                "710c81a7.79fb9"
+            ]
+        ]
+    },
+    {
+        "id": "3a8e520f.748eae",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.root.device[0].deviceList[0].device",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 970,
+        "y": 175,
+        "wires": [
+            [
+                "198a10d3.9baf9f",
+                "f82dc871.928918"
+            ]
+        ]
+    },
+    {
+        "id": "735224c4.8e327c",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "endpoints general",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.controlURL[0]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1180,
+        "y": 200,
+        "wires": [
+            [
+                "d962e394.afd2c"
+            ]
+        ]
+    },
+    {
+        "id": "7a7cd467.c68fdc",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.serviceType[0]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1170,
+        "y": 240,
+        "wires": [
+            [
+                "d962e394.afd2c"
+            ]
+        ]
+    },
+    {
+        "id": "198a10d3.9baf9f",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.serviceList.service.serviceType",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1171,
+        "y": 120,
+        "wires": [
+            [
+                "d962e394.afd2c"
+            ]
+        ]
+    },
+    {
+        "id": "d962e394.afd2c",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f82dc871.928918",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "endpoint device",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.serviceList.service.controlURL",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1171,
+        "y": 160,
+        "wires": [
+            [
+                "d962e394.afd2c"
+            ]
+        ]
+    },
+    {
+        "id": "710c81a7.79fb9",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$.payload.serviceType[0]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1163,
+        "y": 280,
+        "wires": [
+            [
+                "d962e394.afd2c"
+            ]
+        ]
+    },
+    {
+        "id": "b7b8060d.76ce18",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/GroupRenderingControl/Control\",\"action\":\"SetGroupMute\",\"inArgs\":{\"InstanceID\":0,\"DesiredMute\":\"0\"}}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1040,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "6d5863e8.f5994c",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "sleeptimer",
+        "info": "",
+        "x": 100,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "2382fb2.0568104",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaServer/ContentDirectory/Control\",\"action\":\"Browse\",\"inArgs\":{\"ObjectID\":\"A:ALBUM\",\"InstanceID\":0,\"BrowseFlag\":\"BrowseDirectChildren\",\"Filter\":\"*\",\"StartingIndex\":\"0\",\"RequestedCount\":\"100\",\"SortCriteria\":\"\"}}",
+        "payloadType": "json",
+        "x": 90,
+        "y": 1180,
+        "wires": [
+            [
+                "c52af4e6.f2e648"
+            ]
+        ]
+    },
+    {
+        "id": "c52af4e6.f2e648",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 360,
+        "y": 1180,
+        "wires": [
+            [
+                "4a89051b.ecf2dc"
+            ]
+        ]
+    },
+    {
+        "id": "4a89051b.ecf2dc",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "b61a6c73.bd9a2",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "Browse",
+        "info": "",
+        "x": 90,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "7486bfbd.4f702",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 70,
+        "y": 960,
+        "wires": [
+            [
+                "10e906e9.0b24e9"
+            ]
+        ]
+    },
+    {
+        "id": "8f803d17.c9278",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "15",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/GroupRenderingControl/Control\",\"action\":\"SetGroupVolume\",\"inArgs\":{\"InstanceID\":0,\"DesiredVolume\":\"15\"}}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 1000,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "e0ec33ed.16e3d",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "group volume",
+        "info": "",
+        "x": 290,
+        "y": 967,
+        "wires": []
+    },
+    {
+        "id": "12d8c287.c4c59d",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "10",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/GroupRenderingControl/Control\",\"action\":\"SetGroupVolume\",\"inArgs\":{\"InstanceID\":0,\"DesiredVolume\":\"10\"}}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 1040,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "a4e2cc03.62379",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/GroupRenderingControl/Control\",\"action\":\"GetGroupVolume\",\"inArgs\":{\"InstanceID\":0}}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 1080,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "e2c53752.652c48",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "volume",
+        "info": "",
+        "x": 470,
+        "y": 969,
+        "wires": []
+    },
+    {
+        "id": "e94aad15.cac8f",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "play tv",
+        "info": "",
+        "x": 930,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c5b46678.140908",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "15",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/RenderingControl/Control\",\"action\":\"SetVolume\",\"inArgs\":{\"InstanceID\":0,\"Channel\":\"Master\",\"DesiredVolume\":\"15\"}}",
+        "payloadType": "json",
+        "x": 472,
+        "y": 1003,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "3a9d6035.aad0c",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "10",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/RenderingControl/Control\",\"action\":\"SetVolume\",\"inArgs\":{\"InstanceID\":0,\"Channel\":\"Master\",\"DesiredVolume\":\"10\"}}",
+        "payloadType": "json",
+        "x": 472,
+        "y": 1043,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "e0244a3e.3a4378",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/RenderingControl/Control\",\"action\":\"GetVolume\",\"inArgs\":{\"InstanceID\":0,\"Channel\":\"Master\"}}",
+        "payloadType": "json",
+        "x": 472,
+        "y": 1083,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "1ff25a58.3039c6",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "SetAVTransportURI TuneIn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "SetAVTransportURI",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/AVTransport/Control\",\"action\":\"SetAVTransportURI\",\"inArgs\":{\"InstanceID\":0,\"CurrentURI\":\"x-sonos-htastream:RINCON_949F3EC13B9901400:spdif\",\"CurrentURIMetaData\":\"\"}}",
+        "payloadType": "json",
+        "x": 990,
+        "y": 1014,
+        "wires": [
+            [
+                "3afa7293.131c3e"
+            ]
+        ]
+    },
+    {
+        "id": "3afa7293.131c3e",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "living",
+        "x": 1191,
+        "y": 1014,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c1a93609.24be28",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "group",
+        "info": "",
+        "x": 930,
+        "y": 1053,
+        "wires": []
+    },
+    {
+        "id": "e4a271eb.735ad",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "SetAVTransportURI TuneIn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/AVTransport/Control\",\"action\":\"SetAVTransportURI\",\"inArgs\":{\"InstanceID\":0,\"CurrentURI\":\"x-rincon:RINCON_5CAAFD00223601400\",\"CurrentURIMetaData\":\"\"}}",
+        "payloadType": "json",
+        "x": 990,
+        "y": 1090,
+        "wires": [
+            [
+                "c5eed7bb.0aff88"
+            ]
+        ]
+    },
+    {
+        "id": "c5eed7bb.0aff88",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "living",
+        "x": 1191,
+        "y": 1090,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5d04758.55f1f8",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "TransportInfo",
+        "info": "",
+        "x": 670,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "1e84d92b.009e97",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "Get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "action",
+                "v": "GetTransportInfo",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/AVTransport/Control\",\"action\":\"GetTransportInfo\",\"inArgs\":{\"InstanceID\":0}}",
+        "payloadType": "json",
+        "x": 650,
+        "y": 1000,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "1845779d.078958",
+        "type": "comment",
+        "z": "978eb95a.7e19f8",
+        "name": "Loudness",
+        "info": "",
+        "x": 660,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "2e79c5dd.cf00ba",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "Get",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaRenderer/RenderingControl/Control\",\"action\":\"GetLoudness\",\"inArgs\":{\"InstanceID\":0,\"Channel\":\"Master\"}}",
+        "payloadType": "json",
+        "x": 650,
+        "y": 1080,
+        "wires": [
+            [
+                "5edc1f47.7b67"
+            ]
+        ]
+    },
+    {
+        "id": "4ed2e7d1.d47548",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"a\",\"att\":\"x\"}},{\"name1\":{\"endpoint\":\"a\"}}]",
+        "payloadType": "json",
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "7718893c.78abb8"
+            ]
+        ]
+    },
+    {
+        "id": "7718893c.78abb8",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "( \t    $.paylaod\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 400,
+        "wires": [
+            [
+                "2005e582.a7996a"
+            ]
+        ]
+    },
+    {
+        "id": "2005e582.a7996a",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 700,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "f2e66c2.55e4b9",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.name1.att[1]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 440,
+        "wires": [
+            [
+                "2005e582.a7996a"
+            ]
+        ]
+    },
+    {
+        "id": "6614b2bf.27383c",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"a\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"a\"}}]",
+        "payloadType": "json",
+        "x": 100,
+        "y": 440,
+        "wires": [
+            [
+                "f2e66c2.55e4b9"
+            ]
+        ]
+    },
+    {
+        "id": "784b6d98.bd39d4",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"a\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"a\"}}]",
+        "payloadType": "json",
+        "x": 99,
+        "y": 480,
+        "wires": [
+            [
+                "d6ed0dd4.691b8"
+            ]
+        ]
+    },
+    {
+        "id": "d6ed0dd4.691b8",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload[1]",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 480,
+        "wires": [
+            [
+                "2005e582.a7996a"
+            ]
+        ]
+    },
+    {
+        "id": "5752a536.f4de0c",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"b\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"c\"}}]",
+        "payloadType": "json",
+        "x": 90,
+        "y": 520,
+        "wires": [
+            [
+                "73711e76.5b937"
+            ]
+        ]
+    },
+    {
+        "id": "73711e76.5b937",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.*.endpoint",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 520,
+        "wires": [
+            [
+                "2005e582.a7996a"
+            ]
+        ]
+    },
+    {
+        "id": "c7783aa.15071c8",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"b\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"c\"}}]",
+        "payloadType": "json",
+        "x": 90,
+        "y": 620,
+        "wires": [
+            [
+                "ab4e1def.b36f4"
+            ]
+        ]
+    },
+    {
+        "id": "ab4e1def.b36f4",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "empty and single to array",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$keys(payload).{\t     $: { \t         \"endpoint\": $lookup($$.payload, $).endpoint, \t         \"att\": $lookup($$.payload, $).[att] \t         }\t}\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 620,
+        "wires": [
+            [
+                "2005e582.a7996a"
+            ]
+        ]
+    },
+    {
+        "id": "7232352b.61654c",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "Array to Object of Objects",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$merge(payload)\t\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 680,
+        "wires": [
+            [
+                "2005e582.a7996a"
+            ]
+        ]
+    },
+    {
+        "id": "a1064e73.229ba",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"b\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"c\"}}]",
+        "payloadType": "json",
+        "x": 90,
+        "y": 680,
+        "wires": [
+            [
+                "7232352b.61654c"
+            ]
+        ]
+    },
+    {
+        "id": "7d254ec4.c1ef5",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "empty and single to array",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$keys(payload).{\t     $: { \t         \"endpoint\": $lookup($$.payload, $).endpoint, \t         \"inArgs\": $lookup($$.payload, $).[inArgs],\t         \"outArgs\": $lookup($$.payload, $).[outArgs] \t         }\t}\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 540,
+        "wires": [
+            [
+                "7ea73468.890e9c"
+            ]
+        ]
+    },
+    {
+        "id": "7ea73468.890e9c",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "Array to Object of Objects",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$merge(payload)\t\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 600,
+        "wires": [
+            [
+                "aea1007a.f4f01",
+                "97de7b9f.01ec88"
+            ]
+        ]
+    },
+    {
+        "id": "aea1007a.f4f01",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "all",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "97de7b9f.01ec88",
+        "type": "change",
+        "z": "978eb95a.7e19f8",
+        "name": "Single item",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(\t    {\t   \"SetMute\": payload.SetMute\t    }\t)",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 660,
+        "wires": [
+            [
+                "54f02586.bb480c"
+            ]
+        ]
+    },
+    {
+        "id": "54f02586.bb480c",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "single",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "97dfbce3.0697e",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "all",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c81512e9.90726",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "xxxx",
+        "props": [
+            {
+                "p": "searchTitle",
+                "v": "xxxx",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 930,
+        "y": 2020,
+        "wires": [
+            [
+                "9e82258d.006828"
+            ]
+        ]
+    },
+    {
+        "id": "ebdaa18c.07ec",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "blanks",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 890,
+        "y": 2260,
+        "wires": [
+            [
+                "2fe67a51.90ac36"
+            ]
+        ]
     }
 ]
