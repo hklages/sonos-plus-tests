@@ -499,6 +499,12 @@
         "name": "pollyaws"
     },
     {
+        "id": "a72ce1f8.d4a8",
+        "type": "sonosevents-config",
+        "name": "x",
+        "ipaddress": "192.168.178.37"
+    },
+    {
         "id": "497dc083.e5d35",
         "type": "inject",
         "z": "a0a649cc.ca04e8",
@@ -11105,7 +11111,7 @@
         "confignode": "88e9fa70.4a53e8",
         "compatibilityMode": false,
         "command": "group.save.queue",
-        "state": "MySonosPlaylist",
+        "state": "Backup",
         "stateType": "str",
         "name": "",
         "x": 249,
@@ -12200,9 +12206,9 @@
         "id": "75396536.8d7a7c",
         "type": "comment",
         "z": "775d7a2a.44f234",
-        "name": "test size - must be number",
+        "name": "test requestedCount- must be number",
         "info": "",
-        "x": 150,
+        "x": 190,
         "y": 321,
         "wires": [],
         "icon": "node-red/alert.svg"
@@ -12212,6 +12218,18 @@
         "type": "inject",
         "z": "775d7a2a.44f234",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -12235,7 +12253,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "size",
+                "p": "requestedCount",
                 "pt": "msg",
                 "to": "true",
                 "tot": "bool"
@@ -12262,7 +12280,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "size",
+                "p": "requestedCount",
                 "pt": "msg",
                 "to": "-2",
                 "tot": "str"
@@ -12329,7 +12347,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "size",
+                "p": "requestedCount",
                 "pt": "msg",
                 "to": "0",
                 "tot": "str"
@@ -12376,7 +12394,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "size",
+                "p": "requestedCount",
                 "pt": "msg",
                 "to": "0",
                 "tot": "num"
@@ -12423,7 +12441,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "size",
+                "p": "requestedCount",
                 "pt": "msg",
                 "to": "-2",
                 "tot": "num"
@@ -12450,7 +12468,7 @@
         "rules": [
             {
                 "t": "set",
-                "p": "size",
+                "p": "requestedCount",
                 "pt": "msg",
                 "to": "5.3",
                 "tot": "num"
@@ -12505,6 +12523,18 @@
         "type": "inject",
         "z": "775d7a2a.44f234",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "anything",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -13512,7 +13542,7 @@
         "command": "group.remove.tracks",
         "name": "",
         "x": 680,
-        "y": 2001,
+        "y": 1992,
         "wires": [
             []
         ]
@@ -14457,6 +14487,18 @@
         "type": "inject",
         "z": "405b0e15.987b5",
         "name": "2 - will work",
+        "props": [
+            {
+                "p": "payload",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -15730,7 +15772,7 @@
         "stateType": "str",
         "name": "",
         "x": 1199,
-        "y": 2013,
+        "y": 2022,
         "wires": [
             []
         ]
@@ -17067,7 +17109,7 @@
         "stateType": "str",
         "name": "",
         "x": 282,
-        "y": 352,
+        "y": 1191,
         "wires": [
             [
                 "13cd37aa.7c07b8",
@@ -17086,7 +17128,7 @@
         "stateType": "str",
         "name": "",
         "x": 814,
-        "y": 352,
+        "y": 1191,
         "wires": [
             [
                 "40371f91.4f60a"
@@ -17104,7 +17146,7 @@
         "stateType": "str",
         "name": "",
         "x": 813,
-        "y": 217,
+        "y": 1056,
         "wires": [
             [
                 "103c2912.1fae27"
@@ -17122,7 +17164,7 @@
         "stateType": "str",
         "name": "",
         "x": 282,
-        "y": 445,
+        "y": 1284,
         "wires": [
             [
                 "6c619646.d6e9b8",
@@ -17141,7 +17183,7 @@
         "stateType": "str",
         "name": "",
         "x": 816,
-        "y": 445,
+        "y": 1284,
         "wires": [
             [
                 "f76f7270.9af1c"
@@ -17169,8 +17211,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 542,
-        "y": 143,
+        "x": 540,
+        "y": 1000,
         "wires": [
             [
                 "92e10cc1.53dbe",
@@ -17190,7 +17232,7 @@
         "stateType": "str",
         "name": "",
         "x": 281,
-        "y": 218,
+        "y": 1057,
         "wires": [
             [
                 "92e10cc1.53dbe",
@@ -17214,7 +17256,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 522,
-        "y": 297,
+        "y": 1136,
         "wires": [
             [
                 "13cd37aa.7c07b8",
@@ -17238,7 +17280,7 @@
         "randomUnits": "seconds",
         "drop": false,
         "x": 521,
-        "y": 403,
+        "y": 1242,
         "wires": [
             [
                 "92e10cc1.53dbe"
@@ -17259,7 +17301,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1005,
-        "y": 217,
+        "y": 1056,
         "wires": []
     },
     {
@@ -17273,7 +17315,7 @@
         "stateType": "str",
         "name": "",
         "x": 299,
-        "y": 99,
+        "y": 938,
         "wires": [
             [
                 "c5230c2c.2f642"
@@ -17302,7 +17344,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 99,
-        "y": 99,
+        "y": 938,
         "wires": [
             [
                 "9f3ed850.23f3a8"
@@ -17323,7 +17365,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 479,
-        "y": 99,
+        "y": 938,
         "wires": []
     },
     {
@@ -17344,7 +17386,7 @@
         "payload": "2",
         "payloadType": "num",
         "x": 92,
-        "y": 201,
+        "y": 1040,
         "wires": [
             [
                 "a16ef3d7.e33d3"
@@ -17369,7 +17411,7 @@
         "payload": "-2",
         "payloadType": "num",
         "x": 92,
-        "y": 234,
+        "y": 1073,
         "wires": [
             [
                 "a16ef3d7.e33d3"
@@ -17394,7 +17436,7 @@
         "payload": "5",
         "payloadType": "num",
         "x": 92,
-        "y": 333,
+        "y": 1172,
         "wires": [
             [
                 "e15f1c5a.f91b8"
@@ -17419,7 +17461,7 @@
         "payload": "-5",
         "payloadType": "num",
         "x": 92,
-        "y": 367,
+        "y": 1206,
         "wires": [
             [
                 "e15f1c5a.f91b8"
@@ -17444,7 +17486,7 @@
         "payload": "5",
         "payloadType": "num",
         "x": 92,
-        "y": 428,
+        "y": 1267,
         "wires": [
             [
                 "dda118b9.3d25a8"
@@ -17469,7 +17511,7 @@
         "payload": "-5",
         "payloadType": "num",
         "x": 92,
-        "y": 462,
+        "y": 1301,
         "wires": [
             [
                 "dda118b9.3d25a8"
@@ -17490,7 +17532,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 992,
-        "y": 352,
+        "y": 1191,
         "wires": []
     },
     {
@@ -17507,7 +17549,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 971,
-        "y": 445,
+        "y": 1284,
         "wires": []
     },
     {
@@ -17517,7 +17559,7 @@
         "name": "group.create.volumesnap",
         "info": "",
         "x": 149,
-        "y": 66,
+        "y": 905,
         "wires": []
     },
     {
@@ -17527,7 +17569,7 @@
         "name": "group.adjust.volume",
         "info": "",
         "x": 131,
-        "y": 168,
+        "y": 1007,
         "wires": []
     },
     {
@@ -17537,7 +17579,7 @@
         "name": "player.adjust.volume",
         "info": "",
         "x": 130,
-        "y": 300,
+        "y": 1139,
         "wires": []
     },
     {
@@ -17551,7 +17593,7 @@
         "stateType": "num",
         "name": "",
         "x": 300,
-        "y": 554.5,
+        "y": 1393.5,
         "wires": [
             [
                 "2584d571.8bffea",
@@ -17582,7 +17624,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 101,
-        "y": 554.5,
+        "y": 1393.5,
         "wires": [
             [
                 "36ffefb4.638d7"
@@ -17603,7 +17645,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 474,
-        "y": 555,
+        "y": 1394,
         "wires": []
     },
     {
@@ -17613,7 +17655,7 @@
         "name": "group.set.volume",
         "info": "",
         "x": 120,
-        "y": 522,
+        "y": 1361,
         "wires": []
     },
     {
@@ -17638,7 +17680,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 675,
+        "y": 1514,
         "wires": [
             [
                 "27fc114c.7def8e"
@@ -17656,7 +17698,7 @@
         "stateType": "str",
         "name": "newcoordinator invalid name",
         "x": 905,
-        "y": 675,
+        "y": 1514,
         "wires": [
             []
         ]
@@ -17668,7 +17710,7 @@
         "name": "coordinator.delegate",
         "info": "",
         "x": 129,
-        "y": 675,
+        "y": 1514,
         "wires": []
     },
     {
@@ -17678,7 +17720,7 @@
         "name": "failure",
         "info": "",
         "x": 692,
-        "y": 642,
+        "y": 1481,
         "wires": []
     },
     {
@@ -17703,7 +17745,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 709,
+        "y": 1548,
         "wires": [
             [
                 "6222f87b.328118"
@@ -17721,7 +17763,7 @@
         "stateType": "str",
         "name": "",
         "x": 322,
-        "y": 709,
+        "y": 1548,
         "wires": [
             []
         ]
@@ -17748,7 +17790,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 755,
+        "y": 1594,
         "wires": [
             [
                 "48a7d799.6e6428"
@@ -17766,7 +17808,7 @@
         "stateType": "str",
         "name": "",
         "x": 320,
-        "y": 755,
+        "y": 1594,
         "wires": [
             []
         ]
@@ -17793,7 +17835,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 724,
+        "y": 1563,
         "wires": [
             [
                 "c8f841fd.a5426"
@@ -17811,7 +17853,7 @@
         "stateType": "str",
         "name": "timestamp as msg.payoad",
         "x": 902,
-        "y": 724,
+        "y": 1563,
         "wires": [
             []
         ]
@@ -17838,7 +17880,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 821,
+        "y": 1660,
         "wires": [
             [
                 "26f56603.f2493a"
@@ -17856,7 +17898,7 @@
         "stateType": "str",
         "name": "same",
         "x": 832,
-        "y": 821,
+        "y": 1660,
         "wires": [
             []
         ]
@@ -17883,7 +17925,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 772,
+        "y": 1611,
         "wires": [
             [
                 "4bd79e1b.62113"
@@ -17901,7 +17943,7 @@
         "stateType": "str",
         "name": "not a coordinator",
         "x": 872,
-        "y": 772,
+        "y": 1611,
         "wires": [
             []
         ]
@@ -17913,7 +17955,7 @@
         "name": "household.separte.group",
         "info": "",
         "x": 150,
-        "y": 830,
+        "y": 1669,
         "wires": []
     },
     {
@@ -17938,7 +17980,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 863,
+        "y": 1702,
         "wires": [
             [
                 "e5ceee5b.5d571"
@@ -17956,7 +17998,7 @@
         "stateType": "str",
         "name": "",
         "x": 290,
-        "y": 863,
+        "y": 1702,
         "wires": [
             []
         ]
@@ -17983,7 +18025,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1026,
+        "y": 1865,
         "wires": [
             [
                 "60798456.98100c"
@@ -18001,7 +18043,7 @@
         "stateType": "str",
         "name": "Küche,Wohnzimmer",
         "x": 280,
-        "y": 1026,
+        "y": 1865,
         "wires": [
             []
         ]
@@ -18028,7 +18070,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1074,
+        "y": 1913,
         "wires": [
             [
                 "1bf87ca2.130b03"
@@ -18046,7 +18088,7 @@
         "stateType": "str",
         "name": "Küche,Bad,Wohnzimmer",
         "x": 290,
-        "y": 1074,
+        "y": 1913,
         "wires": [
             []
         ]
@@ -18073,7 +18115,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 1017,
+        "y": 1856,
         "wires": [
             [
                 "1b4025d1.097b4a"
@@ -18091,7 +18133,7 @@
         "stateType": "str",
         "name": "csv wrong syntax Bad,",
         "x": 880,
-        "y": 1017,
+        "y": 1856,
         "wires": [
             []
         ]
@@ -18118,7 +18160,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 101,
-        "y": 976,
+        "y": 1815,
         "wires": [
             [
                 "6b2fec0d.a0dc84"
@@ -18136,7 +18178,7 @@
         "stateType": "str",
         "name": "Küche",
         "x": 231,
-        "y": 976,
+        "y": 1815,
         "wires": [
             []
         ]
@@ -18163,7 +18205,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1124,
+        "y": 1963,
         "wires": [
             [
                 "fe793930.dc0198"
@@ -18181,7 +18223,7 @@
         "stateType": "str",
         "name": "Küche,Bad,Wohnzimmer,A E.r_k-er:1",
         "x": 330,
-        "y": 1124,
+        "y": 1963,
         "wires": [
             []
         ]
@@ -18208,7 +18250,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 1066,
+        "y": 1905,
         "wires": [
             [
                 "5a9ddd45.733134"
@@ -18226,7 +18268,7 @@
         "stateType": "str",
         "name": "csv empty",
         "x": 840,
-        "y": 1066,
+        "y": 1905,
         "wires": [
             []
         ]
@@ -18238,7 +18280,7 @@
         "name": "household.create.group",
         "info": "",
         "x": 140,
-        "y": 930,
+        "y": 1769,
         "wires": []
     },
     {
@@ -18248,7 +18290,7 @@
         "name": "failure",
         "info": "",
         "x": 690,
-        "y": 930,
+        "y": 1769,
         "wires": []
     },
     {
@@ -18273,7 +18315,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 970,
+        "y": 1809,
         "wires": [
             [
                 "81cbb78.25f9848"
@@ -18291,7 +18333,7 @@
         "stateType": "str",
         "name": "not unique",
         "x": 850,
-        "y": 970,
+        "y": 1809,
         "wires": [
             []
         ]
@@ -18318,7 +18360,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 1114,
+        "y": 1953,
         "wires": [
             [
                 "181219cc.f28576"
@@ -18336,7 +18378,7 @@
         "stateType": "str",
         "name": "csv wrong syntax: !Küche",
         "x": 890,
-        "y": 1114,
+        "y": 1953,
         "wires": [
             []
         ]
@@ -18363,7 +18405,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 1162,
+        "y": 2001,
         "wires": [
             [
                 "71ef8774.ec8c38"
@@ -18381,7 +18423,7 @@
         "stateType": "str",
         "name": "csv wrong syntax: Küche;Bad",
         "x": 910,
-        "y": 1162,
+        "y": 2001,
         "wires": [
             []
         ]
@@ -18408,7 +18450,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 700,
-        "y": 1210,
+        "y": 2049,
         "wires": [
             [
                 "6126f039.5f3bf"
@@ -18426,7 +18468,7 @@
         "stateType": "str",
         "name": "wrong player name: Küche,Bader",
         "x": 920,
-        "y": 1210,
+        "y": 2049,
         "wires": [
             []
         ]
@@ -18438,7 +18480,7 @@
         "name": "coordinator.standalone",
         "info": "",
         "x": 140,
-        "y": 1295,
+        "y": 2134,
         "wires": []
     },
     {
@@ -18463,7 +18505,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 98,
-        "y": 1328,
+        "y": 2167,
         "wires": [
             [
                 "569c5c32.f0c7f4"
@@ -18481,7 +18523,7 @@
         "stateType": "str",
         "name": "Küche",
         "x": 228,
-        "y": 1328,
+        "y": 2167,
         "wires": [
             []
         ]
@@ -18587,7 +18629,7 @@
         "stateType": "str",
         "name": "",
         "x": 263,
-        "y": 1905,
+        "y": 2744,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -18603,7 +18645,7 @@
         "command": "household.get.groups",
         "name": "",
         "x": 287,
-        "y": 1864,
+        "y": 2703,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -18635,7 +18677,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 97,
-        "y": 1864,
+        "y": 2703,
         "wires": [
             [
                 "999c31f1.6d8c9"
@@ -18655,7 +18697,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 97,
-        "y": 1905,
+        "y": 2744,
         "wires": [
             [
                 "b3dbf63.096d008"
@@ -18674,7 +18716,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 481,
-        "y": 2230,
+        "y": 3069,
         "wires": []
     },
     {
@@ -18684,7 +18726,7 @@
         "name": "Bad (visible) and A E.r_k-er:1  (hidden) as stereopair",
         "info": "",
         "x": 230,
-        "y": 1831,
+        "y": 2670,
         "wires": []
     },
     {
@@ -18700,7 +18742,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 96,
-        "y": 1998,
+        "y": 2837,
         "wires": [
             [
                 "ca184f4e.19ce"
@@ -18718,7 +18760,7 @@
         "stateType": "str",
         "name": "",
         "x": 273,
-        "y": 1998,
+        "y": 2837,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -18738,7 +18780,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 96,
-        "y": 1951,
+        "y": 2790,
         "wires": [
             [
                 "21fd889d.051a38"
@@ -18756,7 +18798,7 @@
         "stateType": "str",
         "name": "",
         "x": 263,
-        "y": 1951,
+        "y": 2790,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -18776,7 +18818,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 760,
-        "y": 1960,
+        "y": 2799,
         "wires": [
             [
                 "c596d628.1cfb08"
@@ -18794,7 +18836,7 @@
         "stateType": "str",
         "name": "",
         "x": 933,
-        "y": 1960,
+        "y": 2799,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -18814,7 +18856,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 760,
-        "y": 1914,
+        "y": 2753,
         "wires": [
             [
                 "5b40c923.eb6e98"
@@ -18832,7 +18874,7 @@
         "stateType": "str",
         "name": "",
         "x": 924,
-        "y": 1914,
+        "y": 2753,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -18846,7 +18888,7 @@
         "name": "failure Wintergarden invisible  - should throw error",
         "info": "",
         "x": 880,
-        "y": 1831,
+        "y": 2670,
         "wires": []
     },
     {
@@ -18874,7 +18916,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 761,
-        "y": 1867,
+        "y": 2706,
         "wires": [
             [
                 "a60373c.bd6b39"
@@ -18892,7 +18934,7 @@
         "stateType": "str",
         "name": "",
         "x": 923,
-        "y": 1867,
+        "y": 2706,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -18912,7 +18954,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 97,
-        "y": 2046,
+        "y": 2885,
         "wires": [
             [
                 "92d0df0b.5c0fc"
@@ -18930,7 +18972,7 @@
         "stateType": "str",
         "name": "",
         "x": 262,
-        "y": 2046,
+        "y": 2885,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -18948,7 +18990,7 @@
         "stateType": "str",
         "name": "",
         "x": 251,
-        "y": 2096,
+        "y": 2935,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -18968,7 +19010,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 97,
-        "y": 2096,
+        "y": 2935,
         "wires": [
             [
                 "47179590.ba256c"
@@ -18988,7 +19030,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 97,
-        "y": 2146,
+        "y": 2985,
         "wires": [
             [
                 "6e10b851.650e18"
@@ -19006,7 +19048,7 @@
         "stateType": "str",
         "name": "",
         "x": 273,
-        "y": 2146,
+        "y": 2985,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -19026,7 +19068,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 97,
-        "y": 2194,
+        "y": 3033,
         "wires": [
             [
                 "e73635e1.3d5068"
@@ -19044,7 +19086,7 @@
         "stateType": "str",
         "name": "",
         "x": 274,
-        "y": 2194,
+        "y": 3033,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -19064,7 +19106,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 761,
-        "y": 2009,
+        "y": 2848,
         "wires": [
             [
                 "88d8b069.628fd"
@@ -19082,7 +19124,7 @@
         "stateType": "str",
         "name": "",
         "x": 921,
-        "y": 2009,
+        "y": 2848,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -19100,7 +19142,7 @@
         "stateType": "str",
         "name": "",
         "x": 914,
-        "y": 2059,
+        "y": 2898,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -19120,7 +19162,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 761,
-        "y": 2059,
+        "y": 2898,
         "wires": [
             [
                 "fdcd9c5d.1e86d"
@@ -19140,7 +19182,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 761,
-        "y": 2109,
+        "y": 2948,
         "wires": [
             [
                 "4220e9a5.5ebf58"
@@ -19158,7 +19200,7 @@
         "stateType": "str",
         "name": "",
         "x": 933,
-        "y": 2109,
+        "y": 2948,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -19178,7 +19220,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 761,
-        "y": 2157,
+        "y": 2996,
         "wires": [
             [
                 "2ab6a85a.8afa28"
@@ -19196,7 +19238,7 @@
         "stateType": "str",
         "name": "",
         "x": 930,
-        "y": 2157,
+        "y": 2996,
         "wires": [
             [
                 "dfc2b0af.2c433"
@@ -19216,7 +19258,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 96,
-        "y": 2229,
+        "y": 3068,
         "wires": [
             [
                 "4344de90.1d936"
@@ -19234,7 +19276,7 @@
         "stateType": "str",
         "name": "",
         "x": 264,
-        "y": 2229,
+        "y": 3068,
         "wires": [
             [
                 "f4fc87fe.5514a8"
@@ -19868,7 +19910,7 @@
         "payload": "s24896",
         "payloadType": "str",
         "x": 610,
-        "y": 1339,
+        "y": 1344,
         "wires": [
             [
                 "ea3ee8f6.81f858"
@@ -19886,7 +19928,7 @@
         "stateType": "str",
         "name": "",
         "x": 771,
-        "y": 1339,
+        "y": 1344,
         "wires": [
             []
         ]
@@ -19913,7 +19955,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1221,
+        "y": 2060,
         "wires": [
             [
                 "ae4c9b13.cc1d98"
@@ -20236,7 +20278,8 @@
         "y": 628,
         "wires": [
             [
-                "cd812bc0.0c1398"
+                "cd812bc0.0c1398",
+                "1af66428.4f0ebc"
             ]
         ]
     },
@@ -20251,7 +20294,7 @@
         "stateType": "str",
         "name": "",
         "x": 1070,
-        "y": 667,
+        "y": 680,
         "wires": [
             []
         ]
@@ -20967,7 +21010,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1173,
+        "y": 2012,
         "wires": [
             [
                 "4d4bf213.2abdec"
@@ -20985,7 +21028,7 @@
         "stateType": "str",
         "name": "A E.r_k-er:1,Küche,Bad,Wohnzimmer",
         "x": 330,
-        "y": 1173,
+        "y": 2012,
         "wires": [
             []
         ]
@@ -21001,7 +21044,7 @@
         "stateType": "str",
         "name": "Küche,A E.r_k-er:1,Bad,Wohnzimmer",
         "x": 330,
-        "y": 1221,
+        "y": 2060,
         "wires": [
             []
         ]
@@ -21013,7 +21056,7 @@
         "name": "GROUP VOLUME",
         "info": "",
         "x": 95,
-        "y": 20,
+        "y": 859,
         "wires": []
     },
     {
@@ -21023,7 +21066,7 @@
         "name": "GROUP MANAGEMENT",
         "info": "",
         "x": 115,
-        "y": 638,
+        "y": 1477,
         "wires": []
     },
     {
@@ -21033,7 +21076,7 @@
         "name": "STEREOPAIR",
         "info": "",
         "x": 75,
-        "y": 1621,
+        "y": 2460,
         "wires": []
     },
     {
@@ -21043,7 +21086,7 @@
         "name": "PLAYERNAME TESTS: playerName = A E.r_k-er:1 ",
         "info": "",
         "x": 195,
-        "y": 1395,
+        "y": 2234,
         "wires": []
     },
     {
@@ -21069,7 +21112,7 @@
         "payload": "on",
         "payloadType": "str",
         "x": 90,
-        "y": 1433,
+        "y": 2272,
         "wires": [
             [
                 "7ddb75ab.bdbfdc"
@@ -21089,7 +21132,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 510,
-        "y": 1433,
+        "y": 2272,
         "wires": []
     },
     {
@@ -21103,7 +21146,7 @@
         "stateType": "str",
         "name": "",
         "x": 300,
-        "y": 1433,
+        "y": 2272,
         "wires": [
             [
                 "4cf51c9e.09d1a4"
@@ -21133,7 +21176,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1500,
+        "y": 2339,
         "wires": [
             [
                 "527919f1.f31688"
@@ -21151,7 +21194,7 @@
         "stateType": "str",
         "name": "",
         "x": 300,
-        "y": 1500,
+        "y": 2339,
         "wires": [
             [
                 "4cf51c9e.09d1a4"
@@ -21181,7 +21224,7 @@
         "payload": "off",
         "payloadType": "str",
         "x": 90,
-        "y": 1467,
+        "y": 2306,
         "wires": [
             [
                 "7ddb75ab.bdbfdc"
@@ -21211,7 +21254,7 @@
         "payload": "10",
         "payloadType": "str",
         "x": 90,
-        "y": 1555,
+        "y": 2394,
         "wires": [
             [
                 "45b43ea7.45e7b"
@@ -21229,7 +21272,7 @@
         "stateType": "str",
         "name": "",
         "x": 290,
-        "y": 1555,
+        "y": 2394,
         "wires": [
             [
                 "4cf51c9e.09d1a4"
@@ -21248,7 +21291,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1150,
-        "y": 2158,
+        "y": 2997,
         "wires": []
     },
     {
@@ -21274,7 +21317,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 90,
-        "y": 1700,
+        "y": 2539,
         "wires": [
             [
                 "8a62bce6.a4f5a"
@@ -21304,7 +21347,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 110,
-        "y": 1755,
+        "y": 2594,
         "wires": [
             [
                 "8a62bce6.a4f5a"
@@ -21318,7 +21361,7 @@
         "name": "make stand alone and then combine wintergarden and bath",
         "info": "",
         "x": 251,
-        "y": 1666,
+        "y": 2505,
         "wires": []
     },
     {
@@ -21332,7 +21375,7 @@
         "stateType": "str",
         "name": "",
         "x": 320,
-        "y": 1715,
+        "y": 2554,
         "wires": [
             []
         ]
@@ -21348,7 +21391,7 @@
         "stateType": "str",
         "name": "",
         "x": 794,
-        "y": 1678,
+        "y": 2517,
         "wires": [
             []
         ]
@@ -21376,7 +21419,7 @@
         "payload": "A E.r_k-er:1",
         "payloadType": "str",
         "x": 610,
-        "y": 1735,
+        "y": 2574,
         "wires": [
             [
                 "7b7c7e2d.8c971"
@@ -21401,7 +21444,7 @@
         "payload": "A E.r_k-er:1",
         "payloadType": "str",
         "x": 830,
-        "y": 1735,
+        "y": 2574,
         "wires": [
             [
                 "84569ddc.1e0d3"
@@ -21419,7 +21462,7 @@
         "stateType": "str",
         "name": "",
         "x": 1055,
-        "y": 1735,
+        "y": 2574,
         "wires": [
             []
         ]
@@ -21447,7 +21490,7 @@
         "payload": "Bad",
         "payloadType": "str",
         "x": 576,
-        "y": 1678,
+        "y": 2517,
         "wires": [
             [
                 "7b7c7e2d.8c971"
@@ -21472,7 +21515,7 @@
         "payload": "Bad",
         "payloadType": "str",
         "x": 1029,
-        "y": 1677,
+        "y": 2516,
         "wires": [
             [
                 "5884d540.db969c"
@@ -21490,7 +21533,7 @@
         "stateType": "str",
         "name": "",
         "x": 1229,
-        "y": 1677,
+        "y": 2516,
         "wires": [
             []
         ]
@@ -21518,7 +21561,7 @@
         "payload": "on",
         "payloadType": "str",
         "x": 710,
-        "y": 1430,
+        "y": 2269,
         "wires": [
             [
                 "f568671c.23f188"
@@ -21548,7 +21591,7 @@
         "payload": "off",
         "payloadType": "str",
         "x": 710,
-        "y": 1464,
+        "y": 2303,
         "wires": [
             [
                 "f568671c.23f188"
@@ -21566,7 +21609,7 @@
         "stateType": "str",
         "name": "",
         "x": 920,
-        "y": 1430,
+        "y": 2269,
         "wires": [
             [
                 "de34b6ac.a15968"
@@ -21586,7 +21629,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 1430,
+        "y": 2269,
         "wires": []
     },
     {
@@ -21612,7 +21655,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 720,
-        "y": 1500,
+        "y": 2339,
         "wires": [
             [
                 "8ec2c731.5e1598"
@@ -21630,7 +21673,7 @@
         "stateType": "str",
         "name": "",
         "x": 920,
-        "y": 1500,
+        "y": 2339,
         "wires": [
             [
                 "de34b6ac.a15968"
@@ -22035,154 +22078,6 @@
         ]
     },
     {
-        "id": "384f0036.5ab46",
-        "type": "inject",
-        "z": "978eb95a.7e19f8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "RemoveMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_000E58FE3AEA01400\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 2050,
-        "wires": [
-            [
-                "307e2144.1c3ebe"
-            ]
-        ]
-    },
-    {
-        "id": "307e2144.1c3ebe",
-        "type": "sonos-universal",
-        "z": "978eb95a.7e19f8",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 2050,
-        "wires": [
-            [
-                "6d0261e.bb36ca"
-            ]
-        ]
-    },
-    {
-        "id": "6d0261e.bb36ca",
-        "type": "debug",
-        "z": "978eb95a.7e19f8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 2050,
-        "wires": []
-    },
-    {
-        "id": "d34b07cb.f6ec78",
-        "type": "comment",
-        "z": "978eb95a.7e19f8",
-        "name": "Remove Member - DOES NOT WORK",
-        "info": "does not work and is also confusing the system",
-        "x": 190,
-        "y": 2003,
-        "wires": []
-    },
-    {
-        "id": "8f43b8b6.22a378",
-        "type": "inject",
-        "z": "978eb95a.7e19f8",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "action",
-                "v": "RemoveMember",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"MemberID\":\"RINCON_5CAAFD00223601400\"}",
-        "payloadType": "json",
-        "x": 90,
-        "y": 2098,
-        "wires": [
-            [
-                "6b48186f.15ca48"
-            ]
-        ]
-    },
-    {
-        "id": "6b48186f.15ca48",
-        "type": "sonos-universal",
-        "z": "978eb95a.7e19f8",
-        "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 240,
-        "y": 2098,
-        "wires": [
-            [
-                "d7421a66.bc4f28"
-            ]
-        ]
-    },
-    {
-        "id": "d7421a66.bc4f28",
-        "type": "debug",
-        "z": "978eb95a.7e19f8",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 2098,
-        "wires": []
-    },
-    {
         "id": "aaf1007c.3e837",
         "type": "comment",
         "z": "978eb95a.7e19f8",
@@ -22555,35 +22450,6 @@
         "x": 90,
         "y": 1301,
         "wires": []
-    },
-    {
-        "id": "7486bfbd.4f702",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 97,
-        "y": 1001,
-        "wires": [
-            [
-                "d8136e98.a802e"
-            ]
-        ]
     },
     {
         "id": "8f803d17.c9278",
@@ -22978,357 +22844,6 @@
         ]
     },
     {
-        "id": "4ed2e7d1.d47548",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"a\",\"att\":\"x\"}},{\"name1\":{\"endpoint\":\"a\"}}]",
-        "payloadType": "json",
-        "x": 100,
-        "y": 400,
-        "wires": [
-            [
-                "7718893c.78abb8"
-            ]
-        ]
-    },
-    {
-        "id": "7718893c.78abb8",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "( \t    $.paylaod\t)",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 400,
-        "wires": [
-            [
-                "2005e582.a7996a"
-            ]
-        ]
-    },
-    {
-        "id": "2005e582.a7996a",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 700,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "f2e66c2.55e4b9",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.name1.att[1]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 440,
-        "wires": [
-            [
-                "2005e582.a7996a"
-            ]
-        ]
-    },
-    {
-        "id": "6614b2bf.27383c",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"a\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"a\"}}]",
-        "payloadType": "json",
-        "x": 100,
-        "y": 440,
-        "wires": [
-            [
-                "f2e66c2.55e4b9"
-            ]
-        ]
-    },
-    {
-        "id": "784b6d98.bd39d4",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"a\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"a\"}}]",
-        "payloadType": "json",
-        "x": 99,
-        "y": 480,
-        "wires": [
-            [
-                "d6ed0dd4.691b8"
-            ]
-        ]
-    },
-    {
-        "id": "d6ed0dd4.691b8",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload[1]",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 480,
-        "wires": [
-            [
-                "2005e582.a7996a"
-            ]
-        ]
-    },
-    {
-        "id": "5752a536.f4de0c",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"b\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"c\"}}]",
-        "payloadType": "json",
-        "x": 90,
-        "y": 520,
-        "wires": [
-            [
-                "73711e76.5b937"
-            ]
-        ]
-    },
-    {
-        "id": "73711e76.5b937",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.*.endpoint",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 400,
-        "y": 520,
-        "wires": [
-            [
-                "2005e582.a7996a"
-            ]
-        ]
-    },
-    {
-        "id": "c7783aa.15071c8",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"b\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"c\"}}]",
-        "payloadType": "json",
-        "x": 90,
-        "y": 620,
-        "wires": [
-            [
-                "ab4e1def.b36f4"
-            ]
-        ]
-    },
-    {
-        "id": "ab4e1def.b36f4",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "empty and single to array",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$keys(payload).{\t     $: { \t         \"endpoint\": $lookup($$.payload, $).endpoint, \t         \"att\": $lookup($$.payload, $).[att] \t         }\t}\t",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 620,
-        "wires": [
-            [
-                "2005e582.a7996a"
-            ]
-        ]
-    },
-    {
-        "id": "7232352b.61654c",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "Array to Object of Objects",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$merge(payload)\t\t",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 430,
-        "y": 680,
-        "wires": [
-            [
-                "2005e582.a7996a"
-            ]
-        ]
-    },
-    {
-        "id": "a1064e73.229ba",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "[{\"name1\":{\"endpoint\":\"a\",\"att\":[\"x\",\"y\"]}},{\"name2\":{\"endpoint\":\"b\",\"att\":\"x\"}},{\"name3\":{\"endpoint\":\"c\"}}]",
-        "payloadType": "json",
-        "x": 90,
-        "y": 680,
-        "wires": [
-            [
-                "7232352b.61654c"
-            ]
-        ]
-    },
-    {
         "id": "d5dbc02c.c6fde",
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
@@ -23648,35 +23163,6 @@
         "wires": [
             [
                 "1bfc90f0.b28eff"
-            ]
-        ]
-    },
-    {
-        "id": "abd844b0.fe11f8",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 98,
-        "y": 1040,
-        "wires": [
-            [
-                "2b1ddc1.3c74a24"
             ]
         ]
     },
@@ -25436,6 +24922,1618 @@
         "wires": [
             [
                 "3297fb94.ce7334"
+            ]
+        ]
+    },
+    {
+        "id": "c2f5af44.24407",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 250,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "8d544137.689ba",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "ZoneGroupState",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/ZoneGroupTopology/Control\",\"action\":\"GetZoneGroupState\",\"inArgs\":{}}",
+        "payloadType": "json",
+        "x": 120,
+        "y": 1620,
+        "wires": [
+            [
+                "52da38d7.1e7228"
+            ]
+        ]
+    },
+    {
+        "id": "52da38d7.1e7228",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 600,
+        "y": 1620,
+        "wires": [
+            [
+                "7947ddcb.bf06e4"
+            ]
+        ]
+    },
+    {
+        "id": "ce018c23.51329",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "7947ddcb.bf06e4",
+        "type": "xml",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "property": "payload",
+        "attr": "tagAtt",
+        "chr": "",
+        "x": 830,
+        "y": 1640,
+        "wires": [
+            [
+                "ce018c23.51329"
+            ]
+        ]
+    },
+    {
+        "id": "f2f62c3f.87d26",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.test",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 340,
+        "wires": [
+            [
+                "f8e79e20.645a9"
+            ]
+        ]
+    },
+    {
+        "id": "f8e79e20.645a9",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 310,
+        "y": 340,
+        "wires": [
+            [
+                "ee21cbc8.72d7f8"
+            ]
+        ]
+    },
+    {
+        "id": "ee21cbc8.72d7f8",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 490,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8ea62eec.3a892",
+        "type": "comment",
+        "z": "405b0e15.987b5",
+        "name": "household",
+        "info": "",
+        "x": 720,
+        "y": 3229,
+        "wires": []
+    },
+    {
+        "id": "cb2e8ca8.8101c",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 710,
+        "y": 3280,
+        "wires": [
+            [
+                "4bc9032e.c716ac"
+            ]
+        ]
+    },
+    {
+        "id": "4bc9032e.c716ac",
+        "type": "sonos-universal",
+        "z": "405b0e15.987b5",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "household.test.player",
+        "state": "Bad",
+        "stateType": "str",
+        "name": "",
+        "x": 880,
+        "y": 3280,
+        "wires": [
+            [
+                "502f21a2.41ad6"
+            ]
+        ]
+    },
+    {
+        "id": "502f21a2.41ad6",
+        "type": "debug",
+        "z": "405b0e15.987b5",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1050,
+        "y": 3280,
+        "wires": []
+    },
+    {
+        "id": "65a8b1ab.21bc9",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 490,
+        "y": 840,
+        "wires": [
+            [
+                "a993e586.635ad8"
+            ]
+        ]
+    },
+    {
+        "id": "5959e713.a572c8",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "A E.r_k-er:1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "playerName",
+                "v": "A E.r_k-er:1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 770,
+        "y": 3039,
+        "wires": [
+            [
+                "bb8d3228.9c72d"
+            ]
+        ]
+    },
+    {
+        "id": "bb8d3228.9c72d",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "group.get.state",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 940,
+        "y": 3039,
+        "wires": [
+            [
+                "dfc2b0af.2c433"
+            ]
+        ]
+    },
+    {
+        "id": "1af66428.4f0ebc",
+        "type": "debug",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "bfb75b16.ecb0f8",
+        "type": "sonos-manage-mysonos",
+        "z": "775d7a2a.44f234",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": true,
+        "command": "library.export.album",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1120,
+        "y": 980,
+        "wires": [
+            [
+                "1af66428.4f0ebc"
+            ]
+        ]
+    },
+    {
+        "id": "a673318b.30b7c",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "Atemlos:",
+        "payload": "",
+        "payloadType": "str",
+        "x": 900,
+        "y": 980,
+        "wires": [
+            [
+                "bfb75b16.ecb0f8"
+            ]
+        ]
+    },
+    {
+        "id": "7a7634c7.ea2eec",
+        "type": "comment",
+        "z": "775d7a2a.44f234",
+        "name": "Compatibility",
+        "info": "",
+        "x": 1030,
+        "y": 940,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "b4c911f6.73b4",
+        "type": "comment",
+        "z": "2655a232.b82cae",
+        "name": "GROUP Basics all players",
+        "info": "checking\na) right playerIndex in player.get.mutestate\nb) groupmembers in both\nc) playerName in both\nd) right group in second part",
+        "x": 115,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "bda4a21f.297af",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "create group",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "a10ceaca.17a748"
+            ]
+        ]
+    },
+    {
+        "id": "a10ceaca.17a748",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "household.create.group",
+        "state": "Küche,A E.r_k-er:1,Bad,Wohnzimmer",
+        "stateType": "str",
+        "name": "",
+        "x": 313,
+        "y": 60,
+        "wires": [
+            [
+                "1dfa1745.725f79"
+            ]
+        ]
+    },
+    {
+        "id": "f38d611.19273a",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "household.get.groups",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 700,
+        "y": 60,
+        "wires": [
+            [
+                "3eff5719.578588"
+            ]
+        ]
+    },
+    {
+        "id": "3eff5719.578588",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 891,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1dfa1745.725f79",
+        "type": "delay",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 503,
+        "y": 60,
+        "wires": [
+            [
+                "f38d611.19273a"
+            ]
+        ]
+    },
+    {
+        "id": "f97688b1.75e398",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "player.set.mutestate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 300,
+        "y": 118,
+        "wires": [
+            [
+                "2277f16e.83ac3e"
+            ]
+        ]
+    },
+    {
+        "id": "d18c269d.a87f18",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 110,
+        "y": 133,
+        "wires": [
+            [
+                "f97688b1.75e398"
+            ]
+        ]
+    },
+    {
+        "id": "2277f16e.83ac3e",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "player.get.mutestate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 520,
+        "y": 118,
+        "wires": [
+            [
+                "c44213a6.174ef"
+            ]
+        ]
+    },
+    {
+        "id": "c44213a6.174ef",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "mute kitchen - coordinator",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 951,
+        "y": 118,
+        "wires": []
+    },
+    {
+        "id": "412bd70c.632dc8",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 110,
+        "y": 198,
+        "wires": [
+            [
+                "b89f15c4.c116b8"
+            ]
+        ]
+    },
+    {
+        "id": "b89f15c4.c116b8",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "2113e9bb.c52236",
+        "compatibilityMode": false,
+        "command": "player.set.mutestate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 300,
+        "y": 179,
+        "wires": [
+            [
+                "d1a0a450.569428"
+            ]
+        ]
+    },
+    {
+        "id": "d1a0a450.569428",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "2113e9bb.c52236",
+        "compatibilityMode": false,
+        "command": "player.get.mutestate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 520,
+        "y": 179,
+        "wires": [
+            [
+                "fca9ece.da6d41"
+            ]
+        ]
+    },
+    {
+        "id": "fca9ece.da6d41",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "mute wintergarden",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 931,
+        "y": 179,
+        "wires": []
+    },
+    {
+        "id": "8f012bc7.c9fe98",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 109,
+        "y": 100,
+        "wires": [
+            [
+                "f97688b1.75e398"
+            ]
+        ]
+    },
+    {
+        "id": "55156996.eedaa8",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 110,
+        "y": 165,
+        "wires": [
+            [
+                "b89f15c4.c116b8"
+            ]
+        ]
+    },
+    {
+        "id": "826c56c1.6d45b8",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "playerName",
+                "v": "A E.r_k-er:1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.set.mutestate",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 108,
+        "y": 230,
+        "wires": [
+            [
+                "82a36c15.64e6e"
+            ]
+        ]
+    },
+    {
+        "id": "82a36c15.64e6e",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "message to kitchen",
+        "x": 290,
+        "y": 246,
+        "wires": [
+            [
+                "65cb1f22.997bb"
+            ]
+        ]
+    },
+    {
+        "id": "65cb1f22.997bb",
+        "type": "change",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "player.get.mutestate",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 471,
+        "y": 246,
+        "wires": [
+            [
+                "a18f1cd9.964f9"
+            ]
+        ]
+    },
+    {
+        "id": "8844e509.682ac8",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "mute A E.r_k-er:1 as playerName",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 982,
+        "y": 246,
+        "wires": []
+    },
+    {
+        "id": "e1a809ce.4435f8",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "playerName",
+                "v": "A E.r_k-er:1",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.set.mutestate",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 108,
+        "y": 262,
+        "wires": [
+            [
+                "82a36c15.64e6e"
+            ]
+        ]
+    },
+    {
+        "id": "a18f1cd9.964f9",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "message to kitchen",
+        "x": 651,
+        "y": 246,
+        "wires": [
+            [
+                "8844e509.682ac8"
+            ]
+        ]
+    },
+    {
+        "id": "7a9b0e4.d9ea9f",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "playerName",
+                "v": "Küche",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.set.mutestate",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 110,
+        "y": 294,
+        "wires": [
+            [
+                "7eeb146c.ad717c"
+            ]
+        ]
+    },
+    {
+        "id": "7eeb146c.ad717c",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "2113e9bb.c52236",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "message to winterg",
+        "x": 289,
+        "y": 312,
+        "wires": [
+            [
+                "339f5296.87f5ee"
+            ]
+        ]
+    },
+    {
+        "id": "339f5296.87f5ee",
+        "type": "change",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "player.get.mutestate",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 470,
+        "y": 312,
+        "wires": [
+            [
+                "b78ff4e7.893878"
+            ]
+        ]
+    },
+    {
+        "id": "dda13d21.cd199",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "mute Küche as playerName",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 959,
+        "y": 312,
+        "wires": []
+    },
+    {
+        "id": "198ecff0.48201",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "playerName",
+                "v": "Küche",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.set.mutestate",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 110,
+        "y": 326,
+        "wires": [
+            [
+                "7eeb146c.ad717c"
+            ]
+        ]
+    },
+    {
+        "id": "b78ff4e7.893878",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "2113e9bb.c52236",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "message to winterg",
+        "x": 650,
+        "y": 312,
+        "wires": [
+            [
+                "dda13d21.cd199"
+            ]
+        ]
+    },
+    {
+        "id": "17a839be.b41306",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute off",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "playerName",
+                "v": "Küche",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.set.mutestate",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 110,
+        "y": 359,
+        "wires": [
+            [
+                "3681b8ba.cd4bd8"
+            ]
+        ]
+    },
+    {
+        "id": "3681b8ba.cd4bd8",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "message to kitchen",
+        "x": 295,
+        "y": 377,
+        "wires": [
+            [
+                "7d33a4e.ed8465c"
+            ]
+        ]
+    },
+    {
+        "id": "7d33a4e.ed8465c",
+        "type": "change",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "player.get.mutestate",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 475,
+        "y": 377,
+        "wires": [
+            [
+                "addbd187.917b3"
+            ]
+        ]
+    },
+    {
+        "id": "dcd227db.24a8d8",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "mute Küche as playerName and config",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 986,
+        "y": 377,
+        "wires": []
+    },
+    {
+        "id": "b2966ad3.7b9f78",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "set mute on",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "playerName",
+                "v": "Küche",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.set.mutestate",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 110,
+        "y": 391,
+        "wires": [
+            [
+                "3681b8ba.cd4bd8"
+            ]
+        ]
+    },
+    {
+        "id": "addbd187.917b3",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "message to kitchen",
+        "x": 655,
+        "y": 377,
+        "wires": [
+            [
+                "dcd227db.24a8d8"
+            ]
+        ]
+    },
+    {
+        "id": "511ba9d3.ce96e8",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "all standalone",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 107,
+        "y": 442,
+        "wires": [
+            [
+                "d129da7f.ec1128"
+            ]
+        ]
+    },
+    {
+        "id": "d129da7f.ec1128",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "88e9fa70.4a53e8",
+        "compatibilityMode": false,
+        "command": "household.separate.group",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 325,
+        "y": 442,
+        "wires": [
+            [
+                "bc6dac79.02d24"
+            ]
+        ]
+    },
+    {
+        "id": "bc6dac79.02d24",
+        "type": "delay",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 516,
+        "y": 442,
+        "wires": [
+            [
+                "946555f2.adc598"
+            ]
+        ]
+    },
+    {
+        "id": "946555f2.adc598",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "household.get.groups",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 699,
+        "y": 442,
+        "wires": [
+            [
+                "902da770.ba6808"
+            ]
+        ]
+    },
+    {
+        "id": "902da770.ba6808",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 892,
+        "y": 442,
+        "wires": []
+    },
+    {
+        "id": "a9d514b.e4371e8",
+        "type": "comment",
+        "z": "2655a232.b82cae",
+        "name": "now do the same for separated group",
+        "info": "",
+        "x": 190,
+        "y": 484,
+        "wires": []
+    },
+    {
+        "id": "647e6b7c.872e64",
+        "type": "comment",
+        "z": "2655a232.b82cae",
+        "name": "now do the same for separated group",
+        "info": "",
+        "x": 190,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b4d43be8.fb4548",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "create small group",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "3b09d01d.7f75b"
+            ]
+        ]
+    },
+    {
+        "id": "3b09d01d.7f75b",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "household.create.group",
+        "state": "Küche,A E.r_k-er:1",
+        "stateType": "str",
+        "name": "",
+        "x": 348,
+        "y": 520,
+        "wires": [
+            [
+                "8536e016.51612"
+            ]
+        ]
+    },
+    {
+        "id": "8536e016.51612",
+        "type": "delay",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 537,
+        "y": 520,
+        "wires": [
+            [
+                "379c4d14.0ea7f2"
+            ]
+        ]
+    },
+    {
+        "id": "379c4d14.0ea7f2",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "household.get.groups",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 717,
+        "y": 520,
+        "wires": [
+            [
+                "9fa8445a.65b7b8"
+            ]
+        ]
+    },
+    {
+        "id": "9fa8445a.65b7b8",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 891,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "e03e0e14.31393",
+        "type": "comment",
+        "z": "2655a232.b82cae",
+        "name": "now with stereopair wintergarden, bath and all grouped",
+        "info": "",
+        "x": 200,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "72c5800d.3f7ac",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "create stereopair",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 640,
+        "wires": [
+            [
+                "cf1da383.b5dbc"
+            ]
+        ]
+    },
+    {
+        "id": "cf30f8db.7b8558",
+        "type": "delay",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 642,
+        "y": 640,
+        "wires": [
+            [
+                "105fbe1f.6e17c2"
+            ]
+        ]
+    },
+    {
+        "id": "105fbe1f.6e17c2",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "household.get.groups",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 827,
+        "y": 640,
+        "wires": [
+            [
+                "24e223f7.f532dc"
+            ]
+        ]
+    },
+    {
+        "id": "24e223f7.f532dc",
+        "type": "debug",
+        "z": "2655a232.b82cae",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 997,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "b6965e12.6a17f",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "household.create.group",
+        "state": "Küche,Wohnzimmer,A E.r_k-er:1",
+        "stateType": "str",
+        "name": "",
+        "x": 451,
+        "y": 640,
+        "wires": [
+            [
+                "cf30f8db.7b8558"
+            ]
+        ]
+    },
+    {
+        "id": "cf1da383.b5dbc",
+        "type": "change",
+        "z": "2655a232.b82cae",
+        "name": "Bad become invisible",
+        "rules": [
+            {
+                "t": "set",
+                "p": "playerNameRight",
+                "pt": "msg",
+                "to": "Bad",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 169,
+        "y": 680,
+        "wires": [
+            [
+                "1a7ea84c.1b44a8"
+            ]
+        ]
+    },
+    {
+        "id": "1a7ea84c.1b44a8",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "household.create.stereopair",
+        "state": "A E.r_k-er:1",
+        "stateType": "str",
+        "name": "",
+        "x": 212,
+        "y": 720,
+        "wires": [
+            [
+                "b6965e12.6a17f"
+            ]
+        ]
+    },
+    {
+        "id": "5fe5fa54.f92be4",
+        "type": "inject",
+        "z": "2655a232.b82cae",
+        "name": "separate stereopair",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 624,
+        "y": 700,
+        "wires": [
+            [
+                "bfcab7da.97ba58"
+            ]
+        ]
+    },
+    {
+        "id": "bfcab7da.97ba58",
+        "type": "sonos-universal",
+        "z": "2655a232.b82cae",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "household.separate.stereopair",
+        "state": "A E.r_k-er:1",
+        "stateType": "str",
+        "name": "",
+        "x": 870,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e3a74889.459c18",
+        "type": "sonosevents-notify",
+        "z": "55805384.a4695c",
+        "confignode": "a72ce1f8.d4a8",
+        "x": 80,
+        "y": 540,
+        "wires": [
+            [
+                "c2f5af44.24407"
             ]
         ]
     }
