@@ -513,13 +513,6 @@
         "ipaddress": "192.168.178.37"
     },
     {
-        "id": "22ba72aa.09f29e",
-        "type": "sonosevents-config",
-        "name": "household",
-        "listenerHostname": "",
-        "listenerPort": ""
-    },
-    {
         "id": "2bd7de2f.3ca842",
         "type": "ui_group",
         "name": "Events",
@@ -633,6 +626,22 @@
                 "py": 0
             }
         }
+    },
+    {
+        "id": "1c70290d.90a4e7",
+        "type": "sonosevents-config",
+        "name": "household",
+        "listenerHostname": "",
+        "listenerPort": ""
+    },
+    {
+        "id": "d563c675.17f6d8",
+        "type": "ui_tab",
+        "name": "Media",
+        "icon": "fa-music",
+        "order": 6,
+        "disabled": false,
+        "hidden": false
     },
     {
         "id": "497dc083.e5d35",
@@ -29116,309 +29125,6 @@
         "wires": []
     },
     {
-        "id": "4851b535.49a41c",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 963,
-        "y": 322,
-        "wires": []
-    },
-    {
-        "id": "674ad607.7261f8",
-        "type": "switch",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "only NOT \"Transitioning\"",
-        "property": "payload.playbackstate",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "neq",
-                "v": "transitioning",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 550,
-        "y": 146,
-        "wires": [
-            [
-                "4ae7f4d7.95bbac"
-            ]
-        ]
-    },
-    {
-        "id": "9a532b6a.f66c68",
-        "type": "switch",
-        "z": "e0bd5fc5.e4aaa",
-        "d": true,
-        "name": "filter by topic",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "volume",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 1,
-        "x": 291,
-        "y": 323,
-        "wires": [
-            [
-                "617886ab.4fe828"
-            ]
-        ]
-    },
-    {
-        "id": "bbc49e8d.fe75f",
-        "type": "rbe",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 843,
-        "y": 322,
-        "wires": [
-            [
-                "4851b535.49a41c"
-            ]
-        ]
-    },
-    {
-        "id": "4ae7f4d7.95bbac",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1010,
-        "y": 146,
-        "wires": []
-    },
-    {
-        "id": "ed321c33.d4b5d",
-        "type": "switch",
-        "z": "e0bd5fc5.e4aaa",
-        "d": true,
-        "name": "filter by topic",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "cont",
-                "v": "AVTransportService",
-                "vt": "str"
-            },
-            {
-                "t": "cont",
-                "v": "GroupRenderingControlService",
-                "vt": "str"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 310,
-        "y": 200,
-        "wires": [
-            [
-                "674ad607.7261f8"
-            ],
-            [
-                "1616553b.ba898b",
-                "329d2594.3f84ea"
-            ]
-        ]
-    },
-    {
-        "id": "1616553b.ba898b",
-        "type": "change",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "select property GroupVolume and to string",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$formatInteger(payload.GroupVolume,'##0' )\t",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "groupVolume",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
-        "y": 219,
-        "wires": [
-            [
-                "6515a083.d86f2"
-            ]
-        ]
-    },
-    {
-        "id": "329d2594.3f84ea",
-        "type": "change",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "select property GroupMute",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.GroupMute",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "groupMute",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 560,
-        "y": 251,
-        "wires": [
-            [
-                "259a7ae5.000dd6"
-            ]
-        ]
-    },
-    {
-        "id": "6515a083.d86f2",
-        "type": "rbe",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 861,
-        "y": 219,
-        "wires": [
-            [
-                "ef00295f.30a6b8"
-            ]
-        ]
-    },
-    {
-        "id": "259a7ae5.000dd6",
-        "type": "rbe",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "func": "rbe",
-        "gap": "",
-        "start": "",
-        "inout": "out",
-        "property": "payload",
-        "x": 770,
-        "y": 251,
-        "wires": [
-            [
-                "2a4507c2.941d08"
-            ]
-        ]
-    },
-    {
-        "id": "ef00295f.30a6b8",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1002,
-        "y": 219,
-        "wires": []
-    },
-    {
-        "id": "2a4507c2.941d08",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 902,
-        "y": 251,
-        "wires": []
-    },
-    {
-        "id": "617886ab.4fe828",
-        "type": "change",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "select property Volume and to string",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$formatInteger(payload,'##0' )\t",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 570,
-        "y": 322,
-        "wires": [
-            [
-                "bbc49e8d.fe75f"
-            ]
-        ]
-    },
-    {
         "id": "67fcb349.37af2c",
         "type": "inject",
         "z": "e0bd5fc5.e4aaa",
@@ -29435,8 +29141,8 @@
         "topic": "",
         "payload": "PATH",
         "payloadType": "env",
-        "x": 110,
-        "y": 1300,
+        "x": 90,
+        "y": 1484,
         "wires": [
             [
                 "60565543.eb53dc"
@@ -29456,8 +29162,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 266,
-        "y": 1332,
+        "x": 310,
+        "y": 1380,
         "wires": []
     },
     {
@@ -29477,8 +29183,8 @@
         "topic": "",
         "payload": "SONOS_LISTENER_HOST",
         "payloadType": "env",
-        "x": 111,
-        "y": 1340,
+        "x": 90,
+        "y": 1380,
         "wires": [
             [
                 "60565543.eb53dc"
@@ -29502,30 +29208,13 @@
         "topic": "",
         "payload": "DEBUG",
         "payloadType": "env",
-        "x": 110,
-        "y": 1380,
+        "x": 90,
+        "y": 1446,
         "wires": [
             [
                 "60565543.eb53dc"
             ]
         ]
-    },
-    {
-        "id": "e9515e53.1944d",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 250,
-        "y": 80,
-        "wires": []
     },
     {
         "id": "9912fd94.3b596",
@@ -29540,8 +29229,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 790,
-        "y": 480,
+        "x": 265,
+        "y": 1074,
         "wires": [
             [
                 "658fefbb.9c8c1",
@@ -29570,8 +29259,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 630,
-        "y": 480,
+        "x": 105,
+        "y": 1074,
         "wires": [
             [
                 "9912fd94.3b596"
@@ -29590,8 +29279,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 967,
-        "y": 440,
+        "x": 442,
+        "y": 1034,
         "wires": []
     },
     {
@@ -29627,8 +29316,8 @@
         ],
         "outputs": 0,
         "cts": false,
-        "x": 1177,
-        "y": 480,
+        "x": 652,
+        "y": 1074,
         "wires": []
     },
     {
@@ -29650,8 +29339,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 977,
-        "y": 480,
+        "x": 452,
+        "y": 1074,
         "wires": [
             [
                 "d5b78740.f76888"
@@ -29676,55 +29365,11 @@
         "payload": "",
         "payloadType": "date",
         "topic": "",
-        "x": 630,
-        "y": 440,
+        "x": 105,
+        "y": 1034,
         "wires": [
             [
                 "9912fd94.3b596"
-            ]
-        ]
-    },
-    {
-        "id": "58183588.096e3c",
-        "type": "file",
-        "z": "e0bd5fc5.e4aaa",
-        "d": true,
-        "name": "",
-        "filename": "\\\\Localhost\\C$\\Users\\hekla\\Downloads\\props.txt",
-        "appendNewline": true,
-        "createDir": false,
-        "overwriteFile": "false",
-        "encoding": "utf8",
-        "x": 560,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "1f7a96f7.894869",
-        "type": "change",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.properties",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 240,
-        "y": 480,
-        "wires": [
-            [
-                "58183588.096e3c"
             ]
         ]
     },
@@ -29748,8 +29393,8 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 570,
-        "y": 620,
+        "x": 330,
+        "y": 500,
         "wires": [
             [
                 "1691f0bc.6fe12f"
@@ -29769,8 +29414,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1070,
-        "y": 620,
+        "x": 830,
+        "y": 500,
         "wires": []
     },
     {
@@ -29816,8 +29461,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 360,
-        "y": 620,
+        "x": 120,
+        "y": 500,
         "wires": [
             [
                 "4a91d044.06275"
@@ -29857,8 +29502,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 860,
-        "y": 580,
+        "x": 600,
+        "y": 500,
         "wires": [
             [
                 "2676698c.c393c6"
@@ -29875,8 +29520,8 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 570,
-        "y": 720,
+        "x": 330,
+        "y": 740,
         "wires": [
             [
                 "2676698c.c393c6"
@@ -29904,8 +29549,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 350,
-        "y": 740,
+        "x": 110,
+        "y": 760,
         "wires": [
             [
                 "9782b59.3671948"
@@ -29933,7 +29578,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 280,
+        "x": 100,
         "y": 840,
         "wires": [
             [
@@ -29945,13 +29590,13 @@
         "id": "f0ef441a.222fd8",
         "type": "sonos-universal",
         "z": "55805384.a4695c",
-        "confignode": "32a98882.56e1c8",
+        "confignode": "88e9fa70.4a53e8",
         "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 670,
+        "x": 490,
         "y": 840,
         "wires": [
             []
@@ -29964,14 +29609,15 @@
         "confignode": "88e9fa70.4a53e8",
         "compatibilityMode": false,
         "command": "mysonos.export.item",
-        "state": "Diamond L",
+        "state": "Jerusa",
         "stateType": "str",
         "name": "",
-        "x": 460,
+        "x": 280,
         "y": 840,
         "wires": [
             [
-                "f0ef441a.222fd8"
+                "f0ef441a.222fd8",
+                "edd7e6fb.f06238"
             ]
         ]
     },
@@ -30283,8 +29929,8 @@
         "persist": false,
         "proxy": "",
         "authType": "",
-        "x": 290,
-        "y": 1220,
+        "x": 295,
+        "y": 1194,
         "wires": [
             [
                 "aefd1889.d56b98",
@@ -30314,8 +29960,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 110,
-        "y": 1220,
+        "x": 115,
+        "y": 1194,
         "wires": [
             [
                 "d7053241.8a2e4"
@@ -30334,8 +29980,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 770,
-        "y": 1220,
+        "x": 775,
+        "y": 1194,
         "wires": []
     },
     {
@@ -30357,8 +30003,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 539,
-        "y": 1259,
+        "x": 544,
+        "y": 1233,
         "wires": [
             [
                 "cf30fc7a.a4f46"
@@ -30369,10 +30015,10 @@
         "id": "3e206e23.dc06e2",
         "type": "comment",
         "z": "e0bd5fc5.e4aaa",
-        "name": "Monitoring Event Server",
+        "name": "Monitoring Event Server Simple",
         "info": "",
-        "x": 105,
-        "y": 1180,
+        "x": 140,
+        "y": 1154,
         "wires": []
     },
     {
@@ -30394,8 +30040,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 528,
-        "y": 1183,
+        "x": 533,
+        "y": 1157,
         "wires": [
             [
                 "cf30fc7a.a4f46"
@@ -30421,8 +30067,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 539,
-        "y": 1220,
+        "x": 544,
+        "y": 1194,
         "wires": [
             [
                 "cf30fc7a.a4f46"
@@ -30430,517 +30076,1553 @@
         ]
     },
     {
-        "id": "17228008.57278",
-        "type": "sonosevents-household",
-        "z": "e0bd5fc5.e4aaa",
-        "confignode": "22ba72aa.09f29e",
-        "playerHostname": "192.168.178.35",
-        "zoneGroupTopologyRaw": true,
-        "allGroups": true,
-        "alarmClockRaw": false,
-        "contentDirectoryRaw": false,
-        "outputs": 8,
-        "x": 120,
-        "y": 700,
-        "wires": [
-            [
-                "f0310910.c65748"
-            ],
-            [
-                "f7795220.ddd7b"
-            ],
-            [],
-            [],
-            [
-                "17c6b422.06125c"
-            ],
-            [],
-            [
-                "f42e1229.2edad"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "f0310910.c65748",
+        "id": "edd7e6fb.f06238",
         "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "raw",
+        "z": "55805384.a4695c",
+        "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 310,
-        "y": 631,
-        "wires": []
-    },
-    {
-        "id": "f7795220.ddd7b",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "all groups",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 667,
-        "wires": []
-    },
-    {
-        "id": "17c6b422.06125c",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "alarm",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 310,
-        "y": 706,
-        "wires": []
-    },
-    {
-        "id": "f42e1229.2edad",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "content",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 745,
-        "wires": []
-    },
-    {
-        "id": "772d8d2a.138844",
-        "type": "sonosevents-player",
-        "z": "e0bd5fc5.e4aaa",
-        "d": true,
-        "confignode": "22ba72aa.09f29e",
-        "playerHostname": "192.168.178.37",
-        "renderingControlRaw": false,
-        "volume": false,
-        "mutestate": false,
-        "groupManagementRaw": true,
-        "localGroupUuid": true,
-        "audioInServiceRaw": false,
-        "playing": false,
-        "devicePropertiesRaw": false,
-        "micEnabled": false,
-        "outputs": 14,
-        "x": 730,
-        "y": 740,
-        "wires": [
-            [
-                "c36d1681.1a2318"
-            ],
-            [
-                "476edfe7.14cdd"
-            ],
-            [
-                "332ddb6f.297254"
-            ],
-            [],
-            [],
-            [
-                "192262db.a9968d"
-            ],
-            [
-                "a8efb4b7.66a668"
-            ],
-            [],
-            [
-                "ce9201c9.6cc8f"
-            ],
-            [
-                "4acdbbc0.65b734"
-            ],
-            [
-                "3dfa07d5.562448"
-            ],
-            [
-                "8ca902dd.8a50a"
-            ],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "c36d1681.1a2318",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "raw",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
-        "y": 633,
-        "wires": []
-    },
-    {
-        "id": "476edfe7.14cdd",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "volume",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 669,
-        "wires": []
-    },
-    {
-        "id": "332ddb6f.297254",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "mute",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
-        "y": 708,
-        "wires": []
-    },
-    {
-        "id": "192262db.a9968d",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "groupmanagement",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 970,
-        "y": 747,
-        "wires": []
-    },
-    {
-        "id": "ce9201c9.6cc8f",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "audioIn Raw",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 822,
-        "wires": []
-    },
-    {
-        "id": "3dfa07d5.562448",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "device raw",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "a8efb4b7.66a668",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "uuid",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 930,
+        "x": 620,
         "y": 780,
         "wires": []
     },
     {
-        "id": "4acdbbc0.65b734",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "playing",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 860,
-        "wires": []
-    },
-    {
-        "id": "8ca902dd.8a50a",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "mic enabled",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 940,
-        "wires": []
-    },
-    {
-        "id": "fb01587a.d002b8",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "raw",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 310,
-        "y": 840,
-        "wires": []
-    },
-    {
-        "id": "9cb427d6.9bd908",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "transport",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 880,
-        "wires": []
-    },
-    {
-        "id": "54605868.55c808",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "content",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 920,
-        "wires": []
-    },
-    {
-        "id": "2fe431cf.306fce",
-        "type": "sonosevents-group",
+        "id": "c70507dc.0cf948",
+        "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
         "d": true,
-        "confignode": "22ba72aa.09f29e",
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.37",
-        "avTransportRaw": false,
-        "basics": false,
-        "content": false,
-        "groupRenderingControlRaw": false,
-        "playbackstate": false,
-        "groupMutestate": true,
-        "groupVolume": false,
-        "outputs": 9,
-        "x": 110,
-        "y": 973,
+        "events": [
+            {
+                "fullName": "AVTransportService.raw"
+            },
+            {
+                "fullName": "AVTransportService.basics"
+            },
+            {
+                "fullName": "AVTransportService.content"
+            },
+            {
+                "fullName": "AVTransportService.playbackstate"
+            }
+        ],
+        "outputs": 4,
+        "x": 145,
+        "y": 1634,
         "wires": [
             [
-                "fb01587a.d002b8"
+                "f7238ad3.84d908"
             ],
             [
-                "9cb427d6.9bd908"
+                "147566a3.d9d6d9"
             ],
             [
-                "54605868.55c808"
+                "8d760a73.771668"
             ],
             [
-                "4f5c346a.6163dc"
-            ],
-            [],
-            [
-                "d527436b.69c5c"
-            ],
-            [
-                "a7ff867b.617958"
-            ],
-            [
-                "f0409305.409e1"
-            ],
-            []
+                "6fd81dee.46a314"
+            ]
         ]
     },
     {
-        "id": "4f5c346a.6163dc",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "playstate",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 960,
-        "wires": []
-    },
-    {
-        "id": "d527436b.69c5c",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "raw",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 310,
-        "y": 1000,
-        "wires": []
-    },
-    {
-        "id": "a7ff867b.617958",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "volume",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 1040,
-        "wires": []
-    },
-    {
-        "id": "f0409305.409e1",
-        "type": "debug",
-        "z": "e0bd5fc5.e4aaa",
-        "name": "mutestate",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 320,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "6c2246fa.d14df8",
-        "type": "sonosevents-player",
-        "z": "e0bd5fc5.e4aaa",
-        "d": true,
-        "confignode": "22ba72aa.09f29e",
-        "playerHostname": "192.168.178.36",
-        "renderingControlRaw": false,
-        "volume": false,
-        "mutestate": false,
-        "groupManagementRaw": true,
-        "localGroupUuid": false,
-        "audioInServiceRaw": false,
-        "playing": false,
-        "devicePropertiesRaw": false,
-        "micEnabled": false,
-        "outputs": 14,
-        "x": 1290,
-        "y": 720,
-        "wires": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [
-                "10f922ce.e033bd"
-            ],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
-        ]
-    },
-    {
-        "id": "10f922ce.e033bd",
+        "id": "f7238ad3.84d908",
         "type": "debug",
         "z": "e0bd5fc5.e4aaa",
         "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1574,
+        "wires": []
+    },
+    {
+        "id": "147566a3.d9d6d9",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1614,
+        "wires": []
+    },
+    {
+        "id": "8d760a73.771668",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1654,
+        "wires": []
+    },
+    {
+        "id": "6fd81dee.46a314",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1694,
+        "wires": []
+    },
+    {
+        "id": "e952066a.ce94a8",
+        "type": "inject",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "SONOS_LISTENER_HOST",
+        "payloadType": "env",
+        "x": 115,
+        "y": 1327,
+        "wires": [
+            [
+                "451be176.c836b"
+            ]
+        ]
+    },
+    {
+        "id": "451be176.c836b",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 295,
+        "y": 1327,
+        "wires": []
+    },
+    {
+        "id": "c47295c3.e31848",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.37",
+        "events": [
+            {
+                "fullName": "AudioInService.raw"
+            },
+            {
+                "fullName": "AudioInService.lineInConnected"
+            },
+            {
+                "fullName": "AlarmClockService.raw"
+            },
+            {
+                "fullName": "AlarmClockService.alarmListVersion"
+            }
+        ],
+        "outputs": 4,
+        "x": 645,
+        "y": 1634,
+        "wires": [
+            [
+                "56fc3057.fefa1"
+            ],
+            [
+                "1a796512.d49a3b"
+            ],
+            [
+                "b6856df4.49b87"
+            ],
+            [
+                "740d89b2.6fa078"
+            ]
+        ]
+    },
+    {
+        "id": "56fc3057.fefa1",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1574,
+        "wires": []
+    },
+    {
+        "id": "1a796512.d49a3b",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1614,
+        "wires": []
+    },
+    {
+        "id": "b6856df4.49b87",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1654,
+        "wires": []
+    },
+    {
+        "id": "740d89b2.6fa078",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1694,
+        "wires": []
+    },
+    {
+        "id": "add34c41.c98f",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.36",
+        "events": [
+            {
+                "fullName": "ConnectionManagerService.raw"
+            },
+            {
+                "fullName": "ConnectionManagerService.currentConnectionIds"
+            },
+            {
+                "fullName": "ContentDirectoryService.raw"
+            },
+            {
+                "fullName": "ContentDirectoryService.mySonosUpdateId"
+            },
+            {
+                "fullName": "DevicePropertiesService.raw"
+            },
+            {
+                "fullName": "DevicePropertiesService.micEnabled"
+            },
+            {
+                "fullName": "DevicePropertiesService.invisible"
+            }
+        ],
+        "outputs": 7,
+        "x": 145,
+        "y": 1874,
+        "wires": [
+            [
+                "9dd14d9a.0a509"
+            ],
+            [
+                "e255d699.42f508"
+            ],
+            [
+                "e38f5538.345428"
+            ],
+            [
+                "22726048.2f54"
+            ],
+            [
+                "f509ed22.5efdf"
+            ],
+            [
+                "21f4e725.710d28"
+            ],
+            [
+                "e31fa26f.e2649"
+            ]
+        ]
+    },
+    {
+        "id": "9dd14d9a.0a509",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1754,
+        "wires": []
+    },
+    {
+        "id": "e255d699.42f508",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1794,
+        "wires": []
+    },
+    {
+        "id": "e38f5538.345428",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1834,
+        "wires": []
+    },
+    {
+        "id": "22726048.2f54",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1874,
+        "wires": []
+    },
+    {
+        "id": "f509ed22.5efdf",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1914,
+        "wires": []
+    },
+    {
+        "id": "21f4e725.710d28",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1954,
+        "wires": []
+    },
+    {
+        "id": "e31fa26f.e2649",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 1994,
+        "wires": []
+    },
+    {
+        "id": "ad2d12df.df40a",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "show Event Server Subscriptions Dahsboard",
+        "info": "",
+        "x": 180,
+        "y": 994,
+        "wires": []
+    },
+    {
+        "id": "5165f479.ca505c",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "show ENV Variabel",
+        "info": "",
+        "x": 100,
+        "y": 1291,
+        "wires": []
+    },
+    {
+        "id": "5c063fd2.f8b88",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Testing events",
+        "info": "",
+        "x": 75,
+        "y": 1534,
+        "wires": []
+    },
+    {
+        "id": "f7d67ba5.341bb8",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.37",
+        "events": [
+            {
+                "fullName": "GroupManagementService.raw"
+            },
+            {
+                "fullName": "GroupManagementService.localGroupUuid"
+            },
+            {
+                "fullName": "GroupRenderingControlService.raw"
+            },
+            {
+                "fullName": "GroupRenderingControlService.groupMutestate"
+            },
+            {
+                "fullName": "GroupRenderingControlService.groupVolume"
+            },
+            {
+                "fullName": "MusicServicesService.raw"
+            },
+            {
+                "fullName": "MusicServicesService.serviceListVersion"
+            }
+        ],
+        "outputs": 7,
+        "x": 645,
+        "y": 1874,
+        "wires": [
+            [
+                "2e0b5d36.d4bcd2"
+            ],
+            [
+                "70f26152.ed63e"
+            ],
+            [
+                "c998112e.f86c4"
+            ],
+            [
+                "2cc8f92c.18e2a6"
+            ],
+            [
+                "6c1fbc8.1c00c44"
+            ],
+            [
+                "11f0e678.e1f24a"
+            ],
+            [
+                "9d265114.91682"
+            ]
+        ]
+    },
+    {
+        "id": "2e0b5d36.d4bcd2",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1754,
+        "wires": []
+    },
+    {
+        "id": "70f26152.ed63e",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1794,
+        "wires": []
+    },
+    {
+        "id": "c998112e.f86c4",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1834,
+        "wires": []
+    },
+    {
+        "id": "2cc8f92c.18e2a6",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1874,
+        "wires": []
+    },
+    {
+        "id": "6c1fbc8.1c00c44",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1914,
+        "wires": []
+    },
+    {
+        "id": "11f0e678.e1f24a",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1954,
+        "wires": []
+    },
+    {
+        "id": "9d265114.91682",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 855,
+        "y": 1994,
+        "wires": []
+    },
+    {
+        "id": "b38e8cb7.0bed7",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.36",
+        "events": [
+            {
+                "fullName": "QueueService.raw"
+            },
+            {
+                "fullName": "QueueService.updateId"
+            },
+            {
+                "fullName": "RenderingControlService.raw"
+            },
+            {
+                "fullName": "RenderingControlService.mutestate"
+            },
+            {
+                "fullName": "RenderingControlService.volume"
+            },
+            {
+                "fullName": "SystemPropertiesService.raw"
+            },
+            {
+                "fullName": "SystemPropertiesService.updateId"
+            }
+        ],
+        "outputs": 7,
+        "x": 145,
+        "y": 2154,
+        "wires": [
+            [
+                "66085323.b2283c"
+            ],
+            [
+                "88054abb.7ffa98"
+            ],
+            [
+                "52350f79.1e8e7"
+            ],
+            [
+                "dd25b76a.d13bb8"
+            ],
+            [
+                "193844ae.ae261b"
+            ],
+            [
+                "50b7f52a.0411cc"
+            ],
+            [
+                "b71775fd.7aa9d8"
+            ]
+        ]
+    },
+    {
+        "id": "66085323.b2283c",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2054,
+        "wires": []
+    },
+    {
+        "id": "88054abb.7ffa98",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2094,
+        "wires": []
+    },
+    {
+        "id": "52350f79.1e8e7",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2134,
+        "wires": []
+    },
+    {
+        "id": "dd25b76a.d13bb8",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2174,
+        "wires": []
+    },
+    {
+        "id": "193844ae.ae261b",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2214,
+        "wires": []
+    },
+    {
+        "id": "50b7f52a.0411cc",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2254,
+        "wires": []
+    },
+    {
+        "id": "b71775fd.7aa9d8",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 355,
+        "y": 2294,
+        "wires": []
+    },
+    {
+        "id": "94dd4314.00ea6",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.36",
+        "events": [
+            {
+                "fullName": "ZoneGroupTopologyService.raw"
+            }
+        ],
+        "outputs": 1,
+        "x": 640,
+        "y": 2140,
+        "wires": [
+            [
+                "ad001545.250f58"
+            ]
+        ]
+    },
+    {
+        "id": "92632a9.7c637d8",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "EXAMPLES",
+        "info": "",
+        "x": 75,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "eebe2546.84c568",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.35",
+        "events": [
+            {
+                "fullName": "RenderingControlService.volume"
+            }
+        ],
+        "outputs": 1,
+        "x": 140,
+        "y": 866,
+        "wires": [
+            [
+                "ab5591cd.a1daa"
+            ]
+        ]
+    },
+    {
+        "id": "ab5591cd.a1daa",
+        "type": "rbe",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 321,
+        "y": 866,
+        "wires": [
+            [
+                "118cc48.4b24b3c"
+            ]
+        ]
+    },
+    {
+        "id": "118cc48.4b24b3c",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "convert to number",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$number(payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 495,
+        "y": 866,
+        "wires": [
+            [
+                "6b316cf2.8ab5f4"
+            ]
+        ]
+    },
+    {
+        "id": "6b316cf2.8ab5f4",
+        "type": "switch",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "> 30",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "gt",
+                "v": "30",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 866,
+        "wires": [
+            [
+                "3975061b.71c97a"
+            ]
+        ]
+    },
+    {
+        "id": "3975061b.71c97a",
+        "type": "sonos-universal",
+        "z": "e0bd5fc5.e4aaa",
+        "confignode": "32a98882.56e1c8",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "29",
+        "stateType": "str",
+        "name": "",
+        "x": 841,
+        "y": 866,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45c1301b.18452",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.36",
+        "events": [
+            {
+                "fullName": "AVTransportService.basics"
+            }
+        ],
+        "outputs": 1,
+        "x": 139,
+        "y": 720,
+        "wires": [
+            [
+                "8d84742b.522518"
+            ]
+        ]
+    },
+    {
+        "id": "53685c9c.006c74",
+        "type": "rbe",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 477,
+        "y": 720,
+        "wires": [
+            [
+                "514c09af.0cb928"
+            ]
+        ]
+    },
+    {
+        "id": "8d84742b.522518",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "select uri",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.uri",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 333,
+        "y": 720,
+        "wires": [
+            [
+                "53685c9c.006c74"
+            ]
+        ]
+    },
+    {
+        "id": "514c09af.0cb928",
+        "type": "switch",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "tv?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "x-sonos-htastream:",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 616,
+        "y": 720,
+        "wires": [
+            [
+                "190e8a02.ec3c16"
+            ]
+        ]
+    },
+    {
+        "id": "190e8a02.ec3c16",
+        "type": "sonos-universal",
+        "z": "e0bd5fc5.e4aaa",
+        "confignode": "8d44022c.adb65",
+        "compatibilityMode": false,
+        "command": "player.set.volume",
+        "state": "20",
+        "stateType": "str",
+        "name": "",
+        "x": 790,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7a17088d.45c358",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Restrict volume to range 0  to 29 - every volume above will be set back to 29",
+        "info": "# Use case\nAnytime someone changes the volume of the specified speaker to a volume higher 0, the volume is reduced to 29. \n\n# My setup \n- player at ip \"192.168.178.35\"\n- config node name sonos events: \"household\"\n\n- sonos-plus confignode name: \"bath\" with ip see above\n",
+        "x": 265,
+        "y": 833,
+        "wires": []
+    },
+    {
+        "id": "ce2f769d.919ba8",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- select your config node \n- select your players ip address",
+        "x": 190,
+        "y": 891,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "dc4dfc38.975a2",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "When TV switched on and Sonos Beam is being activated set the volume to 20",
+        "info": "# Use case\nWhen the TV is switched on, the SONOS Beam is being connected. This has been setup  in the SONOS app.  \nThe Beam will trigger an event and the volume is being set\n\n\n# My setup\n- SONOS beam is connected (wired) to TV (automatci launch)\n- \n- player SONOS beam at ip \"192.168.178.36\"\n- config node name sonos events: \"household\". \n\n- sonos-plus confignode name: \"living\" with ip see above\n",
+        "x": 275,
+        "y": 687,
+        "wires": []
+    },
+    {
+        "id": "d5b45eea.13343",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↓modify",
+        "info": "- select your SONOS player confignode",
+        "x": 830,
+        "y": 840,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "dfe668cf.117888",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "When A E.r_k-er:1 shows up in network it will join a group",
+        "info": "# Use case\nWhen player named \"A E.r_k-er:1\" shows up in network it will join the specified group.\n\n# My setup\n- player at ip \"192.168.178.35\". You can use any.\n- config node name sonos events: \"household\"\n\n- sonos-plus confignode name: \"living\". You can use any in group\n- players in group are \"Küche\", \"Bad\", \"Wohnzimmer\"\n",
+        "x": 215,
+        "y": 487,
+        "wires": []
+    },
+    {
+        "id": "79bd7e5a.995ee",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "current /previous player name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "previousPlayerArray",
+                "pt": "msg",
+                "to": "$flowContext('previousPlayerArray')",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "currentPlayerArray",
+                "pt": "msg",
+                "to": "payload.**.playerName",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 404,
+        "y": 521,
+        "wires": [
+            [
+                "27455f3c.cab9b"
+            ]
+        ]
+    },
+    {
+        "id": "2788e067.82b4b",
+        "type": "inject",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "init flow variable",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 601,
+        "wires": [
+            [
+                "41f87640.5995a8"
+            ]
+        ]
+    },
+    {
+        "id": "41f87640.5995a8",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "previousPlayerArray",
+                "pt": "flow",
+                "to": "[]",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 395,
+        "y": 601,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72b3ae2a.1363",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "update flow variable",
+        "rules": [
+            {
+                "t": "set",
+                "p": "previousPlayerArray",
+                "pt": "flow",
+                "to": "currentPlayerArray",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 693,
+        "y": 561,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c80e53f6.c3166",
+        "type": "switch",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "A E.r_k-er:1 new?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "jsonata_exp",
+                "v": "$count($filter(payload.[$='A E.r_k-er:1'], function ($item) {\t    $item\t})) > 0",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 1,
+        "x": 683,
+        "y": 521,
+        "wires": [
+            [
+                "d99a6d.4f47159"
+            ]
+        ]
+    },
+    {
+        "id": "27455f3c.cab9b",
+        "type": "function",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "get new player list",
+        "func": "// msg.currentPlayerArray current player array\n// msg.previousPlayerArray previous player array\n\n// returns array with names of those not in previous but in current\nconst current = msg.currentPlayerArray\nconst previous = msg.previousPlayerArray\n\nconst newPlayers = []\ncurrent.forEach(player => {\n    if (!previous.includes(player)) {\n        newPlayers.push(player)   \n    }\n})\nmsg.payload = newPlayers\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 464,
+        "y": 561,
+        "wires": [
+            [
+                "72b3ae2a.1363",
+                "c80e53f6.c3166"
+            ]
+        ]
+    },
+    {
+        "id": "b3228ed3.b10fb",
+        "type": "sonos-universal",
+        "z": "e0bd5fc5.e4aaa",
+        "confignode": "d0057e63.a9c5",
+        "compatibilityMode": false,
+        "command": "household.create.group",
+        "state": "Küche,Bad,Wohnzimmer,A E.r_k-er:1",
+        "stateType": "str",
+        "name": "Add A E.r_k-er:1",
+        "x": 1046,
+        "y": 521,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d99a6d.4f47159",
+        "type": "delay",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 871,
+        "y": 521,
+        "wires": [
+            [
+                "b3228ed3.b10fb"
+            ]
+        ]
+    },
+    {
+        "id": "29e13e12.cbf262",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↓modify",
+        "info": "- replace \"A E.r_k-er:1\" with your SONOS-Playername (not the confignode name!)\n",
+        "x": 672,
+        "y": 496,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "b4be9d5b.0a2ef",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.35",
+        "events": [
+            {
+                "fullName": "ZoneGroupTopologyService.allGroups"
+            }
+        ],
+        "outputs": 1,
+        "x": 140,
+        "y": 521,
+        "wires": [
+            [
+                "79bd7e5a.995ee"
+            ]
+        ]
+    },
+    {
+        "id": "557d218b.9e4e3",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "not playing",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.artUri",
+                "pt": "msg",
+                "to": "https://f4.bcbits.com/img/a1470450051_10.jpg",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "msg.payload.artist",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "msg.payload.title",
+                "pt": "msg",
+                "to": "Radio is off",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.processingUnit",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload.additional",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 670,
+        "y": 422,
+        "wires": [
+            [
+                "30c31c0d.10b304"
+            ]
+        ]
+    },
+    {
+        "id": "81bace9e.03959",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Shows title, artist, cover, station/playlist name and radio off",
+        "info": "# Use case\nProvides title, artist, cover of current track. Can be used to show track data in a dashboard or react on track changes.\nA special picture is shown, when player is not playing\n\n# My setup\n- player at ip \"192.168.178.37\". It is the coordinator of group\n- config node name sonos events: \"household\"\n",
+        "x": 215,
+        "y": 348,
+        "wires": []
+    },
+    {
+        "id": "f8ea8f31.41d73",
+        "type": "join",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "mode": "custom",
+        "build": "merged",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "1",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "num",
+        "reduceFixup": "",
+        "x": 331,
+        "y": 388,
+        "wires": [
+            [
+                "a9c6687c.d3c858"
+            ]
+        ]
+    },
+    {
+        "id": "a9c6687c.d3c858",
+        "type": "switch",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "is playing",
+        "property": "payload.playbackstate",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "playing",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 461,
+        "y": 388,
+        "wires": [
+            [
+                "41e71e07.7aad6"
+            ],
+            [
+                "557d218b.9e4e3"
+            ]
+        ]
+    },
+    {
+        "id": "41e71e07.7aad6",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.additional",
+                "pt": "msg",
+                "to": "payload.enqueuedTitle",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 382,
+        "wires": [
+            [
+                "30c31c0d.10b304"
+            ]
+        ]
+    },
+    {
+        "id": "9f880f74.622df",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.37",
+        "events": [
+            {
+                "fullName": "AVTransportService.content"
+            },
+            {
+                "fullName": "AVTransportService.basics"
+            }
+        ],
+        "outputs": 2,
+        "x": 141,
+        "y": 382,
+        "wires": [
+            [
+                "f8ea8f31.41d73"
+            ],
+            [
+                "f8ea8f31.41d73"
+            ]
+        ]
+    },
+    {
+        "id": "30c31c0d.10b304",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "title, artist, art, stations/playlist name",
         "active": true,
         "tosidebar": true,
         "console": false,
@@ -30949,8 +31631,513 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1490,
-        "y": 700,
+        "x": 1010,
+        "y": 382,
+        "wires": []
+    },
+    {
+        "id": "9edd2870.cc5388",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- select your config node \n- select your players ip address",
+        "x": 190,
+        "y": 748,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "e17f5f29.2aa4",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↓modify",
+        "info": "- select your SONOS player confignode",
+        "x": 770,
+        "y": 693,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "98f2474.421bcb8",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- select your config node \n- select your players ip address. you can use anyone.",
+        "x": 190,
+        "y": 546,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "c957951a.7f46c8",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↓modify",
+        "info": "- select your SONOS player confignode\n- enter names of all players in new group",
+        "x": 1045,
+        "y": 496,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "2c23286a.cb3238",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- select your config node \n- select your players ip address. Must be coordinator of group.",
+        "x": 190,
+        "y": 406,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "5bdde3ba.f0f28c",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "get groupname",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload.[*][playerName='Küche']).groupName",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 354,
+        "y": 239,
+        "wires": [
+            [
+                "38aff1bd.c2456e"
+            ]
+        ]
+    },
+    {
+        "id": "38aff1bd.c2456e",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "group name",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 538,
+        "y": 239,
+        "wires": []
+    },
+    {
+        "id": "8b70000.376e7",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.35",
+        "events": [
+            {
+                "fullName": "ZoneGroupTopologyService.allGroups"
+            }
+        ],
+        "outputs": 1,
+        "x": 140,
+        "y": 239,
+        "wires": [
+            [
+                "5bdde3ba.f0f28c"
+            ]
+        ]
+    },
+    {
+        "id": "18e9f93f.0a17f7",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Show groupname of a given player",
+        "info": "# Use case\nProvides the groupname of a given player to demonstrate usage of JSONata.\n\n# My setup\n- player at ip \"192.168.178.35\". \n- config node name sonos events: \"household\"\n\n- SONOS-Playername is \"Küche\"",
+        "x": 145,
+        "y": 206,
+        "wires": []
+    },
+    {
+        "id": "af6db01c.edab7",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- select your config node \n- select your players ip address. Can be any player",
+        "x": 189,
+        "y": 265,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "cf2b6419.a2ed28",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- Replaye \"Küche\" by your SONOS-Playername",
+        "x": 354,
+        "y": 266,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "40ea86de.026448",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.37",
+        "events": [
+            {
+                "fullName": "AVTransportService.playbackstate"
+            }
+        ],
+        "outputs": 1,
+        "x": 140,
+        "y": 100,
+        "wires": [
+            [
+                "2e132c8f.a64da4"
+            ]
+        ]
+    },
+    {
+        "id": "2e132c8f.a64da4",
+        "type": "change",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "(payload = 'playing')",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 361,
+        "y": 100,
+        "wires": [
+            [
+                "cb7049c8.3997d8"
+            ]
+        ]
+    },
+    {
+        "id": "cb7049c8.3997d8",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "playback state",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "57d05716.95f328",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Is playing ",
+        "info": "# Use case\nProvides true if playing. Several events may arrive. You can filter with rbe. \n\n# My setup\n- player at ip \"192.168.178.37\". Must be coordinator.\n- config node name sonos events: \"household\"",
+        "x": 65,
+        "y": 68,
+        "wires": []
+    },
+    {
+        "id": "eebe2c9e.7f0b9",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "↑modify",
+        "info": "- select your config node \n- select your players ip address. Must be coordinator",
+        "x": 190,
+        "y": 125,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "24360ae4.f7d376",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.36",
+        "events": [
+            {
+                "fullName": "DevicePropertiesService.raw"
+            }
+        ],
+        "outputs": 1,
+        "x": 640,
+        "y": 2200,
+        "wires": [
+            [
+                "800635f9.4c1c98"
+            ]
+        ]
+    },
+    {
+        "id": "800635f9.4c1c98",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "ad001545.250f58",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "5852d3b5.04d4bc",
+        "type": "inject",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Port",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "SONOS_LISTENER_PORT",
+        "payloadType": "env",
+        "x": 90,
+        "y": 1413,
+        "wires": [
+            [
+                "60565543.eb53dc"
+            ]
+        ]
+    },
+    {
+        "id": "3a584900.528bf8",
+        "type": "comment",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "Invisible and MicEnabled in Zone Group / Device Properties",
+        "info": "",
+        "x": 760,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "5b359f8a.a4bda",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.37",
+        "events": [
+            {
+                "fullName": "AVTransportService.playbackstate"
+            },
+            {
+                "fullName": "GroupRenderingControlService.groupMutestate"
+            },
+            {
+                "fullName": "AudioInService.lineInConnected"
+            }
+        ],
+        "outputs": 3,
+        "x": 800,
+        "y": 2500,
+        "wires": [
+            [
+                "41e2531e.7fbdfc"
+            ],
+            [
+                "790796de.50a328"
+            ],
+            [
+                "568e0248.276bac"
+            ]
+        ]
+    },
+    {
+        "id": "3a7ba8aa.4ff4b8",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.35",
+        "events": [
+            {
+                "fullName": "DevicePropertiesService.micEnabled"
+            }
+        ],
+        "outputs": 1,
+        "x": 800,
+        "y": 2560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80d5dfee.97705",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.1",
+        "events": [
+            {
+                "fullName": "RenderingControlService.raw"
+            }
+        ],
+        "outputs": 1,
+        "x": 800,
+        "y": 2680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41e2531e.7fbdfc",
+        "type": "rbe",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "playback state",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1020,
+        "y": 2460,
+        "wires": [
+            [
+                "e7e8a143.34dcf"
+            ]
+        ]
+    },
+    {
+        "id": "774e1098.7604d",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.35",
+        "events": [
+            {
+                "fullName": "AudioInService.lineInConnected"
+            }
+        ],
+        "outputs": 1,
+        "x": 800,
+        "y": 2620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "790796de.50a328",
+        "type": "rbe",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "groupMute",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1010,
+        "y": 2500,
+        "wires": [
+            [
+                "209ccabc.70b196"
+            ]
+        ]
+    },
+    {
+        "id": "568e0248.276bac",
+        "type": "rbe",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "line in connected",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload",
+        "x": 1030,
+        "y": 2540,
+        "wires": [
+            [
+                "e3014649.079ab8"
+            ]
+        ]
+    },
+    {
+        "id": "e7e8a143.34dcf",
+        "type": "link out",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "playbackstate",
+        "links": [],
+        "x": 1215,
+        "y": 2460,
+        "wires": []
+    },
+    {
+        "id": "209ccabc.70b196",
+        "type": "link out",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "links": [],
+        "x": 1215,
+        "y": 2500,
+        "wires": []
+    },
+    {
+        "id": "e3014649.079ab8",
+        "type": "link out",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "links": [],
+        "x": 1215,
+        "y": 2540,
         "wires": []
     }
 ]
