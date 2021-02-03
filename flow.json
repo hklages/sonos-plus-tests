@@ -51,7 +51,7 @@
     {
         "id": "e0bd5fc5.e4aaa",
         "type": "tab",
-        "label": "events",
+        "label": "Events",
         "disabled": false,
         "info": ""
     },
@@ -29924,7 +29924,7 @@
         "method": "GET",
         "ret": "obj",
         "paytoqs": "ignore",
-        "url": "http://192.168.178.61:6329/status",
+        "url": "http://192.168.178.13:6329/status",
         "tls": "",
         "persist": false,
         "proxy": "",
@@ -31985,8 +31985,8 @@
             }
         ],
         "outputs": 3,
-        "x": 800,
-        "y": 2500,
+        "x": 140,
+        "y": 2480,
         "wires": [
             [
                 "41e2531e.7fbdfc"
@@ -32012,8 +32012,8 @@
             }
         ],
         "outputs": 1,
-        "x": 800,
-        "y": 2560,
+        "x": 140,
+        "y": 2540,
         "wires": [
             []
         ]
@@ -32031,8 +32031,8 @@
             }
         ],
         "outputs": 1,
-        "x": 800,
-        "y": 2680,
+        "x": 140,
+        "y": 2660,
         "wires": [
             []
         ]
@@ -32047,8 +32047,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1020,
-        "y": 2460,
+        "x": 360,
+        "y": 2440,
         "wires": [
             [
                 "e7e8a143.34dcf"
@@ -32068,8 +32068,8 @@
             }
         ],
         "outputs": 1,
-        "x": 800,
-        "y": 2620,
+        "x": 140,
+        "y": 2600,
         "wires": [
             []
         ]
@@ -32084,8 +32084,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1010,
-        "y": 2500,
+        "x": 350,
+        "y": 2480,
         "wires": [
             [
                 "209ccabc.70b196"
@@ -32102,8 +32102,8 @@
         "start": "",
         "inout": "out",
         "property": "payload",
-        "x": 1030,
-        "y": 2540,
+        "x": 370,
+        "y": 2520,
         "wires": [
             [
                 "e3014649.079ab8"
@@ -32116,8 +32116,8 @@
         "z": "e0bd5fc5.e4aaa",
         "name": "playbackstate",
         "links": [],
-        "x": 1215,
-        "y": 2460,
+        "x": 555,
+        "y": 2440,
         "wires": []
     },
     {
@@ -32126,8 +32126,8 @@
         "z": "e0bd5fc5.e4aaa",
         "name": "",
         "links": [],
-        "x": 1215,
-        "y": 2500,
+        "x": 555,
+        "y": 2480,
         "wires": []
     },
     {
@@ -32136,8 +32136,8 @@
         "z": "e0bd5fc5.e4aaa",
         "name": "",
         "links": [],
-        "x": 1215,
-        "y": 2540,
+        "x": 555,
+        "y": 2520,
         "wires": []
     }
 ]
