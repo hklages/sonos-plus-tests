@@ -455,7 +455,7 @@
         "id": "c747354a.95e5e8",
         "type": "sonos-config",
         "name": "test_no_ ip_but_valid_serialnum",
-        "serialnum": "94-9F-3E-C1-3B-99:8",
+        "serialnum": "5C-AA-FD-00-22-36:1",
         "ipaddress": ""
     },
     {
@@ -635,13 +635,11 @@
         "listenerPort": ""
     },
     {
-        "id": "d563c675.17f6d8",
-        "type": "ui_tab",
-        "name": "Media",
-        "icon": "fa-music",
-        "order": 6,
-        "disabled": false,
-        "hidden": false
+        "id": "e97bec5e.43157",
+        "type": "sonos-config",
+        "name": "test- delete",
+        "serialnum": "00-0E-58-FE-3A-EA:5",
+        "ipaddress": ""
     },
     {
         "id": "497dc083.e5d35",
@@ -3674,7 +3672,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "state": "s24896",
         "stateType": "str",
@@ -4752,13 +4749,10 @@
         "payload": "",
         "payloadType": "date",
         "x": 99,
-        "y": 250,
+        "y": 201,
         "wires": [
             [
-                "2c2cd61e.343cba",
-                "2d69512a.43bb6e",
-                "47b4da16.908d54",
-                "23162a8.e7dc6d6"
+                "2d69512a.43bb6e"
             ]
         ]
     },
@@ -4895,7 +4889,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "9037fbab.1d8408",
-        "compatibilityMode": false,
         "command": "group.play",
         "name": "fritzbox",
         "x": 251,
@@ -4911,7 +4904,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "64704482.34d37c",
-        "compatibilityMode": false,
         "command": "group.play",
         "name": "ip with wrong syntax",
         "x": 291,
@@ -4927,7 +4919,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -4945,7 +4936,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "ff297616.de3c88",
-        "compatibilityMode": false,
         "command": "group.play",
         "name": "no ip && wrong serial",
         "x": 291,
@@ -4961,7 +4951,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "c747354a.95e5e8",
-        "compatibilityMode": false,
         "command": "group.play",
         "state": "",
         "stateType": "str",
@@ -4989,7 +4978,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "name": "",
         "x": 965,
@@ -5050,7 +5038,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "name": "",
         "x": 471,
@@ -5116,7 +5103,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.play.notification",
         "name": "",
         "x": 1220,
@@ -5373,7 +5359,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "name": "",
         "x": 1023,
@@ -5778,7 +5763,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.notification",
         "name": "",
         "x": 341,
@@ -5802,7 +5786,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "joiner.play.notification",
         "name": "",
         "x": 870,
@@ -5937,7 +5920,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.get.queue",
         "name": "joiner",
         "x": 233,
@@ -5953,7 +5935,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "group.get.queue",
         "name": "independent",
         "x": 251,
@@ -5969,7 +5950,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.queue",
         "name": "coordinator",
         "x": 436,
@@ -6410,7 +6390,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.sleeptimer",
         "name": "",
         "x": 1020,
@@ -6474,7 +6453,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.queuemode",
         "name": "coordinator",
         "x": 1070,
@@ -6607,7 +6585,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -6785,7 +6762,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.set.subgain",
         "name": "living with tv",
         "x": 350,
@@ -6859,7 +6835,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.subgain",
         "name": "bath without tv",
         "x": 248,
@@ -6928,6 +6903,18 @@
         "type": "inject",
         "z": "25081f9e.f5f34",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "Arabella",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -6963,6 +6950,15 @@
         "type": "inject",
         "z": "25081f9e.f5f34",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -7260,7 +7256,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.stream.item",
         "name": "",
         "x": 334,
@@ -7318,7 +7313,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.export.item",
         "name": "",
         "x": 302,
@@ -7369,7 +7363,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
@@ -7387,7 +7380,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.queue.item",
         "state": "Best of Prime",
         "stateType": "str",
@@ -7405,7 +7397,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.stream.item",
         "state": "",
         "stateType": "str",
@@ -8269,7 +8260,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.notification",
         "name": "",
         "x": 1191,
@@ -8350,7 +8340,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.create.snap",
         "name": "",
         "x": 710,
@@ -8393,7 +8382,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.save.queue",
         "state": "queueBackup",
         "stateType": "str",
@@ -8431,7 +8419,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.clear.queue",
         "name": "",
         "x": 160,
@@ -8447,7 +8434,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.stop",
         "name": "",
         "x": 951,
@@ -8463,7 +8449,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.remove.sonosplaylist",
         "state": "queueBackup",
         "stateType": "str",
@@ -8496,7 +8481,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.clear.queue",
         "name": "",
         "x": 290,
@@ -8512,7 +8496,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.trackplus",
         "name": "",
         "x": 689,
@@ -8528,7 +8511,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.clear.queue",
         "name": "",
         "x": 293,
@@ -8544,7 +8526,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "name": "",
         "x": 715,
@@ -8560,7 +8541,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "state": "s24896",
         "stateType": "str",
@@ -8578,7 +8558,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.stop",
         "name": "",
         "x": 617,
@@ -8592,7 +8571,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bad",
         "stateType": "str",
@@ -8623,7 +8601,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.get.properties",
         "name": "",
         "x": 278,
@@ -8659,7 +8636,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.play.avtransport",
         "name": "",
         "x": 783,
@@ -8673,7 +8649,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.mutestate",
         "state": "on",
         "stateType": "str",
@@ -8689,7 +8664,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.mutestate",
         "state": "Off",
         "stateType": "str",
@@ -8739,7 +8713,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.snap",
         "state": "",
         "stateType": "str",
@@ -9274,7 +9247,7 @@
         "topic": "",
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
-        "x": 609,
+        "x": 611,
         "y": 1717,
         "wires": [
             [
@@ -9334,7 +9307,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.stereopair",
         "state": "Bad",
         "stateType": "str",
@@ -9380,7 +9352,7 @@
         "topic": "",
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
-        "x": 609,
+        "x": 611,
         "y": 1763,
         "wires": [
             [
@@ -9505,7 +9477,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "joiner.play.notification",
         "state": "",
         "stateType": "str",
@@ -9675,7 +9646,7 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 492,
+        "x": 497,
         "y": 458,
         "wires": [
             [
@@ -9695,7 +9666,7 @@
         "topic": "",
         "payload": "off",
         "payloadType": "str",
-        "x": 492,
+        "x": 497,
         "y": 490,
         "wires": [
             [
@@ -9715,7 +9686,7 @@
         "topic": "",
         "payload": "on",
         "payloadType": "str",
-        "x": 492,
+        "x": 497,
         "y": 522,
         "wires": [
             [
@@ -9735,7 +9706,7 @@
         "topic": "",
         "payload": "off",
         "payloadType": "str",
-        "x": 492,
+        "x": 497,
         "y": 554,
         "wires": [
             [
@@ -9764,7 +9735,7 @@
         "topic": "",
         "payload": "11",
         "payloadType": "num",
-        "x": 490,
+        "x": 498,
         "y": 589,
         "wires": [
             [
@@ -9860,7 +9831,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 612,
+        "x": 611,
         "y": 1632,
         "wires": [
             [
@@ -9916,7 +9887,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 609,
+        "x": 611,
         "y": 1587,
         "wires": [
             [
@@ -9940,12 +9911,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.led",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 645,
+        "x": 644,
         "y": 404,
         "wires": [
             []
@@ -9988,7 +9958,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.create.snap",
         "state": "",
         "stateType": "str",
@@ -10034,7 +10003,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "state": "s24896",
         "stateType": "str",
@@ -10102,7 +10070,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.snap",
         "state": "",
         "stateType": "str",
@@ -10158,7 +10125,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.state",
         "state": "",
         "stateType": "str",
@@ -10176,7 +10142,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.volume",
         "state": "",
         "stateType": "str",
@@ -10194,7 +10159,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.mutestate",
         "state": "",
         "stateType": "str",
@@ -10212,7 +10176,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.crossfade",
         "state": "",
         "stateType": "str",
@@ -10230,7 +10193,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.sleeptimer",
         "state": "",
         "stateType": "str",
@@ -10248,7 +10210,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.trackplus",
         "state": "",
         "stateType": "str",
@@ -10281,7 +10242,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.playbackstate",
         "state": "",
         "stateType": "str",
@@ -10299,7 +10259,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.queue",
         "state": "",
         "stateType": "str",
@@ -10317,12 +10276,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.mutestate",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 695,
+        "x": 693,
         "y": 741,
         "wires": [
             [
@@ -10335,7 +10293,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.properties",
         "state": "",
         "stateType": "str",
@@ -10353,12 +10310,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.led",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 675,
+        "x": 664,
         "y": 846,
         "wires": [
             [
@@ -10371,7 +10327,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.loudness",
         "state": "",
         "stateType": "str",
@@ -10389,7 +10344,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.get.dialoglevel",
         "name": "",
         "x": 694,
@@ -10405,7 +10359,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.volume",
         "state": "",
         "stateType": "str",
@@ -10439,7 +10392,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 488,
+        "x": 497,
         "y": 702,
         "wires": [
             [
@@ -10478,7 +10431,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.get.nightmode",
         "name": "",
         "x": 694,
@@ -10494,12 +10446,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.role",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 676,
+        "x": 674,
         "y": 776,
         "wires": [
             [
@@ -10512,7 +10463,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.get.subgain",
         "name": "",
         "x": 684,
@@ -10528,10 +10478,9 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.get.queue",
         "name": "",
-        "x": 684,
+        "x": 673,
         "y": 885,
         "wires": [
             [
@@ -10544,12 +10493,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.loudness",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 665,
+        "x": 664,
         "y": 203,
         "wires": [
             []
@@ -10560,7 +10508,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.set.nightmode",
         "state": "",
         "stateType": "str",
@@ -10576,7 +10523,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.set.dialoglevel",
         "state": "",
         "stateType": "str",
@@ -10592,7 +10538,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.set.subgain",
         "state": "",
         "stateType": "str",
@@ -10608,7 +10553,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.adjust.volume",
         "state": "",
         "stateType": "str",
@@ -10624,7 +10568,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "state": "",
         "stateType": "str",
@@ -10640,7 +10583,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.previous.track",
         "state": "",
         "stateType": "str",
@@ -10656,7 +10598,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.seek",
         "state": "00:01:00",
         "stateType": "str",
@@ -10672,7 +10613,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.crossfade",
         "state": "",
         "stateType": "str",
@@ -10688,7 +10628,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.sleeptimer",
         "state": "00:05:00",
         "stateType": "str",
@@ -10704,7 +10643,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.mutestate",
         "state": "",
         "stateType": "str",
@@ -10720,7 +10658,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.adjust.volume",
         "state": "",
         "stateType": "str",
@@ -10736,7 +10673,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.toggle.playback",
         "state": "",
         "stateType": "str",
@@ -10752,7 +10688,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.pause",
         "state": "",
         "stateType": "str",
@@ -10768,7 +10703,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.stop",
         "state": "",
         "stateType": "str",
@@ -10871,7 +10805,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.next.track",
         "state": "",
         "stateType": "str",
@@ -10916,7 +10849,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play",
         "state": "",
         "stateType": "str",
@@ -10990,7 +10922,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.separate.stereopair",
         "state": "Bad",
         "stateType": "str",
@@ -11006,7 +10937,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.play.avtransport",
         "state": "x-sonos-htastream:RINCON_949F3EC13B9901400:spdif",
         "stateType": "str",
@@ -11022,7 +10952,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "state": "s24896",
         "stateType": "str",
@@ -11038,7 +10967,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.remove.tracks",
         "state": "",
         "stateType": "str",
@@ -11054,7 +10982,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.clear.queue",
         "state": "",
         "stateType": "str",
@@ -11070,7 +10997,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.save.queue",
         "state": "Backup",
         "stateType": "str",
@@ -11086,7 +11012,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.queuemode",
         "state": "",
         "stateType": "str",
@@ -11102,7 +11027,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.track",
         "state": "2",
         "stateType": "num",
@@ -11118,7 +11042,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "state": "",
         "stateType": "str",
@@ -11134,7 +11057,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.notification",
         "state": "",
         "stateType": "str",
@@ -11219,7 +11141,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.clear.queue",
         "name": "",
         "x": 270,
@@ -11235,7 +11156,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.next.track",
         "name": "",
         "x": 271,
@@ -11251,7 +11171,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.previous.track",
         "name": "",
         "x": 280,
@@ -11552,7 +11471,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.queue.item",
         "state": "queueBackup",
         "stateType": "str",
@@ -11570,7 +11488,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.queue.item",
         "state": "MLAdele",
         "stateType": "str",
@@ -11895,7 +11812,6 @@
         "type": "sonos-manage-mysonos",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.get.playlists",
         "name": "",
         "x": 500,
@@ -11911,7 +11827,6 @@
         "type": "sonos-manage-mysonos",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.get.playlists",
         "name": "",
         "x": 500,
@@ -11958,7 +11873,6 @@
         "type": "sonos-manage-mysonos",
         "z": "775d7a2a.44f234",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.queue.item",
         "state": "",
         "stateType": "str",
@@ -12126,7 +12040,6 @@
         "type": "sonos-manage-mysonos",
         "z": "775d7a2a.44f234",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.get.playlists",
         "state": "",
         "stateType": "str",
@@ -12507,7 +12420,6 @@
         "type": "sonos-manage-mysonos",
         "z": "775d7a2a.44f234",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.queue.playlist",
         "name": "",
         "x": 740,
@@ -12792,7 +12704,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.mutestate",
         "name": "",
         "x": 320,
@@ -12871,7 +12782,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.sleeptimer",
         "name": "",
         "x": 1211,
@@ -13137,7 +13047,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.track",
         "name": "",
         "x": 270,
@@ -13489,7 +13398,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.remove.tracks",
         "name": "",
         "x": 680,
@@ -13698,7 +13606,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.remove.tracks",
         "name": "",
         "x": 300,
@@ -14000,7 +13907,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "name": "",
         "x": 1187,
@@ -14081,7 +13987,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.queuemode",
         "name": "",
         "x": 1190,
@@ -14112,12 +14017,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.mutestate",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 660,
+        "x": 675,
         "y": 140,
         "wires": [
             []
@@ -14148,7 +14052,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.stream.item",
         "state": "Best Of Lovesongs",
         "stateType": "str",
@@ -14166,7 +14069,6 @@
         "type": "sonos-manage-mysonos",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.export.item",
         "state": "ML10CC",
         "stateType": "str",
@@ -14234,7 +14136,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.streamhttp",
         "state": "",
         "stateType": "str",
@@ -14290,7 +14191,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.streamhttp",
         "state": "",
         "stateType": "num",
@@ -14346,7 +14246,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.streamhttp",
         "state": "5",
         "stateType": "num",
@@ -14402,7 +14301,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.streamhttp",
         "state": "xxx",
         "stateType": "str",
@@ -14470,7 +14368,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.track",
         "state": "",
         "stateType": "str",
@@ -14526,7 +14423,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.track",
         "state": "",
         "stateType": "num",
@@ -14582,7 +14478,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.track",
         "state": "5",
         "stateType": "num",
@@ -14638,7 +14533,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.play.track",
         "state": "xxx",
         "stateType": "str",
@@ -14850,7 +14744,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
@@ -15573,7 +15466,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.mutestate",
         "state": "100",
         "stateType": "str",
@@ -15609,7 +15501,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.sleeptimer",
         "state": "xxx",
         "stateType": "str",
@@ -15645,7 +15536,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.sleeptimer",
         "state": "100",
         "stateType": "num",
@@ -15661,7 +15551,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.remove.tracks",
         "state": "xxxx",
         "stateType": "str",
@@ -15717,7 +15606,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.set.queuemode",
         "state": "xxxx",
         "stateType": "str",
@@ -15767,7 +15655,7 @@
         "topic": "",
         "payload": "5",
         "payloadType": "num",
-        "x": 498,
+        "x": 497,
         "y": 253,
         "wires": [
             [
@@ -15780,7 +15668,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.treble",
         "state": "",
         "stateType": "str",
@@ -15803,7 +15690,7 @@
         "topic": "",
         "payload": "-5",
         "payloadType": "num",
-        "x": 498,
+        "x": 497,
         "y": 285,
         "wires": [
             [
@@ -15823,7 +15710,7 @@
         "topic": "",
         "payload": "5",
         "payloadType": "num",
-        "x": 498,
+        "x": 497,
         "y": 317,
         "wires": [
             [
@@ -15836,7 +15723,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.bass",
         "state": "",
         "stateType": "str",
@@ -15859,7 +15745,7 @@
         "topic": "",
         "payload": "-5",
         "payloadType": "num",
-        "x": 498,
+        "x": 497,
         "y": 349,
         "wires": [
             [
@@ -15872,7 +15758,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.treble",
         "state": "",
         "stateType": "str",
@@ -15890,7 +15775,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.bass",
         "state": "",
         "stateType": "str",
@@ -15999,7 +15883,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.queue.urispotify",
         "state": "",
         "stateType": "str",
@@ -16084,7 +15967,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.queue.uri",
         "state": "",
         "stateType": "str",
@@ -16376,7 +16258,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.queue.uri",
         "state": "",
         "stateType": "str",
@@ -16394,7 +16275,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.queue.uri",
         "state": "",
         "stateType": "str",
@@ -16412,7 +16292,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.queue.urispotify",
         "state": "",
         "stateType": "str",
@@ -16440,20 +16319,20 @@
         "id": "e8f37cb1.2dc0b",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "Spotify",
+        "name": "Spotify: station, playlist",
         "info": "",
-        "x": 88,
-        "y": 2102,
+        "x": 141,
+        "y": 2412,
         "wires": []
     },
     {
         "id": "92abce9e.85b6f",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "TuneIn",
+        "name": "TuneIn stations",
         "info": "",
-        "x": 88,
-        "y": 2434,
+        "x": 120,
+        "y": 2530,
         "wires": []
     },
     {
@@ -16462,18 +16341,18 @@
         "z": "fcb24b59.997048",
         "name": "Napster",
         "info": "",
-        "x": 88,
-        "y": 2209,
+        "x": 370,
+        "y": 2440,
         "wires": []
     },
     {
         "id": "fb76baff.bb2398",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "Amazon",
+        "name": "Amazon: album, playlist, station, track",
         "info": "",
-        "x": 100,
-        "y": 2286,
+        "x": 191,
+        "y": 2298,
         "wires": []
     },
     {
@@ -16482,8 +16361,8 @@
         "z": "fcb24b59.997048",
         "name": "Radioplayer",
         "info": "",
-        "x": 109,
-        "y": 2583,
+        "x": 111,
+        "y": 2643,
         "wires": []
     },
     {
@@ -16507,8 +16386,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 90,
-        "y": 2005,
+        "x": 791,
+        "y": 2327,
         "wires": [
             [
                 "22bba9be.293d36"
@@ -16520,13 +16399,12 @@
         "type": "sonos-manage-mysonos",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.queue.item",
-        "state": "MySonosPlaylist",
+        "state": "TestSonosPl",
         "stateType": "str",
         "name": "",
-        "x": 540,
-        "y": 2540,
+        "x": 1001,
+        "y": 2510,
         "wires": [
             []
         ]
@@ -16535,10 +16413,10 @@
         "id": "2b5e32b5.baba2e",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "Music-Library in My-Sonos",
+        "name": "Music-Library in My-Sonos: album, imported playlist, track",
         "info": "",
-        "x": 150,
-        "y": 2672,
+        "x": 252,
+        "y": 2796,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -16548,8 +16426,8 @@
         "z": "fcb24b59.997048",
         "name": "SONOS-Playlists",
         "info": "",
-        "x": 380,
-        "y": 2473,
+        "x": 120,
+        "y": 2714,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -16565,8 +16443,8 @@
         "topic": "",
         "payload": "Best Of Love",
         "payloadType": "str",
-        "x": 370,
-        "y": 2640,
+        "x": 811,
+        "y": 2434,
         "wires": [
             [
                 "ba055dee.63632"
@@ -16585,8 +16463,8 @@
         "topic": "",
         "payload": "Arabella",
         "payloadType": "str",
-        "x": 360,
-        "y": 2672,
+        "x": 801,
+        "y": 2466,
         "wires": [
             [
                 "ba055dee.63632"
@@ -16598,11 +16476,10 @@
         "type": "sonos-manage-mysonos",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.get.items",
         "name": "",
-        "x": 254,
-        "y": 2005,
+        "x": 954,
+        "y": 2327,
         "wires": [
             [
                 "9f3fe37a.b9859"
@@ -16610,27 +16487,10 @@
         ]
     },
     {
-        "id": "304e3fd7.0b1e7",
-        "type": "debug",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1150,
-        "y": 2017,
-        "wires": []
-    },
-    {
         "id": "c07195a5.47a3d8",
         "type": "inject",
         "z": "fcb24b59.997048",
-        "name": "Trigger",
+        "name": "",
         "props": [
             {
                 "p": "payload"
@@ -16645,10 +16505,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 350,
-        "y": 2540,
+        "payload": "TestSonosPl",
+        "payloadType": "str",
+        "x": 811,
+        "y": 2510,
         "wires": [
             [
                 "9c2d9076.4e8a3"
@@ -16659,10 +16519,10 @@
         "id": "6cb68b39.a5fc34",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "Get",
+        "name": "Get all",
         "info": "",
-        "x": 91,
-        "y": 1972,
+        "x": 791,
+        "y": 2294,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -16671,41 +16531,22 @@
         "type": "sonos-manage-mysonos",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.stream.item",
         "name": "",
-        "x": 566,
-        "y": 2657,
+        "x": 1003,
+        "y": 2451,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "7be8e64.d1b2e18",
-        "type": "sonos-manage-mysonos",
-        "z": "fcb24b59.997048",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "library.queue.playlist",
-        "state": "ML10CC",
-        "stateType": "str",
-        "name": "",
-        "x": 961,
-        "y": 2063,
-        "wires": [
-            [
-                "304e3fd7.0b1e7"
-            ]
         ]
     },
     {
         "id": "a143043a.2cc1d8",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "My-Sonos",
+        "name": "MY-SONOS NODE",
         "info": "",
-        "x": 65,
-        "y": 1936,
+        "x": 95,
+        "y": 1871,
         "wires": []
     },
     {
@@ -16743,7 +16584,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.save.queue",
         "state": "xxxxx",
         "stateType": "str",
@@ -16776,7 +16616,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.clear.queue",
         "name": "",
         "x": 270,
@@ -16802,7 +16641,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "state": "",
         "stateType": "str",
@@ -16887,7 +16725,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "state": "",
         "stateType": "str",
@@ -16948,12 +16785,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.seek.delta",
         "state": "-00:00:20",
         "stateType": "str",
         "name": "",
-        "x": 254,
+        "x": 244,
         "y": 416,
         "wires": [
             []
@@ -16964,7 +16800,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.actions",
         "state": "",
         "stateType": "str",
@@ -16982,7 +16817,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.adjust.volume",
         "state": "",
         "stateType": "str",
@@ -17001,7 +16835,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.get.volume",
         "state": "",
         "stateType": "str",
@@ -17019,7 +16852,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.volume",
         "state": "",
         "stateType": "str",
@@ -17037,7 +16869,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.adjust.volume",
         "state": "",
         "stateType": "str",
@@ -17056,7 +16887,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.volume",
         "state": "",
         "stateType": "str",
@@ -17105,7 +16935,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.adjust.volume",
         "state": "",
         "stateType": "str",
@@ -17188,7 +17017,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.create.volumesnap",
         "state": "",
         "stateType": "str",
@@ -17466,7 +17294,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.volume",
         "state": "23",
         "stateType": "num",
@@ -17571,7 +17398,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "x",
         "stateType": "str",
@@ -17636,7 +17462,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "Wohnzimmer",
         "stateType": "str",
@@ -17681,7 +17506,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "Küche",
         "stateType": "str",
@@ -17726,7 +17550,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "",
         "stateType": "str",
@@ -17771,7 +17594,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "Küche",
         "stateType": "str",
@@ -17816,7 +17638,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": " Küche",
         "stateType": "str",
@@ -17871,7 +17692,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.separate.group",
         "state": "",
         "stateType": "str",
@@ -17916,7 +17736,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Wohnzimmer",
         "stateType": "str",
@@ -17961,7 +17780,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bad,Wohnzimmer",
         "stateType": "str",
@@ -18006,7 +17824,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Bad,",
         "stateType": "str",
@@ -18051,7 +17868,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche",
         "stateType": "str",
@@ -18096,7 +17912,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bad,Wohnzimmer,A E.r_k-er:1",
         "stateType": "str",
@@ -18141,7 +17956,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "",
         "stateType": "str",
@@ -18206,7 +18020,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bad,Küche",
         "stateType": "str",
@@ -18251,7 +18064,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "!Küche",
         "stateType": "str",
@@ -18296,7 +18108,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche;Bad",
         "stateType": "str",
@@ -18341,7 +18152,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bader",
         "stateType": "str",
@@ -18396,7 +18206,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.become.standalone",
         "state": "",
         "stateType": "str",
@@ -18441,7 +18250,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bad,Wohnzimmer",
         "stateType": "str",
@@ -18486,7 +18294,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.separate.group",
         "state": "",
         "stateType": "str",
@@ -18502,7 +18309,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.get.state",
         "state": "",
         "stateType": "str",
@@ -18520,7 +18326,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "name": "",
         "x": 287,
@@ -18633,7 +18438,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "state": "",
         "stateType": "str",
@@ -18671,7 +18475,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.get.queue",
         "state": "",
         "stateType": "str",
@@ -18709,7 +18512,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "state": "",
         "stateType": "str",
@@ -18747,7 +18549,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "group.get.queue",
         "state": "",
         "stateType": "str",
@@ -18807,7 +18608,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "group.get.state",
         "state": "",
         "stateType": "str",
@@ -18845,7 +18645,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.led",
         "state": "",
         "stateType": "str",
@@ -18863,7 +18662,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.led",
         "state": "off",
         "stateType": "str",
@@ -18921,7 +18719,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.get.volume",
         "state": "",
         "stateType": "str",
@@ -18959,7 +18756,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "state": "15",
         "stateType": "str",
@@ -18997,7 +18793,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "player.get.led",
         "state": "",
         "stateType": "str",
@@ -19015,7 +18810,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "player.set.led",
         "state": "off",
         "stateType": "str",
@@ -19073,7 +18867,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "player.get.volume",
         "state": "",
         "stateType": "str",
@@ -19111,7 +18904,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "state": "15",
         "stateType": "str",
@@ -19149,7 +18941,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.treble",
         "state": "7",
         "stateType": "str",
@@ -19196,7 +18987,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.get.sonosplaylists",
         "state": "",
         "stateType": "str",
@@ -19214,15 +19004,16 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.remove.sonosplaylist",
-        "state": "Backup",
+        "state": "xxxxx",
         "stateType": "str",
         "name": "",
         "x": 1081,
         "y": 268,
         "wires": [
-            []
+            [
+                "8fa79091.fcdda"
+            ]
         ]
     },
     {
@@ -19251,7 +19042,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 879,
+        "x": 881,
         "y": 268,
         "wires": [
             [
@@ -19293,7 +19084,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "state": "s24896",
         "stateType": "str",
@@ -19338,7 +19128,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.queue",
         "state": "s24896",
         "stateType": "str",
@@ -19383,7 +19172,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
@@ -19399,7 +19187,6 @@
         "type": "sonos-manage-mysonos",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.export.item",
         "state": "KEXP",
         "stateType": "str",
@@ -19446,7 +19233,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Wohnzimmer",
         "stateType": "str",
@@ -19520,7 +19306,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.cancel.sleeptimer",
         "state": "",
         "stateType": "str",
@@ -19576,7 +19361,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.volume",
         "state": "",
         "stateType": "str",
@@ -19621,7 +19405,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.create.volumesnap",
         "state": "",
         "stateType": "str",
@@ -19643,8 +19426,8 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 1290,
-        "y": 347,
+        "x": 1276,
+        "y": 353,
         "wires": []
     },
     {
@@ -19667,7 +19450,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.test.player",
         "state": "Bad",
         "stateType": "str",
@@ -19714,7 +19496,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -19788,7 +19569,7 @@
         "topic": "",
         "payload": "s24896",
         "payloadType": "str",
-        "x": 610,
+        "x": 611,
         "y": 1344,
         "wires": [
             [
@@ -19801,7 +19582,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.tunein",
         "state": "",
         "stateType": "str",
@@ -19846,7 +19626,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "",
         "stateType": "str",
@@ -19878,7 +19657,7 @@
         "topic": "",
         "payload": "Wohnzimmer",
         "payloadType": "str",
-        "x": 910,
+        "x": 901,
         "y": 420,
         "wires": [
             [
@@ -19891,13 +19670,12 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "coordinator.delegate",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1060,
-        "y": 465,
+        "x": 1100,
+        "y": 460,
         "wires": [
             []
         ]
@@ -19923,7 +19701,7 @@
         "topic": "",
         "payload": "Küche",
         "payloadType": "str",
-        "x": 890,
+        "x": 881,
         "y": 465,
         "wires": [
             [
@@ -19952,7 +19730,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "str",
-        "x": 890,
+        "x": 881,
         "y": 510,
         "wires": [
             [
@@ -19965,12 +19743,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.become.standalone",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1080,
+        "x": 1110,
         "y": 510,
         "wires": [
             []
@@ -19988,60 +19765,13 @@
         "icon": "node-red/alert.svg"
     },
     {
-        "id": "41198811.e302b8",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 769,
-        "y": 2017,
-        "wires": [
-            [
-                "9adb5119.239c5"
-            ]
-        ]
-    },
-    {
-        "id": "9adb5119.239c5",
-        "type": "sonos-manage-mysonos",
-        "z": "fcb24b59.997048",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "library.get.playlists",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 949,
-        "y": 2017,
-        "wires": [
-            [
-                "304e3fd7.0b1e7"
-            ]
-        ]
-    },
-    {
         "id": "7eb9a240.6973bc",
         "type": "comment",
         "z": "fcb24b59.997048",
         "name": "Music-Library",
         "info": "",
-        "x": 749,
-        "y": 1943,
+        "x": 75,
+        "y": 1917,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -20051,8 +19781,8 @@
         "z": "fcb24b59.997048",
         "name": "Select and play",
         "info": "",
-        "x": 386,
-        "y": 2605,
+        "x": 821,
+        "y": 2399,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -20078,7 +19808,7 @@
         "payload": "xxxxxxx",
         "payloadType": "str",
         "x": 90,
-        "y": 633,
+        "y": 648,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20107,7 +19837,7 @@
         "payload": "Girl",
         "payloadType": "str",
         "x": 631,
-        "y": 693,
+        "y": 708,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20136,7 +19866,7 @@
         "payload": "R.E.M",
         "payloadType": "str",
         "x": 631,
-        "y": 893,
+        "y": 908,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20148,13 +19878,12 @@
         "type": "sonos-manage-mysonos",
         "z": "775d7a2a.44f234",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.export.album",
         "state": "",
         "stateType": "str",
         "name": "",
         "x": 1050,
-        "y": 628,
+        "y": 643,
         "wires": [
             [
                 "cd812bc0.0c1398",
@@ -20167,13 +19896,12 @@
         "type": "sonos-universal",
         "z": "775d7a2a.44f234",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
         "name": "",
         "x": 1070,
-        "y": 680,
+        "y": 695,
         "wires": [
             []
         ]
@@ -20200,7 +19928,7 @@
         "payload": "Atemlos:",
         "payloadType": "str",
         "x": 641,
-        "y": 653,
+        "y": 668,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20229,7 +19957,7 @@
         "payload": "Hello, I Must",
         "payloadType": "str",
         "x": 651,
-        "y": 733,
+        "y": 748,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20258,7 +19986,7 @@
         "payload": "Ich + Ich",
         "payloadType": "str",
         "x": 641,
-        "y": 773,
+        "y": 788,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20287,7 +20015,7 @@
         "payload": "Moonfleet &",
         "payloadType": "str",
         "x": 651,
-        "y": 853,
+        "y": 868,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20316,7 +20044,7 @@
         "payload": "1.6",
         "payloadType": "str",
         "x": 631,
-        "y": 933,
+        "y": 948,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20345,7 +20073,7 @@
         "payload": "Ö",
         "payloadType": "str",
         "x": 631,
-        "y": 813,
+        "y": 828,
         "wires": [
             [
                 "fd1582bf.f1aca"
@@ -20359,7 +20087,7 @@
         "name": "failure",
         "info": "",
         "x": 55,
-        "y": 600,
+        "y": 615,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -20370,97 +20098,9 @@
         "name": "Success",
         "info": "",
         "x": 640,
-        "y": 600,
+        "y": 615,
         "wires": [],
         "icon": "node-red/alert.svg"
-    },
-    {
-        "id": "8d9b1b81.917bb8",
-        "type": "comment",
-        "z": "fcb24b59.997048",
-        "name": "Playlists",
-        "info": "",
-        "x": 778,
-        "y": 1983,
-        "wires": [],
-        "icon": "node-red/alert.svg"
-    },
-    {
-        "id": "a5ea9e86.5f87f",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "MySelection",
-        "payloadType": "str",
-        "x": 790,
-        "y": 2110,
-        "wires": [
-            [
-                "9d766d14.55fa4"
-            ]
-        ]
-    },
-    {
-        "id": "9d766d14.55fa4",
-        "type": "sonos-manage-mysonos",
-        "z": "fcb24b59.997048",
-        "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
-        "command": "library.export.playlist",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 982,
-        "y": 2110,
-        "wires": [
-            [
-                "cd96d3dc.adc6d",
-                "304e3fd7.0b1e7"
-            ]
-        ]
-    },
-    {
-        "id": "1107c994.a8fcf6",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "ML10CC",
-        "payloadType": "str",
-        "x": 780,
-        "y": 2063,
-        "wires": [
-            [
-                "7be8e64.d1b2e18"
-            ]
-        ]
     },
     {
         "id": "a609fcbf.df602",
@@ -20474,8 +20114,8 @@
         "topic": "",
         "payload": "20 Jahre Napster",
         "payloadType": "str",
-        "x": 118,
-        "y": 2242,
+        "x": 401,
+        "y": 2473,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20487,17 +20127,15 @@
         "type": "sonos-manage-mysonos",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.export.item",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 440,
-        "y": 2266,
+        "x": 648,
+        "y": 2598,
         "wires": [
             [
-                "fbf15b76.cdbef8",
-                "de6666d5.10f8e8"
+                "fbf15b76.cdbef8"
             ]
         ]
     },
@@ -20506,6 +20144,18 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "Best of Prime Music",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -20514,7 +20164,7 @@
         "payload": "Best of Prime Music",
         "payloadType": "str",
         "x": 131,
-        "y": 2351,
+        "y": 2363,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20545,8 +20195,8 @@
         "topic": "",
         "payload": "Arabella",
         "payloadType": "str",
-        "x": 98,
-        "y": 2468,
+        "x": 101,
+        "y": 2564,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20572,8 +20222,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 135,
-        "y": 2542,
+        "x": 256,
+        "y": 2596,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20592,8 +20242,8 @@
         "topic": "",
         "payload": "1A Fitness Hits",
         "payloadType": "str",
-        "x": 119,
-        "y": 2615,
+        "x": 121,
+        "y": 2677,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20624,8 +20274,8 @@
         "topic": "",
         "payload": "Daily Mix",
         "payloadType": "str",
-        "x": 98,
-        "y": 2135,
+        "x": 101,
+        "y": 2445,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20637,6 +20287,18 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "Best Of Love",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -20644,8 +20306,8 @@
         "topic": "",
         "payload": "Best Of Love",
         "payloadType": "str",
-        "x": 111,
-        "y": 2383,
+        "x": 398,
+        "y": 2333,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20664,8 +20326,8 @@
         "topic": "",
         "payload": "GloomySunday",
         "payloadType": "str",
-        "x": 118,
-        "y": 2167,
+        "x": 121,
+        "y": 2477,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20677,6 +20339,18 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "Blowin' in the Wind",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -20684,8 +20358,8 @@
         "topic": "",
         "payload": "Blowin' in the Wind",
         "payloadType": "str",
-        "x": 131,
-        "y": 2319,
+        "x": 377,
+        "y": 2366,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20697,13 +20371,12 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
-        "name": "any",
-        "x": 410,
-        "y": 2313,
+        "name": "",
+        "x": 731,
+        "y": 2660,
         "wires": [
             []
         ]
@@ -20727,68 +20400,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "MySonosPlaylist",
+        "payload": "TestSonosPl",
         "payloadType": "str",
-        "x": 380,
-        "y": 2506,
-        "wires": [
-            [
-                "6a9f4e84.9bc77"
-            ]
-        ]
-    },
-    {
-        "id": "63dda4d2.045f6c",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "Best of Prime Music",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Best of Prime Music",
-        "payloadType": "str",
-        "x": 392,
-        "y": 2189,
-        "wires": [
-            [
-                "6a9f4e84.9bc77"
-            ]
-        ]
-    },
-    {
-        "id": "abc1e41a.030218",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "Angi",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Angi",
-        "payloadType": "str",
-        "x": 350,
-        "y": 2153,
+        "x": 111,
+        "y": 2747,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20802,14 +20417,11 @@
         "name": "",
         "props": [
             {
-                "p": "payload",
-                "v": "Angi",
-                "vt": "str"
+                "p": "payload"
             },
             {
                 "p": "topic",
-                "v": "",
-                "vt": "string"
+                "vt": "str"
             }
         ],
         "repeat": "",
@@ -20817,10 +20429,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "Angi",
+        "payload": "People Help",
         "payloadType": "str",
-        "x": 90,
-        "y": 2705,
+        "x": 330,
+        "y": 2829,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20832,15 +20444,24 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "ML10CC",
+        "payload": "25",
         "payloadType": "str",
-        "x": 100,
-        "y": 2737,
+        "x": 91,
+        "y": 2829,
         "wires": [
             [
                 "6a9f4e84.9bc77"
@@ -20859,8 +20480,8 @@
         "topic": "",
         "payload": "Bayern 3",
         "payloadType": "str",
-        "x": 98,
-        "y": 2500,
+        "x": 101,
+        "y": 2596,
         "wires": [
             [
                 "b6c76ac1.8dc558"
@@ -20901,7 +20522,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "A E.r_k-er:1,Küche,Bad,Wohnzimmer",
         "stateType": "str",
@@ -20917,7 +20537,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,A E.r_k-er:1,Bad,Wohnzimmer",
         "stateType": "str",
@@ -21019,7 +20638,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.set.mutestate",
         "state": "",
         "stateType": "str",
@@ -21067,7 +20685,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.get.mutestate",
         "state": "",
         "stateType": "str",
@@ -21145,7 +20762,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "state": "",
         "stateType": "str",
@@ -21248,7 +20864,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.become.standalone",
         "state": "",
         "stateType": "str",
@@ -21264,7 +20879,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.create.stereopair",
         "state": "",
         "stateType": "str",
@@ -21335,7 +20949,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.separate.stereopair",
         "state": "",
         "stateType": "str",
@@ -21406,7 +21019,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.separate.stereopair",
         "state": "",
         "stateType": "str",
@@ -21482,7 +21094,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.set.mutestate",
         "state": "",
         "stateType": "str",
@@ -21546,7 +21157,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.mutestate",
         "state": "",
         "stateType": "str",
@@ -21572,8 +21182,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 421,
-        "y": 2005,
+        "x": 1121,
+        "y": 2327,
         "wires": []
     },
     {
@@ -21598,7 +21208,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 488,
+        "x": 497,
         "y": 633,
         "wires": [
             [
@@ -21611,12 +21221,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.play.tv",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 643,
+        "x": 645,
         "y": 633,
         "wires": [
             []
@@ -21666,7 +21275,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -21779,7 +21387,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -21858,7 +21465,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -22290,7 +21896,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -22573,7 +22178,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -22628,7 +22232,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -22727,12 +22330,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.leave.group",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1094,
+        "x": 1091,
         "y": 568,
         "wires": [
             []
@@ -22759,7 +22361,7 @@
         "topic": "",
         "payload": "Küche",
         "payloadType": "str",
-        "x": 910,
+        "x": 901,
         "y": 568,
         "wires": [
             [
@@ -22788,7 +22390,7 @@
         "topic": "",
         "payload": "Küche",
         "payloadType": "str",
-        "x": 910,
+        "x": 901,
         "y": 610,
         "wires": [
             [
@@ -22801,12 +22403,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.join.group",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1081,
+        "x": 1080,
         "y": 610,
         "wires": [
             []
@@ -22827,7 +22428,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -22954,7 +22554,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -23014,7 +22613,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.state",
         "state": "",
         "stateType": "str",
@@ -23032,7 +22630,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.get.trackplus",
         "state": "",
         "stateType": "str",
@@ -23080,7 +22677,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -23098,7 +22694,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -23174,7 +22769,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -23250,7 +22844,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -23876,7 +23469,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -24010,7 +23602,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -24075,79 +23666,19 @@
         ]
     },
     {
-        "id": "f86847b0.284878",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "trigger",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 517,
-        "y": 885,
-        "wires": [
-            [
-                "60d2cb79.534e74"
-            ]
-        ]
-    },
-    {
-        "id": "31781175.6cc77e",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "A Girl Like Me",
-        "payloadType": "str",
-        "x": 788,
-        "y": 2295,
-        "wires": [
-            [
-                "12d37daf.c06572"
-            ]
-        ]
-    },
-    {
         "id": "12d37daf.c06572",
         "type": "sonos-manage-mysonos",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.export.album",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1027,
-        "y": 2261,
+        "x": 349,
+        "y": 1983,
         "wires": [
             [
-                "cd96d3dc.adc6d",
-                "b7c6d8cb.6b8888"
+                "cd96d3dc.adc6d"
             ]
         ]
     },
@@ -24156,44 +23687,14 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1089,
-        "y": 2310,
+        "x": 630,
+        "y": 1983,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "211b51fd.9c04de",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "19",
-        "payloadType": "str",
-        "x": 769,
-        "y": 2328,
-        "wires": [
-            [
-                "12d37daf.c06572"
-            ]
         ]
     },
     {
@@ -24217,8 +23718,8 @@
         "topic": "",
         "payload": "Genesis 1976-1982",
         "payloadType": "str",
-        "x": 809,
-        "y": 2261,
+        "x": 131,
+        "y": 1983,
         "wires": [
             [
                 "12d37daf.c06572"
@@ -24229,10 +23730,10 @@
         "id": "e073f15c.4c052",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "Album",
+        "name": "Export: album, playlist, track",
         "info": "",
-        "x": 770,
-        "y": 2154,
+        "x": 160,
+        "y": 1949,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -24243,9 +23744,7 @@
         "name": "Girl",
         "props": [
             {
-                "p": "searchTitle",
-                "v": "Girl",
-                "vt": "str"
+                "p": "payload"
             },
             {
                 "p": "topic",
@@ -24257,9 +23756,10 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
+        "payload": "Girl",
         "payloadType": "str",
-        "x": 770,
-        "y": 2187,
+        "x": 870,
+        "y": 2017,
         "wires": [
             [
                 "8b20e0b5.f5dff"
@@ -24271,79 +23771,15 @@
         "type": "sonos-manage-mysonos",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "library.get.albums",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 936,
-        "y": 2205,
+        "x": 1059,
+        "y": 2000,
         "wires": [
             [
                 "b7c6d8cb.6b8888"
-            ]
-        ]
-    },
-    {
-        "id": "ea8580a0.8302a",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "10",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            },
-            {
-                "p": "requestedCount",
-                "v": "10",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 770,
-        "y": 2223,
-        "wires": [
-            [
-                "8b20e0b5.f5dff"
-            ]
-        ]
-    },
-    {
-        "id": "da89be8c.3bfdd",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "Ö",
-        "payloadType": "str",
-        "x": 768,
-        "y": 2361,
-        "wires": [
-            [
-                "12d37daf.c06572"
             ]
         ]
     },
@@ -24360,24 +23796,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1210,
-        "y": 2261,
-        "wires": []
-    },
-    {
-        "id": "de6666d5.10f8e8",
-        "type": "debug",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 590,
-        "y": 2220,
+        "x": 1230,
+        "y": 2036,
         "wires": []
     },
     {
@@ -24396,7 +23816,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.queue.uri",
         "state": "x-file-cifs://nas2019/Multimedia/Music/MyMusic/The%20Rolling%20Stones/Kuschelrock%2004/The%20Rolling%20Stones%20-%20Angie.mp3",
         "stateType": "str",
@@ -24468,7 +23887,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 610,
+        "x": 611,
         "y": 1440,
         "wires": [
             [
@@ -24481,7 +23900,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.streamhttp",
         "state": "http://www.fritz.de/live.m3u",
         "stateType": "str",
@@ -24513,7 +23931,7 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 610,
+        "x": 611,
         "y": 1486,
         "wires": [
             [
@@ -24526,7 +23944,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.streamhttp",
         "state": "https://live.radioarabella.de",
         "stateType": "str",
@@ -24542,7 +23959,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.members",
         "state": "",
         "stateType": "str",
@@ -24575,7 +23991,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "group.get.members",
         "state": "",
         "stateType": "str",
@@ -24593,7 +24008,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.members",
         "state": "",
         "stateType": "str",
@@ -24791,7 +24205,6 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.members",
         "state": "",
         "stateType": "str",
@@ -24838,7 +24251,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -24928,7 +24340,6 @@
         "type": "sonos-universal",
         "z": "405b0e15.987b5",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.test.player",
         "state": "Bad",
         "stateType": "str",
@@ -24981,7 +24392,7 @@
         "y": 840,
         "wires": [
             [
-                "a993e586.635ad8"
+                "d0d46ea0.bbf6f"
             ]
         ]
     },
@@ -25020,7 +24431,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.state",
         "state": "",
         "stateType": "str",
@@ -25047,46 +24457,8 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1280,
-        "y": 640,
+        "y": 643,
         "wires": []
-    },
-    {
-        "id": "a673318b.30b7c",
-        "type": "inject",
-        "z": "775d7a2a.44f234",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "Atemlos:",
-        "payload": "",
-        "payloadType": "str",
-        "x": 900,
-        "y": 980,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "7a7634c7.ea2eec",
-        "type": "comment",
-        "z": "775d7a2a.44f234",
-        "name": "Compatibility",
-        "info": "",
-        "x": 1030,
-        "y": 940,
-        "wires": [],
-        "icon": "node-red/alert.svg"
     },
     {
         "id": "b4c911f6.73b4",
@@ -25132,7 +24504,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,A E.r_k-er:1,Bad,Wohnzimmer",
         "stateType": "str",
@@ -25150,7 +24521,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -25208,7 +24578,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.set.mutestate",
         "state": "",
         "stateType": "str",
@@ -25255,7 +24624,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "player.get.mutestate",
         "state": "",
         "stateType": "str",
@@ -25319,7 +24687,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "player.set.mutestate",
         "state": "",
         "stateType": "str",
@@ -25337,7 +24704,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "player.get.mutestate",
         "state": "",
         "stateType": "str",
@@ -25464,7 +24830,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -25560,7 +24925,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -25612,7 +24976,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -25708,7 +25071,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "2113e9bb.c52236",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -25760,7 +25122,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -25856,7 +25217,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -25903,7 +25263,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.separate.group",
         "state": "",
         "stateType": "str",
@@ -25944,7 +25303,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -26028,7 +25386,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,A E.r_k-er:1",
         "stateType": "str",
@@ -26069,7 +25426,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -26166,7 +25522,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -26201,7 +25556,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Wohnzimmer,A E.r_k-er:1",
         "stateType": "str",
@@ -26246,7 +25600,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "household.create.stereopair",
         "state": "A E.r_k-er:1",
         "stateType": "str",
@@ -26293,7 +25646,6 @@
         "type": "sonos-universal",
         "z": "2655a232.b82cae",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "household.separate.stereopair",
         "state": "A E.r_k-er:1",
         "stateType": "str",
@@ -26338,7 +25690,6 @@
         "type": "sonos-universal",
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -26766,7 +26117,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -26803,7 +26153,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.create.snap",
         "state": "",
         "stateType": "str",
@@ -27058,7 +26407,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.snap",
         "state": "",
         "stateType": "str",
@@ -27318,7 +26666,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "",
         "stateType": "str",
@@ -27492,7 +26839,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -27554,7 +26900,6 @@
         "type": "sonos-universal",
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "",
         "stateType": "str",
@@ -27792,7 +27137,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28039,7 +27383,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28101,7 +27444,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28163,7 +27505,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28401,7 +27742,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28446,7 +27786,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28527,7 +27866,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -28649,7 +27987,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -28740,7 +28077,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "household.get.groups",
         "state": "",
         "stateType": "str",
@@ -29388,7 +28724,6 @@
         "type": "sonos-universal",
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.get.trackplus",
         "state": "",
         "stateType": "str",
@@ -29515,7 +28850,6 @@
         "type": "sonos-universal",
         "z": "55805384.a4695c",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "group.get.trackplus",
         "state": "",
         "stateType": "str",
@@ -29591,7 +28925,6 @@
         "type": "sonos-universal",
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
@@ -29607,7 +28940,6 @@
         "type": "sonos-manage-mysonos",
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
-        "compatibilityMode": false,
         "command": "mysonos.export.item",
         "state": "Jerusa",
         "stateType": "str",
@@ -29665,7 +28997,6 @@
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -31039,7 +30370,6 @@
         "type": "sonos-universal",
         "z": "e0bd5fc5.e4aaa",
         "confignode": "32a98882.56e1c8",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "state": "29",
         "stateType": "str",
@@ -31147,7 +30477,6 @@
         "type": "sonos-universal",
         "z": "e0bd5fc5.e4aaa",
         "confignode": "8d44022c.adb65",
-        "compatibilityMode": false,
         "command": "player.set.volume",
         "state": "20",
         "stateType": "str",
@@ -31372,7 +30701,6 @@
         "type": "sonos-universal",
         "z": "e0bd5fc5.e4aaa",
         "confignode": "d0057e63.a9c5",
-        "compatibilityMode": false,
         "command": "household.create.group",
         "state": "Küche,Bad,Wohnzimmer,A E.r_k-er:1",
         "stateType": "str",
@@ -31970,6 +31298,7 @@
         "id": "5b359f8a.a4bda",
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
+        "d": true,
         "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.37",
@@ -32003,6 +31332,7 @@
         "id": "3a7ba8aa.4ff4b8",
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
+        "d": true,
         "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.35",
@@ -32022,6 +31352,7 @@
         "id": "80d5dfee.97705",
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
+        "d": true,
         "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.1",
@@ -32059,6 +31390,7 @@
         "id": "774e1098.7604d",
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
+        "d": true,
         "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.35",
@@ -32139,5 +31471,991 @@
         "x": 555,
         "y": 2520,
         "wires": []
+    },
+    {
+        "id": "144934a6.3101ab",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.36",
+        "events": [
+            {
+                "fullName": "AVTransportService.playbackstate"
+            },
+            {
+                "fullName": "AVTransportService.raw"
+            }
+        ],
+        "outputs": 2,
+        "x": 600,
+        "y": 2640,
+        "wires": [
+            [
+                "7a6e6952.207368"
+            ],
+            [
+                "7a6e6952.207368"
+            ]
+        ]
+    },
+    {
+        "id": "7a6e6952.207368",
+        "type": "debug",
+        "z": "e0bd5fc5.e4aaa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 2640,
+        "wires": []
+    },
+    {
+        "id": "e11f327c.4727e",
+        "type": "sonosevents-selection",
+        "z": "e0bd5fc5.e4aaa",
+        "d": true,
+        "name": "",
+        "confignode": "1c70290d.90a4e7",
+        "playerHostname": "192.168.178.3",
+        "events": [
+            {
+                "fullName": "RenderingControlService.raw"
+            }
+        ],
+        "outputs": 1,
+        "x": 140,
+        "y": 2740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1a4b34ce.c6dd5b",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 99,
+        "y": 361,
+        "wires": [
+            [
+                "23162a8.e7dc6d6"
+            ]
+        ]
+    },
+    {
+        "id": "b4e81bd7.939238",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 99,
+        "y": 281,
+        "wires": [
+            [
+                "47b4da16.908d54"
+            ]
+        ]
+    },
+    {
+        "id": "1a6433d7.fc767c",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "2c2cd61e.343cba"
+            ]
+        ]
+    },
+    {
+        "id": "63f6eea1.b0066",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "e97bec5e.43157",
+        "command": "player.get.properties",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 660,
+        "y": 1440,
+        "wires": [
+            [
+                "e4e0d6f.b2d7928"
+            ]
+        ]
+    },
+    {
+        "id": "45be10a1.19ad3",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 1440,
+        "wires": [
+            [
+                "63f6eea1.b0066"
+            ]
+        ]
+    },
+    {
+        "id": "e4e0d6f.b2d7928",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "1046ff9c.f12bc",
+        "type": "sonos-manage-mysonos",
+        "z": "55805384.a4695c",
+        "confignode": "e97bec5e.43157",
+        "command": "mysonos.get.items",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 650,
+        "y": 1380,
+        "wires": [
+            [
+                "e4e0d6f.b2d7928"
+            ]
+        ]
+    },
+    {
+        "id": "4fec5e36.d12d8",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 480,
+        "y": 1380,
+        "wires": [
+            [
+                "1046ff9c.f12bc"
+            ]
+        ]
+    },
+    {
+        "id": "ec09a39.81b496",
+        "type": "comment",
+        "z": "775d7a2a.44f234",
+        "name": "ALBUM",
+        "info": "",
+        "x": 55,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "b0debdd1.ddd4",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "xxxxxxx",
+        "payloadType": "str",
+        "x": 90,
+        "y": 1100,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "f34578b.8036988",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Angie",
+        "payloadType": "str",
+        "x": 631,
+        "y": 1160,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "ac0e7828.1d8c98",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hello, I Love You",
+        "payloadType": "str",
+        "x": 661,
+        "y": 1316,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "38914f38.1dd1",
+        "type": "sonos-manage-mysonos",
+        "z": "775d7a2a.44f234",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "library.export.track",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1050,
+        "y": 1095,
+        "wires": [
+            [
+                "bcf13c51.1f90c",
+                "fc1c2a34.2ebeb8"
+            ]
+        ]
+    },
+    {
+        "id": "bcf13c51.1f90c",
+        "type": "sonos-universal",
+        "z": "775d7a2a.44f234",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.export",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1070,
+        "y": 1147,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fe0278f4.c69098",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "I'm Not The Man",
+        "payloadType": "str",
+        "x": 661,
+        "y": 1120,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "3f3c5afc.5f41d6",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Blowin'",
+        "payloadType": "str",
+        "x": 631,
+        "y": 1200,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "9d2418b8.979028",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "empty",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 90,
+        "y": 1140,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "1fbb6f7c.273cb1",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Lady d'Arbanville",
+        "payloadType": "str",
+        "x": 661,
+        "y": 1276,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "4a449f92.6d0d9",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "L.A. Woman",
+        "payloadType": "str",
+        "x": 651,
+        "y": 1356,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "da1d9d1f.ea709",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Merci Chérie",
+        "payloadType": "str",
+        "x": 651,
+        "y": 1236,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "80cf3221.ac223",
+        "type": "comment",
+        "z": "775d7a2a.44f234",
+        "name": "failure",
+        "info": "",
+        "x": 55,
+        "y": 1067,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "66c60678.c24208",
+        "type": "comment",
+        "z": "775d7a2a.44f234",
+        "name": "Success",
+        "info": "",
+        "x": 640,
+        "y": 1067,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "fc1c2a34.2ebeb8",
+        "type": "debug",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1280,
+        "y": 1095,
+        "wires": []
+    },
+    {
+        "id": "cfcf4aaa.5a8818",
+        "type": "comment",
+        "z": "775d7a2a.44f234",
+        "name": "SONG",
+        "info": "",
+        "x": 55,
+        "y": 1032,
+        "wires": []
+    },
+    {
+        "id": "2aa03de9.5c3d02",
+        "type": "inject",
+        "z": "775d7a2a.44f234",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hush-A-Bye",
+        "payloadType": "str",
+        "x": 650,
+        "y": 1396,
+        "wires": [
+            [
+                "38914f38.1dd1"
+            ]
+        ]
+    },
+    {
+        "id": "3104660b.68358a",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "all",
+        "props": [
+            {
+                "p": "searchTitle",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 870,
+        "y": 1984,
+        "wires": [
+            [
+                "8b20e0b5.f5dff"
+            ]
+        ]
+    },
+    {
+        "id": "743762e3.792d9c",
+        "type": "sonos-manage-mysonos",
+        "z": "fcb24b59.997048",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "library.export.playlist",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 359,
+        "y": 2030,
+        "wires": [
+            [
+                "cd96d3dc.adc6d"
+            ]
+        ]
+    },
+    {
+        "id": "460600ae.e2161",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ML10CC",
+        "payloadType": "str",
+        "x": 100,
+        "y": 2030,
+        "wires": [
+            [
+                "743762e3.792d9c"
+            ]
+        ]
+    },
+    {
+        "id": "2c45fb0c.6ac8f4",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Blowin'",
+        "payloadType": "str",
+        "x": 90,
+        "y": 2077,
+        "wires": [
+            [
+                "6dda2fb8.1badd"
+            ]
+        ]
+    },
+    {
+        "id": "6dda2fb8.1badd",
+        "type": "sonos-manage-mysonos",
+        "z": "fcb24b59.997048",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "library.export.track",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 349,
+        "y": 2077,
+        "wires": [
+            [
+                "cd96d3dc.adc6d"
+            ]
+        ]
+    },
+    {
+        "id": "35302241.ac031e",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "all",
+        "props": [
+            {
+                "p": "searchTitle",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 870,
+        "y": 2054,
+        "wires": [
+            [
+                "17888613.34f28a"
+            ]
+        ]
+    },
+    {
+        "id": "17888613.34f28a",
+        "type": "sonos-manage-mysonos",
+        "z": "fcb24b59.997048",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "library.get.playlists",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1060,
+        "y": 2071,
+        "wires": [
+            [
+                "b7c6d8cb.6b8888"
+            ]
+        ]
+    },
+    {
+        "id": "8d9f9fe5.face5",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ML10CC",
+        "payloadType": "str",
+        "x": 880,
+        "y": 2086,
+        "wires": [
+            [
+                "17888613.34f28a"
+            ]
+        ]
+    },
+    {
+        "id": "3c81693e.c38976",
+        "type": "comment",
+        "z": "fcb24b59.997048",
+        "name": "Get: Album, playlist",
+        "info": "",
+        "x": 909,
+        "y": 1951,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "cbd66b1c.882a78",
+        "type": "comment",
+        "z": "fcb24b59.997048",
+        "name": "My-Sonos",
+        "info": "",
+        "x": 65,
+        "y": 2257,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "66912737.43d058",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ML10CC",
+        "payloadType": "str",
+        "x": 100,
+        "y": 2162,
+        "wires": [
+            [
+                "ff7586c7.f47c08"
+            ]
+        ]
+    },
+    {
+        "id": "ff7586c7.f47c08",
+        "type": "sonos-manage-mysonos",
+        "z": "fcb24b59.997048",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "library.queue.playlist",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 280,
+        "y": 2162,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d11777.714ad88",
+        "type": "comment",
+        "z": "fcb24b59.997048",
+        "name": "Queue playlist",
+        "info": "",
+        "x": 110,
+        "y": 2128,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "e2d764f1.37d0c8",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "HERZ KRAFT",
+        "payloadType": "str",
+        "x": 111,
+        "y": 2330,
+        "wires": [
+            [
+                "6a9f4e84.9bc77"
+            ]
+        ]
+    },
+    {
+        "id": "e0efd269.df8b1",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ML10CC",
+        "payloadType": "str",
+        "x": 101,
+        "y": 2862,
+        "wires": [
+            [
+                "6a9f4e84.9bc77"
+            ]
+        ]
+    },
+    {
+        "id": "f16e432e.51962",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Best of Prime",
+        "payloadType": "str",
+        "x": 810,
+        "y": 2546,
+        "wires": [
+            [
+                "9c2d9076.4e8a3"
+            ]
+        ]
     }
 ]
