@@ -8226,7 +8226,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1394,
+        "y": 1437,
         "wires": [
             [
                 "f8f5397c.9fc5c8"
@@ -8238,6 +8238,15 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -8246,7 +8255,7 @@
         "payload": "2",
         "payloadType": "str",
         "x": 89,
-        "y": 1625,
+        "y": 1668,
         "wires": [
             [
                 "1c01ab2d.2b9625"
@@ -8275,7 +8284,7 @@
         "payload": "NORMAL",
         "payloadType": "str",
         "x": 100,
-        "y": 1459,
+        "y": 1502,
         "wires": [
             [
                 "55f515e0.9b980c"
@@ -8304,7 +8313,7 @@
         "payload": "SHUFFLE",
         "payloadType": "str",
         "x": 100,
-        "y": 1427,
+        "y": 1470,
         "wires": [
             [
                 "55f515e0.9b980c"
@@ -8376,7 +8385,7 @@
         "payload": "2",
         "payloadType": "str",
         "x": 90,
-        "y": 1592,
+        "y": 1635,
         "wires": [
             [
                 "91b068f2.a67c68"
@@ -8387,13 +8396,13 @@
         "id": "91b068f2.a67c68",
         "type": "change",
         "z": "fcb24b59.997048",
-        "name": "5 tracks",
+        "name": "6 tracks",
         "rules": [
             {
                 "t": "set",
                 "p": "numberOfTracks",
                 "pt": "msg",
-                "to": "5",
+                "to": "6",
                 "tot": "num"
             }
         ],
@@ -8403,7 +8412,7 @@
         "to": "",
         "reg": false,
         "x": 221,
-        "y": 1606,
+        "y": 1649,
         "wires": [
             [
                 "1c01ab2d.2b9625"
@@ -8452,7 +8461,7 @@
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
         "x": 632,
-        "y": 1767,
+        "y": 1810,
         "wires": [
             [
                 "51d49a82.887694"
@@ -8479,7 +8488,7 @@
         "to": "",
         "reg": false,
         "x": 770,
-        "y": 1767,
+        "y": 1810,
         "wires": [
             [
                 "efdd2e17.e1fbd"
@@ -8528,7 +8537,7 @@
         "name": "TuneIn",
         "info": "",
         "x": 632,
-        "y": 1315,
+        "y": 1358,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -8554,7 +8563,7 @@
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
         "x": 632,
-        "y": 1813,
+        "y": 1856,
         "wires": [
             [
                 "659dbc63.67f134"
@@ -8581,7 +8590,7 @@
         "to": "",
         "reg": false,
         "x": 770,
-        "y": 1813,
+        "y": 1856,
         "wires": [
             [
                 "45bb3557.49866c"
@@ -8644,7 +8653,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1349,
+        "y": 1392,
         "wires": [
             [
                 "603bf096.7b10b"
@@ -8658,7 +8667,7 @@
         "name": "SONOS-Queue",
         "info": "",
         "x": 120,
-        "y": 1316,
+        "y": 1359,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -8669,7 +8678,7 @@
         "name": "Notification",
         "info": "",
         "x": 640,
-        "y": 1735,
+        "y": 1778,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -8683,7 +8692,7 @@
         "stateType": "str",
         "name": "",
         "x": 959,
-        "y": 1813,
+        "y": 1856,
         "wires": [
             []
         ]
@@ -8779,7 +8788,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1560,
+        "y": 1603,
         "wires": [
             [
                 "4ea01c39.6d2854"
@@ -8808,7 +8817,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1515,
+        "y": 1558,
         "wires": [
             [
                 "2f53d9b2.e67ad6"
@@ -8977,7 +8986,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 642,
-        "y": 1348,
+        "y": 1391,
         "wires": [
             [
                 "f033e838.6a1a98"
@@ -9033,7 +9042,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 642,
-        "y": 1682,
+        "y": 1725,
         "wires": [
             [
                 "19ce25f4.1e1b5a"
@@ -9060,7 +9069,7 @@
         "to": "",
         "reg": false,
         "x": 784,
-        "y": 1682,
+        "y": 1725,
         "wires": [
             [
                 "11575ece.7d3eb1"
@@ -9089,7 +9098,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 642,
-        "y": 1637,
+        "y": 1680,
         "wires": [
             [
                 "11575ece.7d3eb1"
@@ -9103,7 +9112,7 @@
         "name": "Line In and TV",
         "info": "",
         "x": 660,
-        "y": 1604,
+        "y": 1647,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -9302,7 +9311,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 840,
+        "y": 892,
         "wires": [
             [
                 "9b2d5e17.80ad3",
@@ -9327,7 +9336,7 @@
         "stateType": "str",
         "name": "",
         "x": 264,
-        "y": 888,
+        "y": 940,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9344,7 +9353,7 @@
         "stateType": "str",
         "name": "",
         "x": 274,
-        "y": 934,
+        "y": 986,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9361,7 +9370,7 @@
         "stateType": "str",
         "name": "",
         "x": 282,
-        "y": 980,
+        "y": 1032,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9378,7 +9387,7 @@
         "stateType": "str",
         "name": "",
         "x": 282,
-        "y": 1116,
+        "y": 1168,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9395,7 +9404,7 @@
         "stateType": "str",
         "name": "",
         "x": 282,
-        "y": 1162,
+        "y": 1214,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9412,7 +9421,7 @@
         "stateType": "str",
         "name": "",
         "x": 273,
-        "y": 1026,
+        "y": 1078,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9431,7 +9440,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 473,
-        "y": 1201,
+        "y": 1253,
         "wires": []
     },
     {
@@ -9444,7 +9453,7 @@
         "stateType": "str",
         "name": "",
         "x": 294,
-        "y": 842,
+        "y": 894,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -9587,7 +9596,8 @@
                 "9ef480af.e3003",
                 "60d2cb79.534e74",
                 "b9470db1.599dd",
-                "ef2edbd5.f068a8"
+                "ef2edbd5.f068a8",
+                "cc6e2052.9626a"
             ]
         ]
     },
@@ -9603,7 +9613,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 923,
-        "y": 1231,
+        "y": 1281,
         "wires": []
     },
     {
@@ -9646,7 +9656,7 @@
         "command": "player.get.subgain",
         "name": "",
         "x": 684,
-        "y": 1231,
+        "y": 1230,
         "wires": [
             [
                 "d0c8fe54.43fc6"
@@ -10126,7 +10136,7 @@
         "stateType": "str",
         "name": "",
         "x": 837,
-        "y": 1637,
+        "y": 1680,
         "wires": [
             []
         ]
@@ -10141,7 +10151,7 @@
         "stateType": "str",
         "name": "",
         "x": 814,
-        "y": 1348,
+        "y": 1391,
         "wires": [
             []
         ]
@@ -10156,7 +10166,7 @@
         "stateType": "str",
         "name": "",
         "x": 393,
-        "y": 1626,
+        "y": 1669,
         "wires": [
             []
         ]
@@ -10171,7 +10181,7 @@
         "stateType": "str",
         "name": "",
         "x": 293,
-        "y": 1560,
+        "y": 1603,
         "wires": [
             []
         ]
@@ -10186,7 +10196,7 @@
         "stateType": "str",
         "name": "",
         "x": 291,
-        "y": 1515,
+        "y": 1558,
         "wires": [
             []
         ]
@@ -10201,7 +10211,7 @@
         "stateType": "str",
         "name": "",
         "x": 300,
-        "y": 1440,
+        "y": 1483,
         "wires": [
             []
         ]
@@ -10216,7 +10226,7 @@
         "stateType": "num",
         "name": "",
         "x": 281,
-        "y": 1394,
+        "y": 1437,
         "wires": [
             []
         ]
@@ -10231,7 +10241,7 @@
         "stateType": "str",
         "name": "",
         "x": 291,
-        "y": 1349,
+        "y": 1392,
         "wires": [
             []
         ]
@@ -10246,7 +10256,7 @@
         "stateType": "str",
         "name": "",
         "x": 960,
-        "y": 1767,
+        "y": 1810,
         "wires": [
             []
         ]
@@ -12819,7 +12829,7 @@
         "payload": "spotify:track:5AdoS3gS47x40nBNlNmPQ8",
         "payloadType": "str",
         "x": 1061,
-        "y": 1350,
+        "y": 1393,
         "wires": [
             [
                 "634d07c2.0a4e08"
@@ -12839,7 +12849,7 @@
         "payload": "spotify:artistTopTracks:1dfeR4HaWDbWqFHLkxsg1d",
         "payloadType": "str",
         "x": 1071,
-        "y": 1382,
+        "y": 1425,
         "wires": [
             [
                 "634d07c2.0a4e08"
@@ -12859,7 +12869,7 @@
         "payload": "spotify:album:1TSZDcvlPtAnekTaItI3qO",
         "payloadType": "str",
         "x": 1061,
-        "y": 1414,
+        "y": 1457,
         "wires": [
             [
                 "634d07c2.0a4e08"
@@ -12879,7 +12889,7 @@
         "payload": "spotify:user:spotify:playlist:37i9dQZEVXbMDoHDwVN2tF",
         "payloadType": "str",
         "x": 1071,
-        "y": 1449,
+        "y": 1492,
         "wires": [
             [
                 "634d07c2.0a4e08"
@@ -12893,7 +12903,7 @@
         "name": "SONOS-Queue Spotify",
         "info": "",
         "x": 1061,
-        "y": 1317,
+        "y": 1360,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -12907,7 +12917,7 @@
         "stateType": "str",
         "name": "",
         "x": 1321,
-        "y": 1414,
+        "y": 1457,
         "wires": [
             []
         ]
@@ -12919,7 +12929,7 @@
         "name": "SONOS-Queue  URI",
         "info": "",
         "x": 130,
-        "y": 1728,
+        "y": 1771,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -12945,7 +12955,7 @@
         "payload": "x-file-cifs://nas2019/Multimedia/Music/MyMusic/Rihanna/Diamonds/Rihanna%20-%20Diamonds.mp3",
         "payloadType": "str",
         "x": 140,
-        "y": 1845,
+        "y": 1888,
         "wires": [
             [
                 "cfad7644.d60bc8"
@@ -12974,7 +12984,7 @@
         "payload": "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
         "payloadType": "str",
         "x": 90,
-        "y": 1765,
+        "y": 1808,
         "wires": [
             [
                 "cfad7644.d60bc8"
@@ -12991,7 +13001,7 @@
         "stateType": "str",
         "name": "",
         "x": 280,
-        "y": 1765,
+        "y": 1808,
         "wires": [
             []
         ]
@@ -13833,7 +13843,7 @@
         "stateType": "str",
         "name": "",
         "x": 272,
-        "y": 1071,
+        "y": 1123,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -16322,7 +16332,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 797,
+        "y": 849,
         "wires": [
             [
                 "766a9fa6.62c12"
@@ -16339,7 +16349,7 @@
         "stateType": "str",
         "name": "",
         "x": 294,
-        "y": 797,
+        "y": 849,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -16585,7 +16595,7 @@
         "payload": "s24896",
         "payloadType": "str",
         "x": 632,
-        "y": 1394,
+        "y": 1437,
         "wires": [
             [
                 "ea3ee8f6.81f858"
@@ -16602,7 +16612,7 @@
         "stateType": "str",
         "name": "",
         "x": 815,
-        "y": 1394,
+        "y": 1437,
         "wires": [
             []
         ]
@@ -16775,7 +16785,7 @@
         "name": "UNIVERSAL NODE - QUEUE / STREAM",
         "info": "",
         "x": 165,
-        "y": 1283,
+        "y": 1326,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -17445,9 +17455,9 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "People Help",
+        "payload": "People",
         "payloadType": "str",
-        "x": 330,
+        "x": 310,
         "y": 2917,
         "wires": [
             [
@@ -18605,7 +18615,7 @@
         "id": "c52af4e6.f2e648",
         "type": "sonos-universal",
         "z": "978eb95a.7e19f8",
-        "confignode": "32a98882.56e1c8",
+        "confignode": "88e9fa70.4a53e8",
         "command": "message",
         "state": "",
         "stateType": "str",
@@ -20032,7 +20042,7 @@
         "name": "Music-Library track",
         "info": "",
         "x": 130,
-        "y": 1805,
+        "y": 1848,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -20042,11 +20052,11 @@
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
         "command": "group.queue.uri",
-        "state": "x-file-cifs://nas2019/Multimedia/Music/MyMusic/The%20Rolling%20Stones/Kuschelrock%2004/The%20Rolling%20Stones%20-%20Angie.mp3",
+        "state": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/The%20Rolling%20Stones/Kuschelrock%2004/The%20Rolling%20Stones%20-%20Angie.mp3",
         "stateType": "str",
         "name": "",
         "x": 260,
-        "y": 1885,
+        "y": 1928,
         "wires": [
             []
         ]
@@ -20073,7 +20083,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1885,
+        "y": 1928,
         "wires": [
             [
                 "cfa822f.74e21e"
@@ -20087,38 +20097,9 @@
         "name": "http stream",
         "info": "",
         "x": 641,
-        "y": 1450,
+        "y": 1493,
         "wires": [],
         "icon": "node-red/alert.svg"
-    },
-    {
-        "id": "38848c27.451474",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 642,
-        "y": 1490,
-        "wires": [
-            [
-                "c95823b7.e6866"
-            ]
-        ]
     },
     {
         "id": "c95823b7.e6866",
@@ -20129,39 +20110,10 @@
         "state": "http://www.fritz.de/live.m3u",
         "stateType": "str",
         "name": "",
-        "x": 825,
-        "y": 1490,
+        "x": 830,
+        "y": 1533,
         "wires": [
             []
-        ]
-    },
-    {
-        "id": "d5fc563.3da0aa8",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 642,
-        "y": 1536,
-        "wires": [
-            [
-                "fbad7dfb.f92f9"
-            ]
         ]
     },
     {
@@ -20173,8 +20125,8 @@
         "state": "https://live.radioarabella.de",
         "stateType": "str",
         "name": "",
-        "x": 825,
-        "y": 1536,
+        "x": 830,
+        "y": 1579,
         "wires": [
             []
         ]
@@ -20435,7 +20387,7 @@
         "stateType": "str",
         "name": "",
         "x": 271,
-        "y": 1200,
+        "y": 1252,
         "wires": [
             [
                 "3297fb94.ce7334"
@@ -24381,7 +24333,7 @@
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
         "command": "mysonos.export.item",
-        "state": "Jerusa",
+        "state": "Ency",
         "stateType": "str",
         "name": "",
         "x": 281,
@@ -27535,7 +27487,7 @@
         "stateType": "str",
         "name": "",
         "x": 267,
-        "y": 1673,
+        "y": 1716,
         "wires": [
             [
                 "8a475eb8.0a9be"
@@ -27564,7 +27516,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1673,
+        "y": 1716,
         "wires": [
             [
                 "25b08358.52191c"
@@ -27584,7 +27536,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 439,
-        "y": 1673,
+        "y": 1716,
         "wires": []
     },
     {
@@ -27609,7 +27561,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1061,
-        "y": 1638,
+        "y": 1681,
         "wires": [
             [
                 "b84326cf.dadde8"
@@ -27626,7 +27578,7 @@
         "stateType": "str",
         "name": "",
         "x": 1216,
-        "y": 1638,
+        "y": 1681,
         "wires": [
             []
         ]
@@ -28273,23 +28225,6 @@
         "wires": []
     },
     {
-        "id": "cb26c639.982da8",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "command": "group.create.snap",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 319,
-        "y": 740,
-        "wires": [
-            [
-                "d0f022e1.36444"
-            ]
-        ]
-    },
-    {
         "id": "d0f022e1.36444",
         "type": "debug",
         "z": "55805384.a4695c",
@@ -28300,7 +28235,7 @@
         "tostatus": false,
         "complete": "true",
         "targetType": "full",
-        "x": 599,
+        "x": 970,
         "y": 820,
         "wires": []
     },
@@ -28309,90 +28244,16 @@
         "type": "sonos-manage-mysonos",
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
-        "command": "mysonos.export.item",
+        "command": "mysonos.get.items",
         "state": "Entspannter P",
         "stateType": "str",
         "name": "",
-        "x": 329,
+        "x": 319,
         "y": 820,
         "wires": [
             [
+                "8cd957b5.d093d8",
                 "d0f022e1.36444"
-            ]
-        ]
-    },
-    {
-        "id": "47163ae6.ab9854",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "Media",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"endpoint\":\"/MediaRenderer/AVTransport/Control\",\"action\":\"GetMediaInfo\",\"inArgs\":{\"InstanceID\":0}}",
-        "payloadType": "json",
-        "x": 79,
-        "y": 900,
-        "wires": [
-            [
-                "81af001d.9858a"
-            ]
-        ]
-    },
-    {
-        "id": "81af001d.9858a",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "command": "message",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 289,
-        "y": 920,
-        "wires": [
-            [
-                "d0f022e1.36444"
-            ]
-        ]
-    },
-    {
-        "id": "8cb13832.d49cf8",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 99,
-        "y": 740,
-        "wires": [
-            [
-                "cb26c639.982da8"
             ]
         ]
     },
@@ -28422,35 +28283,6 @@
         "wires": [
             [
                 "a1d16dec.b827d"
-            ]
-        ]
-    },
-    {
-        "id": "63f339b3.0297a8",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "Position",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "player.execute.action",
-        "payload": "{\"endpoint\":\"/MediaRenderer/AVTransport/Control\",\"action\":\"GetPositionInfo\",\"inArgs\":{\"InstanceID\":0}}",
-        "payloadType": "json",
-        "x": 79,
-        "y": 940,
-        "wires": [
-            [
-                "81af001d.9858a"
             ]
         ]
     },
@@ -31977,5 +31809,702 @@
         "x": 470,
         "y": 86,
         "wires": []
+    },
+    {
+        "id": "8a79a6ec.22c0d8",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "test",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaServer/ContentDirectory/Control\",\"action\":\"Browse\",\"inArgs\":{\"ObjectID\":\"FV:2\",\"InstanceID\":0,\"BrowseFlag\":\"BrowseDirectChildren\",\"Filter\":\"*\",\"StartingIndex\":\"0\",\"RequestedCount\":\"100\",\"SortCriteria\":\"\"}}",
+        "payloadType": "json",
+        "x": 730,
+        "y": 1543,
+        "wires": [
+            [
+                "4bb5f3f3.547c3c"
+            ]
+        ]
+    },
+    {
+        "id": "4bb5f3f3.547c3c",
+        "type": "sonos-universal",
+        "z": "978eb95a.7e19f8",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 870,
+        "y": 1543,
+        "wires": [
+            [
+                "996274b1.c32038",
+                "5cb3d162.f81cc"
+            ]
+        ]
+    },
+    {
+        "id": "996274b1.c32038",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1543,
+        "wires": []
+    },
+    {
+        "id": "74fbbb4c.e3aec4",
+        "type": "debug",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 1583,
+        "wires": []
+    },
+    {
+        "id": "5cb3d162.f81cc",
+        "type": "xml",
+        "z": "978eb95a.7e19f8",
+        "name": "",
+        "property": "payload.Result",
+        "attr": "_",
+        "chr": "#txt",
+        "x": 1010,
+        "y": 1583,
+        "wires": [
+            [
+                "74fbbb4c.e3aec4"
+            ]
+        ]
+    },
+    {
+        "id": "a283bccc.0ecfc",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "A Categories",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaServer/ContentDirectory/Control\",\"action\":\"Browse\",\"inArgs\":{\"ObjectID\":\"A:\",\"InstanceID\":0,\"BrowseFlag\":\"BrowseDirectChildren\",\"Filter\":\"*\",\"StartingIndex\":\"0\",\"RequestedCount\":\"100\",\"SortCriteria\":\"\"}}",
+        "payloadType": "json",
+        "x": 750,
+        "y": 1400,
+        "wires": [
+            [
+                "4bb5f3f3.547c3c"
+            ]
+        ]
+    },
+    {
+        "id": "fe6ed753.d76558",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "FV",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaServer/ContentDirectory/Control\",\"action\":\"Browse\",\"inArgs\":{\"ObjectID\":\"FV:\",\"InstanceID\":0,\"BrowseFlag\":\"BrowseDirectChildren\",\"Filter\":\"*\",\"StartingIndex\":\"0\",\"RequestedCount\":\"100\",\"SortCriteria\":\"\"}}",
+        "payloadType": "json",
+        "x": 910,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d53cd3.e7ab233",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "TuneIn RadioStations",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaServer/ContentDirectory/Control\",\"action\":\"Browse\",\"inArgs\":{\"ObjectID\":\"R:0/0\",\"InstanceID\":0,\"BrowseFlag\":\"BrowseDirectChildren\",\"Filter\":\"*\",\"StartingIndex\":\"0\",\"RequestedCount\":\"100\",\"SortCriteria\":\"\"}}",
+        "payloadType": "json",
+        "x": 1100,
+        "y": 1400,
+        "wires": [
+            [
+                "4bb5f3f3.547c3c"
+            ]
+        ]
+    },
+    {
+        "id": "ea410b0e.0d88b8",
+        "type": "inject",
+        "z": "978eb95a.7e19f8",
+        "name": "TuneIn RadioShows",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.execute.action",
+        "payload": "{\"endpoint\":\"/MediaServer/ContentDirectory/Control\",\"action\":\"Browse\",\"inArgs\":{\"ObjectID\":\"R:0/1\",\"InstanceID\":0,\"BrowseFlag\":\"BrowseDirectChildren\",\"Filter\":\"*\",\"StartingIndex\":\"0\",\"RequestedCount\":\"100\",\"SortCriteria\":\"\"}}",
+        "payloadType": "json",
+        "x": 1090,
+        "y": 1440,
+        "wires": [
+            [
+                "4bb5f3f3.547c3c"
+            ]
+        ]
+    },
+    {
+        "id": "8cd957b5.d093d8",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$map(\t   payload,\t   function($value){\t        {\t           'title': $value.title,\t           'uri': $value.uri,\t           'upnp': $value.upnpClass,\t           'pt': $value.processingType\t        }\t   }\t)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 860,
+        "wires": [
+            [
+                "d0f022e1.36444"
+            ]
+        ]
+    },
+    {
+        "id": "2021d40c.167a7c",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 960,
+        "wires": [
+            [
+                "71cec8b4.0c4e68"
+            ]
+        ]
+    },
+    {
+        "id": "71cec8b4.0c4e68",
+        "type": "sonos-manage-mysonos",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "mysonos.export.item",
+        "state": "Imported",
+        "stateType": "str",
+        "name": "",
+        "x": 280,
+        "y": 960,
+        "wires": [
+            [
+                "dc0a791b.ee9018"
+            ]
+        ]
+    },
+    {
+        "id": "dc0a791b.ee9018",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.export",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 490,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cc6e2052.9626a",
+        "type": "sonos-universal",
+        "z": "fcb24b59.997048",
+        "confignode": "32a98882.56e1c8",
+        "command": "player.get.buttonlockstate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 704,
+        "y": 1275,
+        "wires": [
+            [
+                "d0c8fe54.43fc6"
+            ]
+        ]
+    },
+    {
+        "id": "63ca3c44.1e36f4",
+        "type": "sonos-universal",
+        "z": "fcb24b59.997048",
+        "confignode": "32a98882.56e1c8",
+        "command": "player.set.buttonlockstate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 293,
+        "y": 801,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "895a921c.f3c",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 89,
+        "y": 785,
+        "wires": [
+            [
+                "63ca3c44.1e36f4"
+            ]
+        ]
+    },
+    {
+        "id": "6449d6.e8c1762c",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "off",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 89,
+        "y": 817,
+        "wires": [
+            [
+                "63ca3c44.1e36f4"
+            ]
+        ]
+    },
+    {
+        "id": "22771de6.cce9d2",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "Fritzzz",
+        "props": [
+            {
+                "p": "info",
+                "v": "Fritzzzz",
+                "vt": "str"
+            },
+            {
+                "p": "artUri",
+                "v": "https://sanitaer-fritz.de/wp-content/uploads/2020/01/Fritz-GmbH-Logo.png",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 632,
+        "y": 1533,
+        "wires": [
+            [
+                "c95823b7.e6866"
+            ]
+        ]
+    },
+    {
+        "id": "1eb0ccf2.6722c3",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "Arabella",
+        "props": [
+            {
+                "p": "info",
+                "v": "Arabella",
+                "vt": "str"
+            },
+            {
+                "p": "artUri",
+                "v": "https://myonlineradio.at/public/uploads/radio_img/radio-arabella/play_250_250.png",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 640,
+        "y": 1579,
+        "wires": [
+            [
+                "fbad7dfb.f92f9"
+            ]
+        ]
+    },
+    {
+        "id": "f9d4920f.38e9",
+        "type": "comment",
+        "z": "405b0e15.987b5",
+        "name": "http stream - will play but only show parts or nothing",
+        "info": "",
+        "x": 230,
+        "y": 3808,
+        "wires": [],
+        "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "3007b1d.73a414e",
+        "type": "sonos-universal",
+        "z": "405b0e15.987b5",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.streamhttp",
+        "state": "http://www.fritz.de/live.m3u",
+        "stateType": "str",
+        "name": "",
+        "x": 320,
+        "y": 3840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0ec9ec.a5ac56",
+        "type": "sonos-universal",
+        "z": "405b0e15.987b5",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.streamhttp",
+        "state": "https://live.radioarabella.de",
+        "stateType": "str",
+        "name": "",
+        "x": 320,
+        "y": 3940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c2b9ec0.de28c",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "no info, artUri",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 3840,
+        "wires": [
+            [
+                "3007b1d.73a414e"
+            ]
+        ]
+    },
+    {
+        "id": "465cca4b.acfd04",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "no art",
+        "props": [
+            {
+                "p": "info",
+                "v": "Arabella",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 3940,
+        "wires": [
+            [
+                "f0ec9ec.a5ac56"
+            ]
+        ]
+    },
+    {
+        "id": "1c4cf408.857bcc",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "no info",
+        "props": [
+            {
+                "p": "artUri",
+                "v": "https://myonlineradio.at/public/uploads/radio_img/radio-arabella/play_250_250.png",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 3986,
+        "wires": [
+            [
+                "48bc5346.60940c"
+            ]
+        ]
+    },
+    {
+        "id": "48bc5346.60940c",
+        "type": "sonos-universal",
+        "z": "405b0e15.987b5",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.streamhttp",
+        "state": "https://live.radioarabella.de",
+        "stateType": "str",
+        "name": "",
+        "x": 320,
+        "y": 3986,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4828bfc1.c57e8",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "wrong type title",
+        "props": [
+            {
+                "p": "title",
+                "v": "",
+                "vt": "date"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "str",
+        "x": 120,
+        "y": 3880,
+        "wires": [
+            [
+                "3007b1d.73a414e"
+            ]
+        ]
+    },
+    {
+        "id": "b863ca53.d3edf8",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "xxxxx",
+        "payloadType": "str",
+        "x": 80,
+        "y": 4100,
+        "wires": [
+            [
+                "c9081427.1c65c8"
+            ]
+        ]
+    },
+    {
+        "id": "621905a2.27fd9c",
+        "type": "inject",
+        "z": "405b0e15.987b5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 80,
+        "y": 4133,
+        "wires": [
+            [
+                "c9081427.1c65c8"
+            ]
+        ]
+    },
+    {
+        "id": "c9081427.1c65c8",
+        "type": "sonos-universal",
+        "z": "405b0e15.987b5",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "player.set.buttonlockstate",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 330,
+        "y": 4133,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fca22de5.5c38d",
+        "type": "comment",
+        "z": "405b0e15.987b5",
+        "name": "button state failure",
+        "info": "",
+        "x": 96,
+        "y": 4060,
+        "wires": [],
+        "icon": "node-red/alert.svg"
     }
 ]
