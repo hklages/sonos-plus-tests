@@ -59,7 +59,7 @@
         "id": "e0bd5fc5.e4aaa",
         "type": "tab",
         "label": "Events",
-        "disabled": true,
+        "disabled": false,
         "info": ""
     },
     {
@@ -10131,11 +10131,11 @@
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
         "confignode": "88e9fa70.4a53e8",
-        "command": "player.play.avtransport",
+        "command": "player.play.linein",
         "state": "x-rincon-stream:RINCON_000E58FE3AEA01400",
         "stateType": "str",
         "name": "",
-        "x": 837,
+        "x": 817,
         "y": 1680,
         "wires": [
             []
@@ -24941,6 +24941,7 @@
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
         "d": true,
+        "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.37",
         "events": [
@@ -25255,6 +25256,7 @@
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
         "d": true,
+        "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.37",
         "events": [
@@ -25431,6 +25433,7 @@
         "type": "sonosevents-selection",
         "z": "e0bd5fc5.e4aaa",
         "d": true,
+        "name": "",
         "confignode": "1c70290d.90a4e7",
         "playerHostname": "192.168.178.36",
         "events": [
