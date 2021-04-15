@@ -28,6 +28,13 @@
         "info": ""
     },
     {
+        "id": "6d603261.4bb86c",
+        "type": "tab",
+        "label": "Notification & Snap",
+        "disabled": false,
+        "info": ""
+    },
+    {
         "id": "775d7a2a.44f234",
         "type": "tab",
         "label": "My Sonos",
@@ -6575,902 +6582,6 @@
         ]
     },
     {
-        "id": "6edae5c0.71764c",
-        "type": "polly",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "voice": "0",
-        "ssml": false,
-        "dir": "overwritten",
-        "config": "8945d5a5.31aef8",
-        "x": 352,
-        "y": 2415,
-        "wires": [
-            [
-                "eb21ac8e.1acb8"
-            ],
-            []
-        ]
-    },
-    {
-        "id": "6117cc2e.1247f4",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "weather",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "notification_weather.mp3",
-        "payload": "We expect nice weather without any rain. Enjoy the day.",
-        "payloadType": "str",
-        "x": 90,
-        "y": 2370,
-        "wires": [
-            [
-                "45df8523.17f7bc"
-            ]
-        ]
-    },
-    {
-        "id": "cdcb0b84.3e80c8",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "prepare play notification",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$globalContext('system_baseUrl') & '/notifications/' & topic",
-                "tot": "jsonata"
-            },
-            {
-                "t": "set",
-                "p": "volume",
-                "pt": "msg",
-                "to": "70",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "sameVolume",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 652,
-        "y": 2453,
-        "wires": [
-            [
-                "eea26486.5a84b8"
-            ]
-        ]
-    },
-    {
-        "id": "61e8079b.0744c8",
-        "type": "fs-ops-copy",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "sourcePath": "",
-        "sourcePathType": "str",
-        "sourceFilename": "file",
-        "sourceFilenameType": "msg",
-        "destPath": "notification_cache",
-        "destPathType": "global",
-        "destFilename": "topic",
-        "destFilenameType": "msg",
-        "link": false,
-        "overwrite": true,
-        "x": 596,
-        "y": 2411,
-        "wires": [
-            [
-                "cdcb0b84.3e80c8"
-            ]
-        ]
-    },
-    {
-        "id": "eb21ac8e.1acb8",
-        "type": "switch",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "property": "_polly.cached",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "false"
-            },
-            {
-                "t": "else"
-            }
-        ],
-        "checkall": "false",
-        "repair": false,
-        "outputs": 2,
-        "x": 468,
-        "y": 2417,
-        "wires": [
-            [
-                "61e8079b.0744c8"
-            ],
-            [
-                "cdcb0b84.3e80c8"
-            ]
-        ]
-    },
-    {
-        "id": "56bc69b9.945378",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "Caution",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "notification_caution.mp3",
-        "payload": "Caution Caution Caution",
-        "payloadType": "str",
-        "x": 90,
-        "y": 2402,
-        "wires": [
-            [
-                "45df8523.17f7bc"
-            ]
-        ]
-    },
-    {
-        "id": "d4d35cd2.c8bb1",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "inform",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "notification_inform.mp3",
-        "payload": "Please mind your steps",
-        "payloadType": "str",
-        "x": 90,
-        "y": 2435,
-        "wires": [
-            [
-                "45df8523.17f7bc"
-            ]
-        ]
-    },
-    {
-        "id": "2e24502.17808b",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Examples",
-        "info": "",
-        "x": 99,
-        "y": 2331,
-        "wires": []
-    },
-    {
-        "id": "b8593edd.183ee",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Create/Update mp3 file, create uri and parameter",
-        "info": "",
-        "x": 481,
-        "y": 2331,
-        "wires": []
-    },
-    {
-        "id": "76f7d799.22ea88",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Serialize msgs and play notification",
-        "info": "",
-        "x": 1030,
-        "y": 2330,
-        "wires": []
-    },
-    {
-        "id": "f6cf8a70.cb3968",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "Clear storage / cache",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 747,
-        "y": 2186,
-        "wires": [
-            [
-                "2822240b.ac4f1c",
-                "5b658e0c.99519"
-            ]
-        ]
-    },
-    {
-        "id": "5b492bb7.8723c4",
-        "type": "link in",
-        "z": "25081f9e.f5f34",
-        "name": "execute play_notification",
-        "links": [
-            "eea26486.5a84b8"
-        ],
-        "x": 904,
-        "y": 2370,
-        "wires": [
-            [
-                "f6bd0928.fc79a8"
-            ]
-        ]
-    },
-    {
-        "id": "eea26486.5a84b8",
-        "type": "link out",
-        "z": "25081f9e.f5f34",
-        "name": "Trigger play_notification",
-        "links": [
-            "5b492bb7.8723c4"
-        ],
-        "x": 752,
-        "y": 2370,
-        "wires": []
-    },
-    {
-        "id": "268c8327.a8a12c",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "set",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 90,
-        "y": 2220,
-        "wires": [
-            [
-                "27034749.03ae18",
-                "c9be9d0.3a5cc6",
-                "67e03099.89377"
-            ]
-        ]
-    },
-    {
-        "id": "4f2df90e.b7c768",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "TTS, notification",
-        "info": "",
-        "x": 85,
-        "y": 2151,
-        "wires": []
-    },
-    {
-        "id": "cc3ba74b.699798",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Set Up",
-        "info": "",
-        "x": 91,
-        "y": 2186,
-        "wires": []
-    },
-    {
-        "id": "27034749.03ae18",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "system_baseUrl",
-                "pt": "global",
-                "to": "http://192.168.178.13:1880",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 296,
-        "y": 2187,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "c9be9d0.3a5cc6",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "notification_directory",
-                "pt": "global",
-                "to": "\\Users\\hekla\\AppData\\Local\\Temp",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 306,
-        "y": 2219,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "67e03099.89377",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "notification_cache",
-                "pt": "global",
-                "to": "\\Users\\hekla\\AppData\\Local\\Temp",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 296,
-        "y": 2251,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a881a188.4c194",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "add cache",
-        "rules": [
-            {
-                "t": "set",
-                "p": "options.dir",
-                "pt": "msg",
-                "to": "notification_cache",
-                "tot": "global"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 605,
-        "y": 2369,
-        "wires": [
-            [
-                "6edae5c0.71764c"
-            ]
-        ]
-    },
-    {
-        "id": "7c70a566.a6371c",
-        "type": "link in",
-        "z": "25081f9e.f5f34",
-        "name": "TTS Execute",
-        "links": [
-            "18152db0.dc8512",
-            "45df8523.17f7bc",
-            "26ac2b2.49d16d4",
-            "4613a740.f0ce58"
-        ],
-        "x": 315,
-        "y": 2369,
-        "wires": [
-            [
-                "f8c778ee.a48958"
-            ]
-        ]
-    },
-    {
-        "id": "45df8523.17f7bc",
-        "type": "link out",
-        "z": "25081f9e.f5f34",
-        "name": "TTS Trigger",
-        "links": [
-            "7c70a566.a6371c"
-        ],
-        "x": 215,
-        "y": 2368,
-        "wires": []
-    },
-    {
-        "id": "5bf5d4c5.59daac",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Maintain",
-        "info": "",
-        "x": 554,
-        "y": 2187,
-        "wires": []
-    },
-    {
-        "id": "76bdded1.b8428",
-        "type": "fs-ops-delete",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "path": "notification_directory",
-        "pathType": "global",
-        "filename": "files",
-        "filenameType": "msg",
-        "x": 867,
-        "y": 2225,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "2822240b.ac4f1c",
-        "type": "fs-ops-dir",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "path": "notification_directory",
-        "pathType": "global",
-        "filter": "notification_*.*",
-        "filterType": "str",
-        "dir": "files",
-        "dirType": "msg",
-        "x": 717,
-        "y": 2225,
-        "wires": [
-            [
-                "76bdded1.b8428"
-            ]
-        ]
-    },
-    {
-        "id": "5b658e0c.99519",
-        "type": "fs-ops-dir",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "path": "notification_cache",
-        "pathType": "global",
-        "filter": "*_*.mp3",
-        "filterType": "str",
-        "dir": "files",
-        "dirType": "msg",
-        "x": 717,
-        "y": 2258,
-        "wires": [
-            [
-                "566e2c4a.fd11c4"
-            ]
-        ]
-    },
-    {
-        "id": "566e2c4a.fd11c4",
-        "type": "fs-ops-delete",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "path": "notification_directory",
-        "pathType": "global",
-        "filename": "files",
-        "filenameType": "msg",
-        "x": 867,
-        "y": 2258,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "a95bb148.f6cf8",
-        "type": "status",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "scope": [
-            "94a3f8d9.622f08"
-        ],
-        "x": 949,
-        "y": 2419,
-        "wires": [
-            [
-                "cb9f1269.8a42a"
-            ]
-        ]
-    },
-    {
-        "id": "cb9f1269.8a42a",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "initiate next",
-        "rules": [
-            {
-                "t": "set",
-                "p": "releaseNext",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1101,
-        "y": 2419,
-        "wires": [
-            [
-                "f6bd0928.fc79a8"
-            ]
-        ]
-    },
-    {
-        "id": "f6bd0928.fc79a8",
-        "type": "function",
-        "z": "25081f9e.f5f34",
-        "name": "queue",
-        "func": "// modified version - originally from https://gist.github.com/dceejay/cea8afa28b7a93ebdc0f \n\n// restartQueue = create new\nif (msg.hasOwnProperty(\"restartQueue\")) {\n    context.queue = []\n    \n// if queue doesn't exist, create it    \n} else {\n    context.queue = context.queue || []\n    context.busy = context.busy || false\n\n    // if the msg is a trigger one release next message\n    if (msg.hasOwnProperty(\"releaseNext\")) {\n        if (context.queue.length > 0) {\n            var m = context.queue.shift()\n            node.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n            return m \n        }\n        else {\n            context.busy = false;\n        }\n    }\n    else {\n        if (context.busy) {\n            // if busy add to queue\n            context.queue.push(msg);\n        }\n        else {\n        // otherwise we are empty so just pass through and set busy flag\n            context.busy = true;\n            node.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n            return msg;\n        }\n    }\n}\nnode.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n\nreturn null;",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 1012,
-        "y": 2370,
-        "wires": [
-            [
-                "94a3f8d9.622f08"
-            ]
-        ]
-    },
-    {
-        "id": "39107409.2bd34c",
-        "type": "http in",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "url": "/notifications/:mp3file",
-        "method": "get",
-        "upload": false,
-        "swaggerDoc": "",
-        "x": 150,
-        "y": 2566,
-        "wires": [
-            [
-                "8d123025.d983d"
-            ]
-        ]
-    },
-    {
-        "id": "a6b140d2.92031",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "serve mp3 file for SONOS player",
-        "info": "",
-        "x": 170,
-        "y": 2529,
-        "wires": []
-    },
-    {
-        "id": "8d123025.d983d",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "$globalContext('notification_directory') & '/' & msg.req.params.mp3file",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 374,
-        "y": 2566,
-        "wires": [
-            [
-                "88023347.baaa5"
-            ]
-        ]
-    },
-    {
-        "id": "88023347.baaa5",
-        "type": "file in",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "filename": "",
-        "format": "",
-        "chunk": false,
-        "sendError": false,
-        "encoding": "base64",
-        "x": 534,
-        "y": 2566,
-        "wires": [
-            [
-                "90c7cb1e.f8b988"
-            ]
-        ]
-    },
-    {
-        "id": "739ca8ed.a5b598",
-        "type": "catch",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "scope": [
-            "8d123025.d983d",
-            "88023347.baaa5",
-            "90c7cb1e.f8b988"
-        ],
-        "uncaught": false,
-        "x": 549,
-        "y": 2614,
-        "wires": [
-            [
-                "a92f54ca.9b9918",
-                "e2120fb8.13076"
-            ]
-        ]
-    },
-    {
-        "id": "c3be5270.7da9c",
-        "type": "http response",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "statusCode": "",
-        "headers": {},
-        "x": 829,
-        "y": 2565,
-        "wires": []
-    },
-    {
-        "id": "c3d21ae8.1d9e98",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Test",
-        "info": "http://192.168.178.49:1880/notifications/notification_weather.mp3",
-        "x": 386,
-        "y": 2530,
-        "wires": []
-    },
-    {
-        "id": "e1f463c3.4e624",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "Flush command queue",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1095,
-        "y": 2186,
-        "wires": [
-            [
-                "6e7df499.48bb2c"
-            ]
-        ]
-    },
-    {
-        "id": "6e7df499.48bb2c",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "restartQueue",
-                "pt": "msg",
-                "to": "true",
-                "tot": "bool"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1107,
-        "y": 2223,
-        "wires": [
-            [
-                "f6bd0928.fc79a8"
-            ]
-        ]
-    },
-    {
-        "id": "f8c778ee.a48958",
-        "type": "function",
-        "z": "25081f9e.f5f34",
-        "name": "check globals",
-        "func": "// checks existens of requried global variables\n//\nlet value = global.get('system_baseUrl')\nif (!isTruthyAndNotEmptyString(value)) {\n    node.error('global - system_baseUrl not defined')\n    return null\n}\nvalue = global.get('notification_cache')\nif (!isTruthyAndNotEmptyString(value)) {\n    node.error('global - notification_cache not defined')\n    return null\n}\nvalue = global.get('notification_directory')\nif (!isTruthyAndNotEmptyString(value)) {\n    node.error('global - notification_directory not defined')\n    return null\n}\nreturn msg\n\nfunction isTruthyAndNotEmptyString (input) {\n    return !(typeof input === 'undefined' || input === null ||\n      (typeof input === 'number' && !Number.isFinite(input)) || input === '')\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 432,
-        "y": 2369,
-        "wires": [
-            [
-                "a881a188.4c194"
-            ]
-        ]
-    },
-    {
-        "id": "434999ac.a373d8",
-        "type": "comment",
-        "z": "25081f9e.f5f34",
-        "name": "Recommendation: Define globals as permanent",
-        "info": "This is done in the settings.js file. \nUncomment the contextStorage paragraph.\nThis will store all context variable on disk.",
-        "x": 440,
-        "y": 2151,
-        "wires": []
-    },
-    {
-        "id": "5cca9dcf.2b7814",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "weather",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "notification_weather.mp3",
-        "payload": "We expect nice weather without any rain. Enjoy the day.",
-        "payloadType": "str",
-        "x": 450,
-        "y": 2475,
-        "wires": [
-            [
-                "cdcb0b84.3e80c8"
-            ]
-        ]
-    },
-    {
-        "id": "90c7cb1e.f8b988",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "set 200",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "200",
-                "tot": "num"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 664,
-        "y": 2566,
-        "wires": [
-            [
-                "c3be5270.7da9c"
-            ]
-        ]
-    },
-    {
-        "id": "a92f54ca.9b9918",
-        "type": "change",
-        "z": "25081f9e.f5f34",
-        "name": "set 404",
-        "rules": [
-            {
-                "t": "set",
-                "p": "statusCode",
-                "pt": "msg",
-                "to": "404",
-                "tot": "num"
-            },
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "error",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 675,
-        "y": 2614,
-        "wires": [
-            [
-                "c3be5270.7da9c"
-            ]
-        ]
-    },
-    {
-        "id": "e2120fb8.13076",
-        "type": "debug",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": true,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 670,
-        "y": 2649,
-        "wires": []
-    },
-    {
-        "id": "94a3f8d9.622f08",
-        "type": "sonos-universal",
-        "z": "25081f9e.f5f34",
-        "confignode": "88e9fa70.4a53e8",
-        "command": "group.play.notification",
-        "name": "",
-        "x": 1191,
-        "y": 2370,
-        "wires": [
-            [
-                "a29a63d7.3e64c"
-            ]
-        ]
-    },
-    {
-        "id": "a29a63d7.3e64c",
-        "type": "debug",
-        "z": "25081f9e.f5f34",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 1286,
-        "y": 2419,
-        "wires": []
-    },
-    {
-        "id": "536e14cb.5bbbcc",
-        "type": "inject",
-        "z": "25081f9e.f5f34",
-        "name": "habit",
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "notification_habit.mp3",
-        "payload": "Don't do unto others what you would not have done unto you. Don't do unto others what you would not have done unto you.",
-        "payloadType": "str",
-        "x": 90,
-        "y": 2468,
-        "wires": [
-            [
-                "45df8523.17f7bc"
-            ]
-        ]
-    },
-    {
         "id": "a72c5aae.097e58",
         "type": "comment",
         "z": "25081f9e.f5f34",
@@ -7662,6 +6773,8 @@
         "z": "25081f9e.f5f34",
         "confignode": "88e9fa70.4a53e8",
         "command": "group.get.trackplus",
+        "state": "",
+        "stateType": "str",
         "name": "",
         "x": 689,
         "y": 71,
@@ -8478,7 +7591,7 @@
                 "t": "set",
                 "p": "volume",
                 "pt": "msg",
-                "to": "70",
+                "to": "40",
                 "tot": "str"
             }
         ],
@@ -8580,7 +7693,7 @@
                 "t": "set",
                 "p": "volume",
                 "pt": "msg",
-                "to": "70",
+                "to": "40",
                 "tot": "str"
             }
         ],
@@ -11555,6 +10668,9 @@
         "z": "775d7a2a.44f234",
         "confignode": "88e9fa70.4a53e8",
         "command": "library.queue.playlist",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
         "name": "",
         "x": 740,
         "y": 366,
@@ -12861,6 +11977,15 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "insert_spotify_uri Album",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
@@ -15649,6 +14774,7 @@
         "command": "group.get.state",
         "state": "",
         "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
         "name": "",
         "x": 923,
         "y": 2706,
@@ -21077,6 +20203,7 @@
         "command": "message",
         "state": "",
         "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
         "name": "message to kitchen",
         "x": 651,
         "y": 246,
@@ -21813,6 +20940,7 @@
         "command": "message",
         "state": "",
         "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
         "name": "",
         "x": 690,
         "y": 80,
@@ -24316,12 +23444,13 @@
         "id": "f0ef441a.222fd8",
         "type": "sonos-universal",
         "z": "55805384.a4695c",
+        "d": true,
         "confignode": "88e9fa70.4a53e8",
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 491,
+        "x": 530,
         "y": 420,
         "wires": [
             []
@@ -24333,7 +23462,7 @@
         "z": "55805384.a4695c",
         "confignode": "88e9fa70.4a53e8",
         "command": "mysonos.export.item",
-        "state": "Ency",
+        "state": "Entspan",
         "stateType": "str",
         "name": "",
         "x": 281,
@@ -28228,68 +27357,6 @@
         "wires": []
     },
     {
-        "id": "d0f022e1.36444",
-        "type": "debug",
-        "z": "55805384.a4695c",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "x": 970,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "a1d16dec.b827d",
-        "type": "sonos-manage-mysonos",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "command": "mysonos.get.items",
-        "state": "Entspannter P",
-        "stateType": "str",
-        "name": "",
-        "x": 319,
-        "y": 820,
-        "wires": [
-            [
-                "8cd957b5.d093d8",
-                "d0f022e1.36444"
-            ]
-        ]
-    },
-    {
-        "id": "a7a7048d.c2b0b8",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 90,
-        "y": 820,
-        "wires": [
-            [
-                "a1d16dec.b827d"
-            ]
-        ]
-    },
-    {
         "id": "33efa22f.c9ba5e",
         "type": "inject",
         "z": "978eb95a.7e19f8",
@@ -32025,94 +31092,6 @@
         ]
     },
     {
-        "id": "8cd957b5.d093d8",
-        "type": "change",
-        "z": "55805384.a4695c",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "$map(\t   payload,\t   function($value){\t        {\t           'title': $value.title,\t           'uri': $value.uri,\t           'upnp': $value.upnpClass,\t           'pt': $value.processingType\t        }\t   }\t)\t",
-                "tot": "jsonata"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 600,
-        "y": 860,
-        "wires": [
-            [
-                "d0f022e1.36444"
-            ]
-        ]
-    },
-    {
-        "id": "2021d40c.167a7c",
-        "type": "inject",
-        "z": "55805384.a4695c",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 960,
-        "wires": [
-            [
-                "71cec8b4.0c4e68"
-            ]
-        ]
-    },
-    {
-        "id": "71cec8b4.0c4e68",
-        "type": "sonos-manage-mysonos",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "command": "mysonos.export.item",
-        "state": "Imported",
-        "stateType": "str",
-        "name": "",
-        "x": 280,
-        "y": 960,
-        "wires": [
-            [
-                "dc0a791b.ee9018"
-            ]
-        ]
-    },
-    {
-        "id": "dc0a791b.ee9018",
-        "type": "sonos-universal",
-        "z": "55805384.a4695c",
-        "confignode": "88e9fa70.4a53e8",
-        "command": "group.play.export",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 490,
-        "y": 960,
-        "wires": [
-            []
-        ]
-    },
-    {
         "id": "cc6e2052.9626a",
         "type": "sonos-universal",
         "z": "fcb24b59.997048",
@@ -32509,5 +31488,1783 @@
         "y": 4060,
         "wires": [],
         "icon": "node-red/alert.svg"
+    },
+    {
+        "id": "35a3d5a8.0a8bba",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "insert_spotify_uri Track",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:album:6gificznvuk0ddZK9dmv3T",
+        "payloadType": "str",
+        "x": 1260,
+        "y": 1320,
+        "wires": [
+            [
+                "634d07c2.0a4e08"
+            ]
+        ]
+    },
+    {
+        "id": "199ad435.f1f31c",
+        "type": "comment",
+        "z": "55805384.a4695c",
+        "name": "Spotfy Region",
+        "info": "",
+        "x": 80,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "f8583e36.f2de",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 1060,
+        "wires": [
+            [
+                "8fd2d74c.963298"
+            ]
+        ]
+    },
+    {
+        "id": "8fd2d74c.963298",
+        "type": "sonos-manage-mysonos",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "mysonos.export.item",
+        "state": "Top Tracks",
+        "stateType": "str",
+        "name": "",
+        "x": 300,
+        "y": 1060,
+        "wires": [
+            [
+                "3fd94026.6cdfb"
+            ]
+        ]
+    },
+    {
+        "id": "3fd94026.6cdfb",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "305c8e7a.9153f2",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.export",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 810,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "61c20e8c.ccb9c",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"uri\":\"x-rincon-cpcontainer:100e206cspotify%3aartistTopTracks%3a0xXsqso16tGTnoiMpTcukL?sid=9&amp;flags=8300&amp;sn=24\",\"metadata\":\"&lt;DIDL-Lite xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot; xmlns:upnp=&quot;urn:schemas-upnp-org:metadata-1-0/upnp/&quot; xmlns:r=&quot;urn:schemas-rinconnetworks-com:metadata-1-0/&quot; xmlns=&quot;urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/&quot;&gt;&lt;item id=&quot;100e206cspotify%3aartistTopTracks%3a0xXsqso16tGTnoiMpTcukL&quot; parentID=&quot;&quot; restricted=&quot;true&quot;&gt;&lt;dc:title&gt;&lt;/dc:title&gt;&lt;upnp:class&gt;object.container.playlistContainer&lt;/upnp:class&gt;&lt;desc id=&quot;cdudn&quot; nameSpace=&quot;urn:schemas-rinconnetworks-com:metadata-1-0/&quot;&gt;SA_RINCON2311_X_#Svc2311-0-Token&lt;/desc&gt;&lt;/item&gt;&lt;/DIDL-Lite&gt;\",\"queue\":true}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 1140,
+        "wires": [
+            [
+                "305c8e7a.9153f2"
+            ]
+        ]
+    },
+    {
+        "id": "fc4246df.bd2ef8",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "Example 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:album:6gificznvuk0ddZK9dmv3T",
+        "payloadType": "str",
+        "x": 120,
+        "y": 1280,
+        "wires": [
+            [
+                "a5631e5b.0e258"
+            ]
+        ]
+    },
+    {
+        "id": "a5631e5b.0e258",
+        "type": "switch",
+        "z": "55805384.a4695c",
+        "name": "album?",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "spotify:album:",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 1280,
+        "wires": [
+            [
+                "6134d059.c9e49"
+            ]
+        ]
+    },
+    {
+        "id": "2b9e69b6.2096a6",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "illegal - missing identifier",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:",
+        "payloadType": "str",
+        "x": 170,
+        "y": 1240,
+        "wires": [
+            [
+                "a5631e5b.0e258"
+            ]
+        ]
+    },
+    {
+        "id": "e4d3ee70.96efd",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 914,
+        "y": 1327,
+        "wires": []
+    },
+    {
+        "id": "6134d059.c9e49",
+        "type": "change",
+        "z": "55805384.a4695c",
+        "name": "extract id",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$substringAfter(payload, 'spotify:album:')\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 1280,
+        "wires": [
+            [
+                "1552be7c.376a72"
+            ]
+        ]
+    },
+    {
+        "id": "1552be7c.376a72",
+        "type": "template",
+        "z": "55805384.a4695c",
+        "name": "template with region us",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{\n    \"uri\": \"x-rincon-cpcontainer:1004206cspotify%3aalbum%3a{{payload}}?sid=12&amp;flags=8300&amp;sn=1\",\n    \"metadata\": \"&lt;DIDL-Lite xmlns:dc=&quot;http://purl.org/dc/elements/1.1/&quot; xmlns:upnp=&quot;urn:schemas-upnp-org:metadata-1-0/upnp/&quot; xmlns:r=&quot;urn:schemas-rinconnetworks-com:metadata-1-0/&quot; xmlns=&quot;urn:schemas-upnp-org:metadata-1-0/DIDL-Lite/&quot;&gt;&lt;item id=&quot;1004206cspotify%3aalbum%3a{{payload}}&quot; parentID=&quot;&quot; restricted=&quot;true&quot;&gt;&lt;dc:title&gt;&lt;/dc:title&gt;&lt;upnp:class&gt;object.container.album.musicAlbum&lt;/upnp:class&gt;&lt;desc id=&quot;cdudn&quot; nameSpace=&quot;urn:schemas-rinconnetworks-com:metadata-1-0/&quot;&gt;SA_RINCON3079_X_#Svc3079-0-Token&lt;/desc&gt;&lt;/item&gt;&lt;/DIDL-Lite&gt;\",\n    \"queue\": true\n}\n",
+        "output": "json",
+        "x": 720,
+        "y": 1280,
+        "wires": [
+            [
+                "e4d3ee70.96efd",
+                "12cf8e7b.637b72"
+            ]
+        ]
+    },
+    {
+        "id": "653bc433.91995c",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "Example 2",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:album:6KrB8Sf5g2WpCcWUOE9CpE",
+        "payloadType": "str",
+        "x": 120,
+        "y": 1320,
+        "wires": [
+            [
+                "a5631e5b.0e258"
+            ]
+        ]
+    },
+    {
+        "id": "12cf8e7b.637b72",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.export",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 954,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4054890c.2e9118",
+        "type": "comment",
+        "z": "55805384.a4695c",
+        "name": "↓modify",
+        "info": "Modify the config file and enter a valid player ip address. ",
+        "x": 963,
+        "y": 1253,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "88405595.05fa38",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Play Notification ",
+        "info": "",
+        "x": 85,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "b0cc8529.6708f8",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.notification",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 627,
+        "y": 222,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3c66de0a.97bed2",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "with volume",
+        "rules": [
+            {
+                "t": "set",
+                "p": "volume",
+                "pt": "msg",
+                "to": "20",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 417,
+        "y": 222,
+        "wires": [
+            [
+                "b0cc8529.6708f8"
+            ]
+        ]
+    },
+    {
+        "id": "86c86015.3e327",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "http soundbible foghorn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
+        "payloadType": "str",
+        "x": 140,
+        "y": 60,
+        "wires": [
+            [
+                "3c66de0a.97bed2"
+            ]
+        ]
+    },
+    {
+        "id": "ac611a2d.f39168",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "cifs Angi",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/The%20Rolling%20Stones/Kuschelrock%2004/The%20Rolling%20Stones%20-%20Angie.mp3",
+        "payloadType": "str",
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "3c66de0a.97bed2"
+            ]
+        ]
+    },
+    {
+        "id": "25517602.317f8a",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Snap shot",
+        "info": "",
+        "x": 66,
+        "y": 299,
+        "wires": []
+    },
+    {
+        "id": "479aa35c.8c803c",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 95,
+        "y": 340,
+        "wires": [
+            [
+                "fd2385aa.d50a38"
+            ]
+        ]
+    },
+    {
+        "id": "fd2385aa.d50a38",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.create.snap",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 305,
+        "y": 340,
+        "wires": [
+            [
+                "71b3b063.3a8f8"
+            ]
+        ]
+    },
+    {
+        "id": "bdc6340f.40d8f8",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.snap",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 815,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "71b3b063.3a8f8",
+        "type": "delay",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "30",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 535,
+        "y": 340,
+        "wires": [
+            [
+                "bdc6340f.40d8f8"
+            ]
+        ]
+    },
+    {
+        "id": "b54028f2.b65548",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 395,
+        "y": 380,
+        "wires": [
+            [
+                "357965e3.dfc4da"
+            ]
+        ]
+    },
+    {
+        "id": "357965e3.dfc4da",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.streamhttp",
+        "state": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 595,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b45b842.75ea38",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "cifs foghorn mp3",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_1.mp3",
+        "payloadType": "str",
+        "x": 121,
+        "y": 140,
+        "wires": [
+            [
+                "3c66de0a.97bed2"
+            ]
+        ]
+    },
+    {
+        "id": "1d3a1841.bd20c8",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "cifs foghorn wav",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_2.wav",
+        "payloadType": "str",
+        "x": 121,
+        "y": 180,
+        "wires": [
+            [
+                "3c66de0a.97bed2"
+            ]
+        ]
+    },
+    {
+        "id": "ada42f9.c1f98d",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "https soundbible foghorn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "https://soundbible.com/mp3/foghorn-daniel_simon.mp3",
+        "payloadType": "str",
+        "x": 150,
+        "y": 100,
+        "wires": [
+            [
+                "3c66de0a.97bed2"
+            ]
+        ]
+    },
+    {
+        "id": "884deb1f.b9f008",
+        "type": "polly",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "voice": "0",
+        "ssml": false,
+        "dir": "overwritten",
+        "config": "8945d5a5.31aef8",
+        "x": 350,
+        "y": 860,
+        "wires": [
+            [
+                "a1d174cf.238b28"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "238d26fa.c8224a",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "weather",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "notification_weather.mp3",
+        "payload": "We expect nice weather without any rain. Enjoy the day.",
+        "payloadType": "str",
+        "x": 88,
+        "y": 815,
+        "wires": [
+            [
+                "fec8c517.027818"
+            ]
+        ]
+    },
+    {
+        "id": "a14c7615.788fb8",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "prepare play notification",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$globalContext('system_baseUrl') & '/notifications/' & topic",
+                "tot": "jsonata"
+            },
+            {
+                "t": "set",
+                "p": "volume",
+                "pt": "msg",
+                "to": "70",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "sameVolume",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 898,
+        "wires": [
+            [
+                "23808166.c97c6e"
+            ]
+        ]
+    },
+    {
+        "id": "67ffcfcb.15bd",
+        "type": "fs-ops-copy",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "sourcePath": "",
+        "sourcePathType": "str",
+        "sourceFilename": "file",
+        "sourceFilenameType": "msg",
+        "destPath": "notification_cache",
+        "destPathType": "global",
+        "destFilename": "topic",
+        "destFilenameType": "msg",
+        "link": false,
+        "overwrite": true,
+        "x": 594,
+        "y": 856,
+        "wires": [
+            [
+                "a14c7615.788fb8"
+            ]
+        ]
+    },
+    {
+        "id": "a1d174cf.238b28",
+        "type": "switch",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "property": "_polly.cached",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 2,
+        "x": 466,
+        "y": 862,
+        "wires": [
+            [
+                "67ffcfcb.15bd"
+            ],
+            [
+                "a14c7615.788fb8"
+            ]
+        ]
+    },
+    {
+        "id": "fcf50875.baab88",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Caution",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "notification_caution.mp3",
+        "payload": "Caution Caution Caution",
+        "payloadType": "str",
+        "x": 88,
+        "y": 847,
+        "wires": [
+            [
+                "fec8c517.027818"
+            ]
+        ]
+    },
+    {
+        "id": "1248889f.c76c87",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "inform",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "notification_inform.mp3",
+        "payload": "Please mind your steps",
+        "payloadType": "str",
+        "x": 88,
+        "y": 880,
+        "wires": [
+            [
+                "fec8c517.027818"
+            ]
+        ]
+    },
+    {
+        "id": "fc7a4025.92f4e",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Examples",
+        "info": "",
+        "x": 97,
+        "y": 776,
+        "wires": []
+    },
+    {
+        "id": "e0afdc1.6279b2",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Create/Update mp3 file, create uri and parameter",
+        "info": "",
+        "x": 479,
+        "y": 776,
+        "wires": []
+    },
+    {
+        "id": "6668d928.c9d308",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Serialize msgs and play notification",
+        "info": "",
+        "x": 1028,
+        "y": 775,
+        "wires": []
+    },
+    {
+        "id": "5571647a.d1780c",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Clear storage / cache",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 745,
+        "y": 631,
+        "wires": [
+            [
+                "d15a60f9.564e2",
+                "a7935c13.464ab"
+            ]
+        ]
+    },
+    {
+        "id": "c407d3ee.78e67",
+        "type": "link in",
+        "z": "6d603261.4bb86c",
+        "name": "execute play_notification",
+        "links": [
+            "23808166.c97c6e",
+            "76e6ed77.e3dd84"
+        ],
+        "x": 902,
+        "y": 815,
+        "wires": [
+            [
+                "7663467f.6d9e38"
+            ]
+        ]
+    },
+    {
+        "id": "23808166.c97c6e",
+        "type": "link out",
+        "z": "6d603261.4bb86c",
+        "name": "Trigger play_notification",
+        "links": [
+            "c407d3ee.78e67"
+        ],
+        "x": 750,
+        "y": 815,
+        "wires": []
+    },
+    {
+        "id": "ea8da81a.2a8508",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "set",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 88,
+        "y": 665,
+        "wires": [
+            [
+                "40eb64bd.a17ebc",
+                "b6e1e75d.eafa18",
+                "5fabed53.e27f44"
+            ]
+        ]
+    },
+    {
+        "id": "46403f1f.54a57",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "TTS, notification",
+        "info": "",
+        "x": 85,
+        "y": 596,
+        "wires": []
+    },
+    {
+        "id": "58da61e8.d666d",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Set Up",
+        "info": "",
+        "x": 89,
+        "y": 631,
+        "wires": []
+    },
+    {
+        "id": "40eb64bd.a17ebc",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "system_baseUrl",
+                "pt": "global",
+                "to": "http://192.168.178.13:1880",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 294,
+        "y": 632,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6e1e75d.eafa18",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "notification_directory",
+                "pt": "global",
+                "to": "\\Users\\hekla\\AppData\\Local\\Temp",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 304,
+        "y": 664,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5fabed53.e27f44",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "notification_cache",
+                "pt": "global",
+                "to": "\\Users\\hekla\\AppData\\Local\\Temp",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 294,
+        "y": 696,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "29249781.b4add8",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "add cache",
+        "rules": [
+            {
+                "t": "set",
+                "p": "options.dir",
+                "pt": "msg",
+                "to": "notification_cache",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 603,
+        "y": 814,
+        "wires": [
+            [
+                "884deb1f.b9f008"
+            ]
+        ]
+    },
+    {
+        "id": "5c6cc856.6aa6c8",
+        "type": "link in",
+        "z": "6d603261.4bb86c",
+        "name": "TTS Execute",
+        "links": [
+            "18152db0.dc8512",
+            "fec8c517.027818",
+            "26ac2b2.49d16d4",
+            "4613a740.f0ce58"
+        ],
+        "x": 313,
+        "y": 814,
+        "wires": [
+            [
+                "2ebb1a19.f32b76"
+            ]
+        ]
+    },
+    {
+        "id": "fec8c517.027818",
+        "type": "link out",
+        "z": "6d603261.4bb86c",
+        "name": "TTS Trigger",
+        "links": [
+            "5c6cc856.6aa6c8"
+        ],
+        "x": 213,
+        "y": 813,
+        "wires": []
+    },
+    {
+        "id": "d27666e1.d1ff28",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Maintain",
+        "info": "",
+        "x": 552,
+        "y": 632,
+        "wires": []
+    },
+    {
+        "id": "7fbf84a6.82a2ec",
+        "type": "fs-ops-delete",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "path": "notification_directory",
+        "pathType": "global",
+        "filename": "files",
+        "filenameType": "msg",
+        "x": 865,
+        "y": 670,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d15a60f9.564e2",
+        "type": "fs-ops-dir",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "path": "notification_directory",
+        "pathType": "global",
+        "filter": "notification_*.*",
+        "filterType": "str",
+        "dir": "files",
+        "dirType": "msg",
+        "x": 715,
+        "y": 670,
+        "wires": [
+            [
+                "7fbf84a6.82a2ec"
+            ]
+        ]
+    },
+    {
+        "id": "a7935c13.464ab",
+        "type": "fs-ops-dir",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "path": "notification_cache",
+        "pathType": "global",
+        "filter": "*_*.mp3",
+        "filterType": "str",
+        "dir": "files",
+        "dirType": "msg",
+        "x": 715,
+        "y": 703,
+        "wires": [
+            [
+                "1666bec2.490c01"
+            ]
+        ]
+    },
+    {
+        "id": "1666bec2.490c01",
+        "type": "fs-ops-delete",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "path": "notification_directory",
+        "pathType": "global",
+        "filename": "files",
+        "filenameType": "msg",
+        "x": 865,
+        "y": 703,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e30370a6.0a91a",
+        "type": "status",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "scope": [
+            "45324393.696ebc"
+        ],
+        "x": 947,
+        "y": 864,
+        "wires": [
+            [
+                "aa1212bf.453a9"
+            ]
+        ]
+    },
+    {
+        "id": "aa1212bf.453a9",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "initiate next",
+        "rules": [
+            {
+                "t": "set",
+                "p": "releaseNext",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1099,
+        "y": 864,
+        "wires": [
+            [
+                "7663467f.6d9e38"
+            ]
+        ]
+    },
+    {
+        "id": "7663467f.6d9e38",
+        "type": "function",
+        "z": "6d603261.4bb86c",
+        "name": "queue",
+        "func": "// modified version - originally from https://gist.github.com/dceejay/cea8afa28b7a93ebdc0f \n\n// restartQueue = create new\nif (msg.hasOwnProperty(\"restartQueue\")) {\n    context.queue = []\n    \n// if queue doesn't exist, create it    \n} else {\n    context.queue = context.queue || []\n    context.busy = context.busy || false\n\n    // if the msg is a trigger one release next message\n    if (msg.hasOwnProperty(\"releaseNext\")) {\n        if (context.queue.length > 0) {\n            var m = context.queue.shift()\n            node.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n            return m \n        }\n        else {\n            context.busy = false;\n        }\n    }\n    else {\n        if (context.busy) {\n            // if busy add to queue\n            context.queue.push(msg);\n        }\n        else {\n        // otherwise we are empty so just pass through and set busy flag\n            context.busy = true;\n            node.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n            return msg;\n        }\n    }\n}\nnode.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1010,
+        "y": 815,
+        "wires": [
+            [
+                "45324393.696ebc"
+            ]
+        ]
+    },
+    {
+        "id": "2306cdff.cce762",
+        "type": "http in",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "url": "/notifications/:mp3file",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 148,
+        "y": 1011,
+        "wires": [
+            [
+                "67a56dfd.7434b4"
+            ]
+        ]
+    },
+    {
+        "id": "bace01df.9c73c",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "serve mp3 file for SONOS player",
+        "info": "",
+        "x": 168,
+        "y": 974,
+        "wires": []
+    },
+    {
+        "id": "67a56dfd.7434b4",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "filename",
+                "pt": "msg",
+                "to": "$globalContext('notification_directory') & '/' & msg.req.params.mp3file",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 372,
+        "y": 1011,
+        "wires": [
+            [
+                "40aa813c.425ce"
+            ]
+        ]
+    },
+    {
+        "id": "40aa813c.425ce",
+        "type": "file in",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "filename": "",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "base64",
+        "x": 532,
+        "y": 1011,
+        "wires": [
+            [
+                "be2c961d.80b0a8"
+            ]
+        ]
+    },
+    {
+        "id": "dcb015f7.a32528",
+        "type": "catch",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "scope": [
+            "67a56dfd.7434b4",
+            "40aa813c.425ce",
+            "be2c961d.80b0a8"
+        ],
+        "uncaught": false,
+        "x": 547,
+        "y": 1059,
+        "wires": [
+            [
+                "a058e94f.850658",
+                "2c3dbc65.675a84"
+            ]
+        ]
+    },
+    {
+        "id": "e64c8cf4.c65f7",
+        "type": "http response",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 827,
+        "y": 1010,
+        "wires": []
+    },
+    {
+        "id": "509f880.e5ee778",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Test",
+        "info": "http://192.168.178.49:1880/notifications/notification_weather.mp3",
+        "x": 384,
+        "y": 975,
+        "wires": []
+    },
+    {
+        "id": "fcd3da3f.30ea48",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Flush command queue",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1093,
+        "y": 631,
+        "wires": [
+            [
+                "def8224e.66019"
+            ]
+        ]
+    },
+    {
+        "id": "def8224e.66019",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "restartQueue",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1105,
+        "y": 668,
+        "wires": [
+            [
+                "7663467f.6d9e38"
+            ]
+        ]
+    },
+    {
+        "id": "2ebb1a19.f32b76",
+        "type": "function",
+        "z": "6d603261.4bb86c",
+        "name": "check globals",
+        "func": "// checks existens of requried global variables\n//\nlet value = global.get('system_baseUrl')\nif (!isTruthyAndNotEmptyString(value)) {\n    node.error('global - system_baseUrl not defined')\n    return null\n}\nvalue = global.get('notification_cache')\nif (!isTruthyAndNotEmptyString(value)) {\n    node.error('global - notification_cache not defined')\n    return null\n}\nvalue = global.get('notification_directory')\nif (!isTruthyAndNotEmptyString(value)) {\n    node.error('global - notification_directory not defined')\n    return null\n}\nreturn msg\n\nfunction isTruthyAndNotEmptyString (input) {\n    return !(typeof input === 'undefined' || input === null ||\n      (typeof input === 'number' && !Number.isFinite(input)) || input === '')\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 430,
+        "y": 814,
+        "wires": [
+            [
+                "29249781.b4add8"
+            ]
+        ]
+    },
+    {
+        "id": "95573f3.23119c",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Recommendation: Define globals as permanent",
+        "info": "This is done in the settings.js file. \nUncomment the contextStorage paragraph.\nThis will store all context variable on disk.",
+        "x": 438,
+        "y": 596,
+        "wires": []
+    },
+    {
+        "id": "b9e6d33c.576b7",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "weather",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "notification_weather.mp3",
+        "payload": "We expect nice weather without any rain. Enjoy the day.",
+        "payloadType": "str",
+        "x": 448,
+        "y": 920,
+        "wires": [
+            [
+                "a14c7615.788fb8"
+            ]
+        ]
+    },
+    {
+        "id": "be2c961d.80b0a8",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "set 200",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "200",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 662,
+        "y": 1011,
+        "wires": [
+            [
+                "e64c8cf4.c65f7"
+            ]
+        ]
+    },
+    {
+        "id": "a058e94f.850658",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "set 404",
+        "rules": [
+            {
+                "t": "set",
+                "p": "statusCode",
+                "pt": "msg",
+                "to": "404",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "error",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 673,
+        "y": 1059,
+        "wires": [
+            [
+                "e64c8cf4.c65f7"
+            ]
+        ]
+    },
+    {
+        "id": "2c3dbc65.675a84",
+        "type": "debug",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 668,
+        "y": 1094,
+        "wires": []
+    },
+    {
+        "id": "45324393.696ebc",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.notification",
+        "name": "",
+        "x": 1189,
+        "y": 815,
+        "wires": [
+            [
+                "a0f04794.5e2998"
+            ]
+        ]
+    },
+    {
+        "id": "a0f04794.5e2998",
+        "type": "debug",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1284,
+        "y": 864,
+        "wires": []
+    },
+    {
+        "id": "cbf5905c.a3d79",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "habit",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "notification_habit.mp3",
+        "payload": "Don't do unto others what you would not have done unto you. Don't do unto others what you would not have done unto you.",
+        "payloadType": "str",
+        "x": 88,
+        "y": 913,
+        "wires": [
+            [
+                "fec8c517.027818"
+            ]
+        ]
+    },
+    {
+        "id": "acb2877c.df11a8",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Tune In ANTENNE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ANTENNE",
+        "payloadType": "str",
+        "x": 510,
+        "y": 60,
+        "wires": [
+            [
+                "5cd48705.c45488"
+            ]
+        ]
+    },
+    {
+        "id": "5cd48705.c45488",
+        "type": "sonos-manage-mysonos",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "mysonos.export.item",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "Tune In Antenne",
+        "x": 820,
+        "y": 60,
+        "wires": [
+            [
+                "51508943.1c91a8"
+            ]
+        ]
+    },
+    {
+        "id": "51508943.1c91a8",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.export",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 1010,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b19da92d.a14cf8",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Amazon Station Best Of Charts",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Best Of",
+        "payloadType": "str",
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "5cd48705.c45488"
+            ]
+        ]
+    },
+    {
+        "id": "528833ed.f402cc",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Amazon Playlist Best of Prime",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Best of Prime",
+        "payloadType": "str",
+        "x": 540,
+        "y": 140,
+        "wires": [
+            [
+                "5cd48705.c45488"
+            ]
+        ]
+    },
+    {
+        "id": "bcc3ab96.8d8768",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Amazon Album Britney",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Britney",
+        "payloadType": "str",
+        "x": 840,
+        "y": 140,
+        "wires": [
+            [
+                "5cd48705.c45488"
+            ]
+        ]
+    },
+    {
+        "id": "1377f4c0.aa6b4b",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "ML Playlist",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ML10CC",
+        "payloadType": "str",
+        "x": 1100,
+        "y": 140,
+        "wires": [
+            [
+                "5cd48705.c45488"
+            ]
+        ]
+    },
+    {
+        "id": "bd750f7d.fc07c",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "ML Album Diamond Life Sade",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Diamond Life",
+        "payloadType": "str",
+        "x": 1340,
+        "y": 140,
+        "wires": [
+            [
+                "5cd48705.c45488"
+            ]
+        ]
     }
 ]
