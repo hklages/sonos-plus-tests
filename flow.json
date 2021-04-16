@@ -23701,7 +23701,7 @@
         "payload": "{\"value1\":2,\"value2\":1}",
         "payloadType": "json",
         "x": 290,
-        "y": 554,
+        "y": 544,
         "wires": [
             [
                 "3a17dc.7d242824"
@@ -31831,7 +31831,7 @@
         "name": "Play Notification ",
         "info": "",
         "x": 85,
-        "y": 20,
+        "y": 477,
         "wires": []
     },
     {
@@ -31844,7 +31844,7 @@
         "stateType": "str",
         "name": "",
         "x": 627,
-        "y": 222,
+        "y": 679,
         "wires": [
             []
         ]
@@ -31869,7 +31869,7 @@
         "to": "",
         "reg": false,
         "x": 417,
-        "y": 222,
+        "y": 679,
         "wires": [
             [
                 "b0cc8529.6708f8"
@@ -31898,7 +31898,7 @@
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
         "x": 140,
-        "y": 60,
+        "y": 517,
         "wires": [
             [
                 "3c66de0a.97bed2"
@@ -31927,7 +31927,7 @@
         "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/The%20Rolling%20Stones/Kuschelrock%2004/The%20Rolling%20Stones%20-%20Angie.mp3",
         "payloadType": "str",
         "x": 100,
-        "y": 220,
+        "y": 677,
         "wires": [
             [
                 "3c66de0a.97bed2"
@@ -31940,8 +31940,8 @@
         "z": "6d603261.4bb86c",
         "name": "Snap shot",
         "info": "",
-        "x": 66,
-        "y": 299,
+        "x": 65,
+        "y": 732,
         "wires": []
     },
     {
@@ -31965,8 +31965,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 95,
-        "y": 340,
+        "x": 89,
+        "y": 773,
         "wires": [
             [
                 "fd2385aa.d50a38"
@@ -31983,8 +31983,8 @@
         "stateType": "str",
         "avoidCheckPlayerAvailability": false,
         "name": "",
-        "x": 305,
-        "y": 340,
+        "x": 299,
+        "y": 773,
         "wires": [
             [
                 "71b3b063.3a8f8"
@@ -32001,8 +32001,8 @@
         "stateType": "str",
         "avoidCheckPlayerAvailability": false,
         "name": "",
-        "x": 815,
-        "y": 340,
+        "x": 809,
+        "y": 773,
         "wires": [
             []
         ]
@@ -32022,8 +32022,8 @@
         "randomLast": "5",
         "randomUnits": "seconds",
         "drop": false,
-        "x": 535,
-        "y": 340,
+        "x": 529,
+        "y": 773,
         "wires": [
             [
                 "bdc6340f.40d8f8"
@@ -32051,8 +32051,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 395,
-        "y": 380,
+        "x": 389,
+        "y": 813,
         "wires": [
             [
                 "357965e3.dfc4da"
@@ -32069,8 +32069,8 @@
         "stateType": "str",
         "avoidCheckPlayerAvailability": false,
         "name": "",
-        "x": 595,
-        "y": 380,
+        "x": 589,
+        "y": 813,
         "wires": [
             []
         ]
@@ -32097,7 +32097,7 @@
         "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_1.mp3",
         "payloadType": "str",
         "x": 121,
-        "y": 140,
+        "y": 597,
         "wires": [
             [
                 "3c66de0a.97bed2"
@@ -32126,7 +32126,7 @@
         "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_2.wav",
         "payloadType": "str",
         "x": 121,
-        "y": 180,
+        "y": 637,
         "wires": [
             [
                 "3c66de0a.97bed2"
@@ -32155,7 +32155,7 @@
         "payload": "https://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
         "x": 150,
-        "y": 100,
+        "y": 557,
         "wires": [
             [
                 "3c66de0a.97bed2"
@@ -32172,7 +32172,7 @@
         "dir": "overwritten",
         "config": "8945d5a5.31aef8",
         "x": 350,
-        "y": 860,
+        "y": 1152,
         "wires": [
             [
                 "a1d174cf.238b28"
@@ -32193,7 +32193,7 @@
         "payload": "We expect nice weather without any rain. Enjoy the day.",
         "payloadType": "str",
         "x": 88,
-        "y": 815,
+        "y": 1107,
         "wires": [
             [
                 "fec8c517.027818"
@@ -32234,7 +32234,7 @@
         "to": "",
         "reg": false,
         "x": 650,
-        "y": 898,
+        "y": 1190,
         "wires": [
             [
                 "23808166.c97c6e"
@@ -32257,7 +32257,7 @@
         "link": false,
         "overwrite": true,
         "x": 594,
-        "y": 856,
+        "y": 1148,
         "wires": [
             [
                 "a14c7615.788fb8"
@@ -32283,7 +32283,7 @@
         "repair": false,
         "outputs": 2,
         "x": 466,
-        "y": 862,
+        "y": 1154,
         "wires": [
             [
                 "67ffcfcb.15bd"
@@ -32306,7 +32306,7 @@
         "payload": "Caution Caution Caution",
         "payloadType": "str",
         "x": 88,
-        "y": 847,
+        "y": 1139,
         "wires": [
             [
                 "fec8c517.027818"
@@ -32326,7 +32326,7 @@
         "payload": "Please mind your steps",
         "payloadType": "str",
         "x": 88,
-        "y": 880,
+        "y": 1172,
         "wires": [
             [
                 "fec8c517.027818"
@@ -32340,7 +32340,7 @@
         "name": "Examples",
         "info": "",
         "x": 97,
-        "y": 776,
+        "y": 1068,
         "wires": []
     },
     {
@@ -32350,7 +32350,7 @@
         "name": "Create/Update mp3 file, create uri and parameter",
         "info": "",
         "x": 479,
-        "y": 776,
+        "y": 1068,
         "wires": []
     },
     {
@@ -32360,7 +32360,7 @@
         "name": "Serialize msgs and play notification",
         "info": "",
         "x": 1028,
-        "y": 775,
+        "y": 1067,
         "wires": []
     },
     {
@@ -32376,7 +32376,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 745,
-        "y": 631,
+        "y": 923,
         "wires": [
             [
                 "d15a60f9.564e2",
@@ -32394,7 +32394,7 @@
             "76e6ed77.e3dd84"
         ],
         "x": 902,
-        "y": 815,
+        "y": 1107,
         "wires": [
             [
                 "7663467f.6d9e38"
@@ -32410,7 +32410,7 @@
             "c407d3ee.78e67"
         ],
         "x": 750,
-        "y": 815,
+        "y": 1107,
         "wires": []
     },
     {
@@ -32426,7 +32426,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 88,
-        "y": 665,
+        "y": 957,
         "wires": [
             [
                 "40eb64bd.a17ebc",
@@ -32442,7 +32442,7 @@
         "name": "TTS, notification",
         "info": "",
         "x": 85,
-        "y": 596,
+        "y": 888,
         "wires": []
     },
     {
@@ -32452,7 +32452,7 @@
         "name": "Set Up",
         "info": "",
         "x": 89,
-        "y": 631,
+        "y": 923,
         "wires": []
     },
     {
@@ -32475,7 +32475,7 @@
         "to": "",
         "reg": false,
         "x": 294,
-        "y": 632,
+        "y": 924,
         "wires": [
             []
         ]
@@ -32500,7 +32500,7 @@
         "to": "",
         "reg": false,
         "x": 304,
-        "y": 664,
+        "y": 956,
         "wires": [
             []
         ]
@@ -32525,7 +32525,7 @@
         "to": "",
         "reg": false,
         "x": 294,
-        "y": 696,
+        "y": 988,
         "wires": [
             []
         ]
@@ -32550,7 +32550,7 @@
         "to": "",
         "reg": false,
         "x": 603,
-        "y": 814,
+        "y": 1106,
         "wires": [
             [
                 "884deb1f.b9f008"
@@ -32569,7 +32569,7 @@
             "4613a740.f0ce58"
         ],
         "x": 313,
-        "y": 814,
+        "y": 1106,
         "wires": [
             [
                 "2ebb1a19.f32b76"
@@ -32585,7 +32585,7 @@
             "5c6cc856.6aa6c8"
         ],
         "x": 213,
-        "y": 813,
+        "y": 1105,
         "wires": []
     },
     {
@@ -32595,7 +32595,7 @@
         "name": "Maintain",
         "info": "",
         "x": 552,
-        "y": 632,
+        "y": 924,
         "wires": []
     },
     {
@@ -32608,7 +32608,7 @@
         "filename": "files",
         "filenameType": "msg",
         "x": 865,
-        "y": 670,
+        "y": 962,
         "wires": [
             []
         ]
@@ -32625,7 +32625,7 @@
         "dir": "files",
         "dirType": "msg",
         "x": 715,
-        "y": 670,
+        "y": 962,
         "wires": [
             [
                 "7fbf84a6.82a2ec"
@@ -32644,7 +32644,7 @@
         "dir": "files",
         "dirType": "msg",
         "x": 715,
-        "y": 703,
+        "y": 995,
         "wires": [
             [
                 "1666bec2.490c01"
@@ -32661,7 +32661,7 @@
         "filename": "files",
         "filenameType": "msg",
         "x": 865,
-        "y": 703,
+        "y": 995,
         "wires": [
             []
         ]
@@ -32675,7 +32675,7 @@
             "45324393.696ebc"
         ],
         "x": 947,
-        "y": 864,
+        "y": 1156,
         "wires": [
             [
                 "aa1212bf.453a9"
@@ -32702,7 +32702,7 @@
         "to": "",
         "reg": false,
         "x": 1099,
-        "y": 864,
+        "y": 1156,
         "wires": [
             [
                 "7663467f.6d9e38"
@@ -32718,7 +32718,7 @@
         "outputs": 1,
         "noerr": 0,
         "x": 1010,
-        "y": 815,
+        "y": 1107,
         "wires": [
             [
                 "45324393.696ebc"
@@ -32735,7 +32735,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 148,
-        "y": 1011,
+        "y": 1303,
         "wires": [
             [
                 "67a56dfd.7434b4"
@@ -32749,7 +32749,7 @@
         "name": "serve mp3 file for SONOS player",
         "info": "",
         "x": 168,
-        "y": 974,
+        "y": 1266,
         "wires": []
     },
     {
@@ -32772,7 +32772,7 @@
         "to": "",
         "reg": false,
         "x": 372,
-        "y": 1011,
+        "y": 1303,
         "wires": [
             [
                 "40aa813c.425ce"
@@ -32790,7 +32790,7 @@
         "sendError": false,
         "encoding": "base64",
         "x": 532,
-        "y": 1011,
+        "y": 1303,
         "wires": [
             [
                 "be2c961d.80b0a8"
@@ -32809,7 +32809,7 @@
         ],
         "uncaught": false,
         "x": 547,
-        "y": 1059,
+        "y": 1351,
         "wires": [
             [
                 "a058e94f.850658",
@@ -32825,7 +32825,7 @@
         "statusCode": "",
         "headers": {},
         "x": 827,
-        "y": 1010,
+        "y": 1302,
         "wires": []
     },
     {
@@ -32835,7 +32835,7 @@
         "name": "Test",
         "info": "http://192.168.178.49:1880/notifications/notification_weather.mp3",
         "x": 384,
-        "y": 975,
+        "y": 1267,
         "wires": []
     },
     {
@@ -32851,7 +32851,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 1093,
-        "y": 631,
+        "y": 923,
         "wires": [
             [
                 "def8224e.66019"
@@ -32878,7 +32878,7 @@
         "to": "",
         "reg": false,
         "x": 1105,
-        "y": 668,
+        "y": 960,
         "wires": [
             [
                 "7663467f.6d9e38"
@@ -32896,7 +32896,7 @@
         "initialize": "",
         "finalize": "",
         "x": 430,
-        "y": 814,
+        "y": 1106,
         "wires": [
             [
                 "29249781.b4add8"
@@ -32910,7 +32910,7 @@
         "name": "Recommendation: Define globals as permanent",
         "info": "This is done in the settings.js file. \nUncomment the contextStorage paragraph.\nThis will store all context variable on disk.",
         "x": 438,
-        "y": 596,
+        "y": 888,
         "wires": []
     },
     {
@@ -32926,7 +32926,7 @@
         "payload": "We expect nice weather without any rain. Enjoy the day.",
         "payloadType": "str",
         "x": 448,
-        "y": 920,
+        "y": 1212,
         "wires": [
             [
                 "a14c7615.788fb8"
@@ -32953,7 +32953,7 @@
         "to": "",
         "reg": false,
         "x": 662,
-        "y": 1011,
+        "y": 1303,
         "wires": [
             [
                 "e64c8cf4.c65f7"
@@ -32987,7 +32987,7 @@
         "to": "",
         "reg": false,
         "x": 673,
-        "y": 1059,
+        "y": 1351,
         "wires": [
             [
                 "e64c8cf4.c65f7"
@@ -33006,7 +33006,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 668,
-        "y": 1094,
+        "y": 1386,
         "wires": []
     },
     {
@@ -33017,7 +33017,7 @@
         "command": "group.play.notification",
         "name": "",
         "x": 1189,
-        "y": 815,
+        "y": 1107,
         "wires": [
             [
                 "a0f04794.5e2998"
@@ -33036,7 +33036,7 @@
         "complete": "true",
         "targetType": "full",
         "x": 1284,
-        "y": 864,
+        "y": 1156,
         "wires": []
     },
     {
@@ -33052,7 +33052,7 @@
         "payload": "Don't do unto others what you would not have done unto you. Don't do unto others what you would not have done unto you.",
         "payloadType": "str",
         "x": 88,
-        "y": 913,
+        "y": 1205,
         "wires": [
             [
                 "fec8c517.027818"
@@ -33081,7 +33081,7 @@
         "payload": "ANTENNE",
         "payloadType": "str",
         "x": 510,
-        "y": 60,
+        "y": 517,
         "wires": [
             [
                 "5cd48705.c45488"
@@ -33099,7 +33099,7 @@
         "avoidCheckPlayerAvailability": false,
         "name": "Tune In Antenne",
         "x": 820,
-        "y": 60,
+        "y": 517,
         "wires": [
             [
                 "51508943.1c91a8"
@@ -33117,7 +33117,7 @@
         "avoidCheckPlayerAvailability": false,
         "name": "",
         "x": 1010,
-        "y": 60,
+        "y": 517,
         "wires": [
             []
         ]
@@ -33144,7 +33144,7 @@
         "payload": "Best Of",
         "payloadType": "str",
         "x": 550,
-        "y": 100,
+        "y": 557,
         "wires": [
             [
                 "5cd48705.c45488"
@@ -33173,7 +33173,7 @@
         "payload": "Best of Prime",
         "payloadType": "str",
         "x": 540,
-        "y": 140,
+        "y": 597,
         "wires": [
             [
                 "5cd48705.c45488"
@@ -33202,7 +33202,7 @@
         "payload": "Britney",
         "payloadType": "str",
         "x": 840,
-        "y": 140,
+        "y": 597,
         "wires": [
             [
                 "5cd48705.c45488"
@@ -33231,7 +33231,7 @@
         "payload": "ML10CC",
         "payloadType": "str",
         "x": 1100,
-        "y": 140,
+        "y": 597,
         "wires": [
             [
                 "5cd48705.c45488"
@@ -33260,10 +33260,440 @@
         "payload": "Diamond Life",
         "payloadType": "str",
         "x": 1340,
-        "y": 140,
+        "y": 597,
         "wires": [
             [
                 "5cd48705.c45488"
+            ]
+        ]
+    },
+    {
+        "id": "a0edc26f.5640c",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Play Notification - READ ME",
+        "info": "# Play a Notification\n\n2021-04-16T0804\n\n## General\n**Notifications* are short tracks such as a doorbell or messages such as \"new mail in your post box\". The current content on the player is being stopped, the notification is being played and after having finished, the origional content is being continued.\n\nSONOS does not provide a build-in function. Therefore there are some limitations but in most cases\nyou can find a work around. \n\nThe restrictitons are\n- Restoring the state before playing the notification does not work in all cases. Example: Playlist initited from Spotify App.\n\n- Additional commands from different sources (SONOA app, ...) may mix up with the notification. Example: During notification you request to play another Radio station.\n\n- Some errors are not caught. Example: Missing mp3 file.\n\n## What content can be played\nYou can play any \"mp3\" or \"wav\" track from different sources: \n- internet\n- files being provided via a web server in your local network\n- files from SONOS Music library\n- files from a NAS in your network via SONOS Music Library\n\nExample 1: \nPlay a foghorn fetched from the internet\n\nExamples 2: \n\n\n\n",
+        "x": 125,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "3fb2c002.d9f4b",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "https soundbible foghorn",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "https://soundbible.com/mp3/foghorn-daniel_simon.mp3",
+        "payloadType": "str",
+        "x": 150,
+        "y": 98,
+        "wires": [
+            [
+                "e01c10ac.6ded2"
+            ]
+        ]
+    },
+    {
+        "id": "e01c10ac.6ded2",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "with volume",
+        "rules": [
+            {
+                "t": "set",
+                "p": "volume",
+                "pt": "msg",
+                "to": "40",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 355,
+        "y": 98,
+        "wires": [
+            [
+                "c533fa35.7556e8"
+            ]
+        ]
+    },
+    {
+        "id": "c533fa35.7556e8",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.notification",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 551,
+        "y": 98,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4bbe442d.57ac9c",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "↑modify",
+        "info": "Select your config node.",
+        "x": 602,
+        "y": 126,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "e6614d38.1300d",
+        "type": "function",
+        "z": "6d603261.4bb86c",
+        "name": "queue",
+        "func": "// modified version - originally from https://gist.github.com/dceejay/cea8afa28b7a93ebdc0f \n\n// restartQueue = create new\nif (msg.hasOwnProperty(\"restartQueue\")) {\n    context.queue = []\n    \n// if queue doesn't exist, create it    \n} else {\n    context.queue = context.queue || []\n    context.busy = context.busy || false\n\n    // if the msg is a trigger one release next message\n    if (msg.hasOwnProperty(\"releaseNext\")) {\n        if (context.queue.length > 0) {\n            var m = context.queue.shift()\n            node.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n            return m \n        }\n        else {\n            context.busy = false;\n        }\n    }\n    else {\n        if (context.busy) {\n            // if busy add to queue\n            context.queue.push(msg);\n        }\n        else {\n        // otherwise we are empty so just pass through and set busy flag\n            context.busy = true;\n            node.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n            return msg;\n        }\n    }\n}\nnode.status({ fill: 'green', shape: 'dot', text: context.queue.length })\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 589,
+        "y": 356,
+        "wires": [
+            [
+                "864a0ad4.6b8df8"
+            ]
+        ]
+    },
+    {
+        "id": "371ce529.19070a",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Example 1: From Internet",
+        "info": "",
+        "x": 149,
+        "y": 65,
+        "wires": []
+    },
+    {
+        "id": "fb047d82.f9e18",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Example 2: From Music Library - READ ME",
+        "info": "## SET UP\n\nMy NAS has the name \"hkNas\".\n\n1. On your NAS - in this case Synologoy\n- create a new shared folder named MultiMedia\n- create a subdirectory \\Music\\MyMusic\\AAAMyNotification\n- copy your notification track to that directory here foghorn_1.wav\n\nSo the full path is: //hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_2.wav\n\n2. In your SONOS app\n- Settings, System, Music Library, Music Library Setup\n- Add the path above (with your data\n- Do an Update of the index",
+        "x": 200,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a8807bfd.e51308",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Music Library foghorn wav",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_2.wav",
+        "payloadType": "str",
+        "x": 150,
+        "y": 213,
+        "wires": [
+            [
+                "ae16c479.73cb68"
+            ]
+        ]
+    },
+    {
+        "id": "ae16c479.73cb68",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "with volume",
+        "rules": [
+            {
+                "t": "set",
+                "p": "volume",
+                "pt": "msg",
+                "to": "40",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 364,
+        "y": 213,
+        "wires": [
+            [
+                "2936af2b.5843b"
+            ]
+        ]
+    },
+    {
+        "id": "2936af2b.5843b",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.notification",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 560,
+        "y": 213,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35c727e4.196ac8",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "↑modify",
+        "info": "Select your config node.",
+        "x": 610,
+        "y": 240,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "22fc7087.c58ef",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "↑modify",
+        "info": "Modify the path to your file.",
+        "x": 210,
+        "y": 241,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "b35d5186.74779",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "Example 3: From Music Library with queue - READ ME",
+        "info": "Having added the function node you are able to send several notifications and they all are being played with out mixing up the content. ",
+        "x": 240,
+        "y": 307,
+        "wires": []
+    },
+    {
+        "id": "96453daf.7dba7",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "Music Library foghorn wav",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "x-file-cifs://hkNas/Multimedia/Music/MyMusic/AAAMyNotifications/foghorn_2.wav",
+        "payloadType": "str",
+        "x": 150,
+        "y": 356,
+        "wires": [
+            [
+                "79f7acba.65acc4"
+            ]
+        ]
+    },
+    {
+        "id": "79f7acba.65acc4",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "with volume",
+        "rules": [
+            {
+                "t": "set",
+                "p": "volume",
+                "pt": "msg",
+                "to": "40",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 364,
+        "y": 356,
+        "wires": [
+            [
+                "e6614d38.1300d"
+            ]
+        ]
+    },
+    {
+        "id": "864a0ad4.6b8df8",
+        "type": "sonos-universal",
+        "z": "6d603261.4bb86c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.notification",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 779,
+        "y": 356,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2f9703a1.261d5c",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "↑modify",
+        "info": "Select your config node.",
+        "x": 829,
+        "y": 382,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "9ed82e6e.6c0fc",
+        "type": "comment",
+        "z": "6d603261.4bb86c",
+        "name": "↑modify",
+        "info": "Modify the path to your file.",
+        "x": 210,
+        "y": 384,
+        "wires": [],
+        "icon": "font-awesome/fa-edit"
+    },
+    {
+        "id": "1e427c4e.1b74d4",
+        "type": "inject",
+        "z": "6d603261.4bb86c",
+        "name": "trigger",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 390,
+        "y": 420,
+        "wires": [
+            [
+                "bd62cd3.484523"
+            ]
+        ]
+    },
+    {
+        "id": "bd62cd3.484523",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "reset",
+        "rules": [
+            {
+                "t": "set",
+                "p": "restartQueue",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 420,
+        "wires": [
+            [
+                "e6614d38.1300d"
+            ]
+        ]
+    },
+    {
+        "id": "2f3f7fba.4ad46",
+        "type": "change",
+        "z": "6d603261.4bb86c",
+        "name": "initiate next",
+        "rules": [
+            {
+                "t": "set",
+                "p": "releaseNext",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 313,
+        "wires": [
+            [
+                "e6614d38.1300d"
+            ]
+        ]
+    },
+    {
+        "id": "f9335023.08dea",
+        "type": "status",
+        "z": "6d603261.4bb86c",
+        "name": "",
+        "scope": [
+            "45324393.696ebc",
+            "864a0ad4.6b8df8"
+        ],
+        "x": 600,
+        "y": 313,
+        "wires": [
+            [
+                "2f3f7fba.4ad46"
             ]
         ]
     }
