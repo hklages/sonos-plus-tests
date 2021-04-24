@@ -642,6 +642,13 @@
         "listenerPort": ""
     },
     {
+        "id": "f166c7c9.fa00c8",
+        "type": "sonos-config",
+        "name": "yourplayer",
+        "serialnum": "",
+        "ipaddress": "192.168.178.35"
+    },
+    {
         "id": "497dc083.e5d35",
         "type": "inject",
         "z": "a0a649cc.ca04e8",
@@ -23449,6 +23456,7 @@
         "command": "group.play.export",
         "state": "",
         "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
         "name": "",
         "x": 530,
         "y": 420,
@@ -33696,5 +33704,124 @@
                 "2f3f7fba.4ad46"
             ]
         ]
+    },
+    {
+        "id": "56bafa1b.db6af4",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "ZoneGroupState",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "player.test",
+        "payload": "{\"endpoint\":\"/ZoneGroupTopology/Control\",\"action\":\"GetZoneGroupState\",\"inArgs\":{}}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 800,
+        "wires": [
+            [
+                "5435d9af.214928"
+            ]
+        ]
+    },
+    {
+        "id": "5435d9af.214928",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "f166c7c9.fa00c8",
+        "command": "message",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 320,
+        "y": 800,
+        "wires": [
+            [
+                "ac614d5e.307e2",
+                "12acadd6.dddd92"
+            ]
+        ]
+    },
+    {
+        "id": "ac614d5e.307e2",
+        "type": "xml",
+        "z": "55805384.a4695c",
+        "name": "",
+        "property": "payload",
+        "attr": "tagAtt",
+        "chr": "",
+        "x": 470,
+        "y": 800,
+        "wires": [
+            [
+                "9336fa5c.635468"
+            ]
+        ]
+    },
+    {
+        "id": "12acadd6.dddd92",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "raw",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 470,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "9336fa5c.635468",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": " after xml",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "1dce8629.fb58aa",
+        "type": "comment",
+        "z": "55805384.a4695c",
+        "name": "Modify",
+        "info": "Please modify config and use your ip address",
+        "x": 330,
+        "y": 780,
+        "wires": [],
+        "icon": "font-awesome/fa-arrow-down"
+    },
+    {
+        "id": "8d4cd0a9.f1c7f",
+        "type": "comment",
+        "z": "55805384.a4695c",
+        "name": "Test without using group!",
+        "info": "",
+        "x": 110,
+        "y": 720,
+        "wires": []
     }
 ]
