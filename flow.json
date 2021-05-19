@@ -6069,9 +6069,9 @@
         "id": "c249bd9e.21742",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "Example 3: Replace SONOS-Queue without playing",
+        "name": "Example 03: Replace SONOS-Queue without playing",
         "info": "",
-        "x": 195,
+        "x": 205,
         "y": 756,
         "wires": []
     },
@@ -6079,7 +6079,7 @@
         "id": "3ce73efc.9acb82",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "Example 4: Line in Play:5 / TV Beam or Playbar",
+        "name": "Example 04: Line in Play:5 / TV Beam or Playbar",
         "info": "",
         "x": 185,
         "y": 855,
@@ -6157,9 +6157,9 @@
         "id": "da2d9474.71d978",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "Example 5: Play Playlist from Music-Library",
+        "name": "Example 05: Play Playlist from Music-Library in My Sonos",
         "info": "",
-        "x": 165,
+        "x": 215,
         "y": 962,
         "wires": []
     },
@@ -6283,7 +6283,7 @@
         "id": "c7c57729.8e9638",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "Example 6: Set a morning station but dont play right now",
+        "name": "Example 06: Set a morning station but dont play right now",
         "info": "",
         "x": 215,
         "y": 1066,
@@ -6293,7 +6293,7 @@
         "id": "e0d75c39.aba64",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "Example 1: Play a (Music-Library, Amazon) playlist using My-Sonos ",
+        "name": "Example 01: Play a (Music-Library, Amazon) playlist using My-Sonos ",
         "info": "",
         "x": 245,
         "y": 397,
@@ -6402,7 +6402,7 @@
         "id": "a72c5aae.097e58",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "Example 8: Group snapshot with save queue",
+        "name": "Example 08: Group snapshot with save queue",
         "info": "",
         "x": 175,
         "y": 1366,
@@ -7344,7 +7344,7 @@
         "id": "cda28de9.4a0b3",
         "type": "inject",
         "z": "fcb24b59.997048",
-        "name": "foghorn",
+        "name": "http: foghorn",
         "props": [
             {
                 "p": "payload"
@@ -7361,7 +7361,7 @@
         "topic": "",
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
-        "x": 632,
+        "x": 652,
         "y": 1810,
         "wires": [
             [
@@ -7388,7 +7388,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
+        "x": 851,
         "y": 1810,
         "wires": [
             [
@@ -7463,8 +7463,8 @@
         "topic": "",
         "payload": "http://soundbible.com/mp3/foghorn-daniel_simon.mp3",
         "payloadType": "str",
-        "x": 632,
-        "y": 1856,
+        "x": 630,
+        "y": 1887,
         "wires": [
             [
                 "659dbc63.67f134"
@@ -7490,8 +7490,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 770,
-        "y": 1856,
+        "x": 768,
+        "y": 1887,
         "wires": [
             [
                 "45bb3557.49866c"
@@ -7576,9 +7576,9 @@
         "id": "934b482e.555ef8",
         "type": "comment",
         "z": "fcb24b59.997048",
-        "name": "Notification",
+        "name": "Notification http/NAS",
         "info": "",
-        "x": 640,
+        "x": 670,
         "y": 1778,
         "wires": [],
         "icon": "node-red/alert.svg"
@@ -7592,8 +7592,8 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 959,
-        "y": 1856,
+        "x": 957,
+        "y": 1887,
         "wires": [
             []
         ]
@@ -9156,7 +9156,7 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 960,
+        "x": 1046,
         "y": 1810,
         "wires": [
             []
@@ -11649,7 +11649,7 @@
         "topic": "",
         "payload": "spotify:track:5AdoS3gS47x40nBNlNmPQ8",
         "payloadType": "str",
-        "x": 1061,
+        "x": 1078,
         "y": 1393,
         "wires": [
             [
@@ -11669,7 +11669,7 @@
         "topic": "",
         "payload": "spotify:artistTopTracks:1dfeR4HaWDbWqFHLkxsg1d",
         "payloadType": "str",
-        "x": 1071,
+        "x": 1088,
         "y": 1425,
         "wires": [
             [
@@ -11698,7 +11698,7 @@
         "topic": "",
         "payload": "spotify:album:1TSZDcvlPtAnekTaItI3qO",
         "payloadType": "str",
-        "x": 1061,
+        "x": 1078,
         "y": 1457,
         "wires": [
             [
@@ -11711,14 +11711,23 @@
         "type": "inject",
         "z": "fcb24b59.997048",
         "name": "insert_spotify_uri Playlist",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
         "repeat": "",
         "crontab": "",
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "spotify:user:spotify:playlist:37i9dQZEVXbMDoHDwVN2tF",
+        "payload": "spotify:playlist:37i9dQZEVXbMDoHDwVN2tF",
         "payloadType": "str",
-        "x": 1071,
+        "x": 1088,
         "y": 1492,
         "wires": [
             [
@@ -11732,7 +11741,7 @@
         "z": "fcb24b59.997048",
         "name": "SONOS-Queue Spotify",
         "info": "",
-        "x": 1061,
+        "x": 1078,
         "y": 1360,
         "wires": [],
         "icon": "node-red/alert.svg"
@@ -11746,7 +11755,7 @@
         "state": "",
         "stateType": "str",
         "name": "",
-        "x": 1321,
+        "x": 1338,
         "y": 1457,
         "wires": [
             []
@@ -11785,7 +11794,7 @@
         "payload": "x-file-cifs://nas2019/Multimedia/Music/MyMusic/Rihanna/Diamonds/Rihanna%20-%20Diamonds.mp3",
         "payloadType": "str",
         "x": 140,
-        "y": 1888,
+        "y": 1884,
         "wires": [
             [
                 "cfad7644.d60bc8"
@@ -11814,7 +11823,7 @@
         "payload": "https://archive.org/download/testmp3testfile/mpthreetest.mp3",
         "payloadType": "str",
         "x": 90,
-        "y": 1808,
+        "y": 1804,
         "wires": [
             [
                 "cfad7644.d60bc8"
@@ -11831,7 +11840,7 @@
         "stateType": "str",
         "name": "",
         "x": 280,
-        "y": 1808,
+        "y": 1804,
         "wires": [
             []
         ]
@@ -12190,7 +12199,7 @@
         "name": "Spotify: station, playlist",
         "info": "",
         "x": 141,
-        "y": 2500,
+        "y": 2555,
         "wires": []
     },
     {
@@ -12200,7 +12209,7 @@
         "name": "TuneIn stations",
         "info": "",
         "x": 120,
-        "y": 2618,
+        "y": 2673,
         "wires": []
     },
     {
@@ -12210,7 +12219,7 @@
         "name": "Napster",
         "info": "",
         "x": 370,
-        "y": 2528,
+        "y": 2583,
         "wires": []
     },
     {
@@ -12220,7 +12229,7 @@
         "name": "Amazon: album, playlist, station, track",
         "info": "",
         "x": 191,
-        "y": 2386,
+        "y": 2441,
         "wires": []
     },
     {
@@ -12230,7 +12239,7 @@
         "name": "Radioplayer",
         "info": "",
         "x": 111,
-        "y": 2731,
+        "y": 2786,
         "wires": []
     },
     {
@@ -12255,7 +12264,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 801,
-        "y": 2415,
+        "y": 2470,
         "wires": [
             [
                 "22bba9be.293d36"
@@ -12272,7 +12281,7 @@
         "stateType": "str",
         "name": "",
         "x": 1001,
-        "y": 2598,
+        "y": 2653,
         "wires": [
             []
         ]
@@ -12284,7 +12293,7 @@
         "name": "Music-Library in My-Sonos: album, imported playlist, track",
         "info": "",
         "x": 252,
-        "y": 2884,
+        "y": 2939,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -12295,7 +12304,7 @@
         "name": "SONOS-Playlists",
         "info": "",
         "x": 120,
-        "y": 2802,
+        "y": 2857,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -12312,7 +12321,7 @@
         "payload": "Best Of Love",
         "payloadType": "str",
         "x": 811,
-        "y": 2522,
+        "y": 2577,
         "wires": [
             [
                 "ba055dee.63632"
@@ -12332,7 +12341,7 @@
         "payload": "Arabella",
         "payloadType": "str",
         "x": 801,
-        "y": 2554,
+        "y": 2609,
         "wires": [
             [
                 "ba055dee.63632"
@@ -12347,7 +12356,7 @@
         "command": "mysonos.get.items",
         "name": "",
         "x": 973,
-        "y": 2415,
+        "y": 2470,
         "wires": [
             [
                 "9f3fe37a.b9859"
@@ -12376,7 +12385,7 @@
         "payload": "TestSonosPl",
         "payloadType": "str",
         "x": 811,
-        "y": 2598,
+        "y": 2653,
         "wires": [
             [
                 "9c2d9076.4e8a3"
@@ -12390,7 +12399,7 @@
         "name": "Get all",
         "info": "",
         "x": 791,
-        "y": 2382,
+        "y": 2437,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -12402,7 +12411,7 @@
         "command": "mysonos.stream.item",
         "name": "",
         "x": 1003,
-        "y": 2539,
+        "y": 2594,
         "wires": [
             []
         ]
@@ -15445,7 +15454,7 @@
         "name": "Select and play",
         "info": "",
         "x": 821,
-        "y": 2487,
+        "y": 2542,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -15778,7 +15787,7 @@
         "payload": "20 Jahre Napster",
         "payloadType": "str",
         "x": 401,
-        "y": 2561,
+        "y": 2616,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15810,7 +15819,7 @@
         "payload": "Best of Prime Music",
         "payloadType": "str",
         "x": 131,
-        "y": 2451,
+        "y": 2506,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15842,7 +15851,7 @@
         "payload": "Arabella",
         "payloadType": "str",
         "x": 101,
-        "y": 2652,
+        "y": 2707,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15869,7 +15878,7 @@
         "to": "",
         "reg": false,
         "x": 256,
-        "y": 2684,
+        "y": 2739,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15889,7 +15898,7 @@
         "payload": "1A Fitness Hits",
         "payloadType": "str",
         "x": 121,
-        "y": 2765,
+        "y": 2820,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15921,7 +15930,7 @@
         "payload": "Daily Mix",
         "payloadType": "str",
         "x": 101,
-        "y": 2533,
+        "y": 2588,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15953,7 +15962,7 @@
         "payload": "Best Of Love",
         "payloadType": "str",
         "x": 398,
-        "y": 2421,
+        "y": 2476,
         "wires": [
             [
                 "8a32208c.a122"
@@ -15973,7 +15982,7 @@
         "payload": "GloomySunday",
         "payloadType": "str",
         "x": 121,
-        "y": 2565,
+        "y": 2620,
         "wires": [
             [
                 "8a32208c.a122"
@@ -16005,7 +16014,7 @@
         "payload": "Blowin' in the Wind",
         "payloadType": "str",
         "x": 377,
-        "y": 2454,
+        "y": 2509,
         "wires": [
             [
                 "8a32208c.a122"
@@ -16034,7 +16043,7 @@
         "payload": "TestSonosPl",
         "payloadType": "str",
         "x": 111,
-        "y": 2835,
+        "y": 2890,
         "wires": [
             [
                 "8a32208c.a122"
@@ -16063,7 +16072,7 @@
         "payload": "People",
         "payloadType": "str",
         "x": 310,
-        "y": 2917,
+        "y": 2972,
         "wires": [
             [
                 "8a32208c.a122"
@@ -16092,7 +16101,7 @@
         "payload": "25",
         "payloadType": "str",
         "x": 91,
-        "y": 2917,
+        "y": 2972,
         "wires": [
             [
                 "8a32208c.a122"
@@ -16112,7 +16121,7 @@
         "payload": "Bayern 3",
         "payloadType": "str",
         "x": 101,
-        "y": 2684,
+        "y": 2739,
         "wires": [
             [
                 "b6c76ac1.8dc558"
@@ -16814,7 +16823,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1140,
-        "y": 2415,
+        "y": 2470,
         "wires": []
     },
     {
@@ -18604,7 +18613,7 @@
         "name": "Music-Library track",
         "info": "",
         "x": 130,
-        "y": 1848,
+        "y": 1844,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -18618,7 +18627,7 @@
         "stateType": "str",
         "name": "",
         "x": 260,
-        "y": 1928,
+        "y": 1924,
         "wires": [
             []
         ]
@@ -18645,7 +18654,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 100,
-        "y": 1928,
+        "y": 1924,
         "wires": [
             [
                 "cfa822f.74e21e"
@@ -18673,7 +18682,7 @@
         "stateType": "str",
         "name": "",
         "x": 830,
-        "y": 1533,
+        "y": 1526,
         "wires": [
             []
         ]
@@ -18688,7 +18697,7 @@
         "stateType": "str",
         "name": "",
         "x": 830,
-        "y": 1579,
+        "y": 1572,
         "wires": [
             []
         ]
@@ -20837,9 +20846,9 @@
         "id": "1d9709f0.e93166",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "09 Household snapshot and grouping",
+        "name": "Example 09 Household snapshot and grouping",
         "info": "",
-        "x": 155,
+        "x": 185,
         "y": 1615,
         "wires": [],
         "icon": "node-red-contrib-sonos-plus/sonos.png"
@@ -21453,9 +21462,9 @@
         "id": "a04b8409.5ae458",
         "type": "comment",
         "z": "25081f9e.f5f34",
-        "name": "10 create one single group with all players",
+        "name": "Example 10 create one single group with all players",
         "info": "",
-        "x": 165,
+        "x": 195,
         "y": 2194,
         "wires": [],
         "icon": "node-red-contrib-sonos-plus/sonos.png"
@@ -25853,7 +25862,7 @@
         "name": "My-Sonos",
         "info": "",
         "x": 65,
-        "y": 2345,
+        "y": 2400,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -25879,7 +25888,7 @@
         "payload": "ML10CC",
         "payloadType": "str",
         "x": 100,
-        "y": 2266,
+        "y": 2312,
         "wires": [
             [
                 "ff7586c7.f47c08"
@@ -25896,7 +25905,7 @@
         "stateType": "str",
         "name": "",
         "x": 292,
-        "y": 2266,
+        "y": 2312,
         "wires": [
             []
         ]
@@ -25908,7 +25917,7 @@
         "name": "Queue playlist",
         "info": "",
         "x": 110,
-        "y": 2232,
+        "y": 2278,
         "wires": [],
         "icon": "node-red/alert.svg"
     },
@@ -25934,7 +25943,7 @@
         "payload": "HERZ KRAFT",
         "payloadType": "str",
         "x": 111,
-        "y": 2418,
+        "y": 2473,
         "wires": [
             [
                 "8a32208c.a122"
@@ -25963,7 +25972,7 @@
         "payload": "ML10CC",
         "payloadType": "str",
         "x": 101,
-        "y": 2950,
+        "y": 3005,
         "wires": [
             [
                 "8a32208c.a122"
@@ -25992,7 +26001,7 @@
         "payload": "Best of Prime",
         "payloadType": "str",
         "x": 811,
-        "y": 2632,
+        "y": 2687,
         "wires": [
             [
                 "9c2d9076.4e8a3"
@@ -26060,50 +26069,6 @@
         "x": 439,
         "y": 1716,
         "wires": []
-    },
-    {
-        "id": "a6039ba1.57ae58",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1061,
-        "y": 1681,
-        "wires": [
-            [
-                "b84326cf.dadde8"
-            ]
-        ]
-    },
-    {
-        "id": "b84326cf.dadde8",
-        "type": "sonos-universal",
-        "z": "fcb24b59.997048",
-        "confignode": "8d44022c.adb65",
-        "command": "player.play.tv",
-        "state": "",
-        "stateType": "str",
-        "name": "",
-        "x": 1216,
-        "y": 1681,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "e5b8f93e.20f158",
@@ -30386,7 +30351,7 @@
         "topic": "",
         "payloadType": "str",
         "x": 632,
-        "y": 1533,
+        "y": 1526,
         "wires": [
             [
                 "c95823b7.e6866"
@@ -30416,7 +30381,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "x": 640,
-        "y": 1579,
+        "y": 1572,
         "wires": [
             [
                 "fbad7dfb.f92f9"
@@ -30663,35 +30628,6 @@
         "y": 4060,
         "wires": [],
         "icon": "node-red/alert.svg"
-    },
-    {
-        "id": "35a3d5a8.0a8bba",
-        "type": "inject",
-        "z": "fcb24b59.997048",
-        "name": "insert_spotify_uri Track",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "spotify:album:6gificznvuk0ddZK9dmv3T",
-        "payloadType": "str",
-        "x": 1260,
-        "y": 1320,
-        "wires": [
-            [
-                "634d07c2.0a4e08"
-            ]
-        ]
     },
     {
         "id": "199ad435.f1f31c",
@@ -33249,7 +33185,7 @@
         "avoidCheckPlayerAvailability": false,
         "name": "",
         "x": 560,
-        "y": 2720,
+        "y": 2775,
         "wires": [
             []
         ]
@@ -33896,5 +33832,337 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "6941e4.5eec2e1c",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "NAS: new mail",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "x-file-cifs://hkNas/MultiMedia/Music/MyMusic/AAAMyNotifications/mail.mp3",
+        "payloadType": "str",
+        "x": 660,
+        "y": 1848,
+        "wires": [
+            [
+                "51d49a82.887694"
+            ]
+        ]
+    },
+    {
+        "id": "b84326cf.dadde8",
+        "type": "sonos-universal",
+        "z": "fcb24b59.997048",
+        "confignode": "8d44022c.adb65",
+        "command": "player.play.tv",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1216,
+        "y": 1681,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a6039ba1.57ae58",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1061,
+        "y": 1681,
+        "wires": [
+            [
+                "b84326cf.dadde8"
+            ]
+        ]
+    },
+    {
+        "id": "87e83078.ef3a4",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Jürgens",
+        "payloadType": "str",
+        "x": 90,
+        "y": 2229,
+        "wires": [
+            [
+                "99e5904e.e049b"
+            ]
+        ]
+    },
+    {
+        "id": "99e5904e.e049b",
+        "type": "sonos-universal",
+        "z": "fcb24b59.997048",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.play.library.artist",
+        "state": "",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 280,
+        "y": 2229,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "609e7c76.086654",
+        "type": "comment",
+        "z": "55805384.a4695c",
+        "name": "Test spotify",
+        "info": "",
+        "x": 800,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "cf8bb3d8.a3f5b",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 790,
+        "y": 1720,
+        "wires": [
+            [
+                "412029b2.736c18"
+            ]
+        ]
+    },
+    {
+        "id": "f4c3cfd8.99e03",
+        "type": "debug",
+        "z": "55805384.a4695c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "412029b2.736c18",
+        "type": "sonos-manage-mysonos",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "mysonos.export.item",
+        "state": "Zuhause",
+        "stateType": "str",
+        "avoidCheckPlayerAvailability": false,
+        "name": "",
+        "x": 980,
+        "y": 1720,
+        "wires": [
+            [
+                "f4c3cfd8.99e03"
+            ]
+        ]
+    },
+    {
+        "id": "651cce5d.d32ea",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "Mein Beispiel ohne \"user\"",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:playlist:37i9dQZEVXbMDoHDwVN2tF",
+        "payloadType": "str",
+        "x": 830,
+        "y": 1860,
+        "wires": [
+            [
+                "4ba92e8d.1c39"
+            ]
+        ]
+    },
+    {
+        "id": "4ba92e8d.1c39",
+        "type": "sonos-universal",
+        "z": "55805384.a4695c",
+        "confignode": "88e9fa70.4a53e8",
+        "command": "group.queue.urispotify",
+        "state": "",
+        "stateType": "str",
+        "name": "",
+        "x": 1120,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "388da8bd.6795f8",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "Mein Beispiel mit user",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:user:spotify:playlist:37i9dQZEVXbMDoHDwVN2tF",
+        "payloadType": "str",
+        "x": 820,
+        "y": 1820,
+        "wires": [
+            [
+                "4ba92e8d.1c39"
+            ]
+        ]
+    },
+    {
+        "id": "a9848a93.0c0428",
+        "type": "inject",
+        "z": "55805384.a4695c",
+        "name": "Beispiel von TKKönig mit user",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:user:spotify:playlist:37i9dQZF1DX1htCFhfVtyK",
+        "payloadType": "str",
+        "x": 840,
+        "y": 1900,
+        "wires": [
+            [
+                "4ba92e8d.1c39"
+            ]
+        ]
+    },
+    {
+        "id": "7b2e766d.32a288",
+        "type": "inject",
+        "z": "fcb24b59.997048",
+        "name": "insert_spotify_uri Playlist",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "spotify:user:spotify:playlist:37i9dQZF1DX1htCFhfVtyK",
+        "payloadType": "str",
+        "x": 1088,
+        "y": 1526,
+        "wires": [
+            [
+                "634d07c2.0a4e08"
+            ]
+        ]
+    },
+    {
+        "id": "3926de4a.bafdf2",
+        "type": "comment",
+        "z": "25081f9e.f5f34",
+        "name": "Example 02: see seperate file ! dont import the Home Assistan config node",
+        "info": "",
+        "x": 265,
+        "y": 620,
+        "wires": []
     }
 ]
